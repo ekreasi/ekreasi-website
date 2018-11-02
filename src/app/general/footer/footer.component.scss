@@ -48,11 +48,11 @@
         padding:0px 10px;
     }
     .terms-link ul li a {
-        color:#fff;
+        color:$gray;
         font-size:15px;
     }
     .copyright span {
-        color:#fff;
+        color:$gray;
         font-size:14px;
     }
     .footer-section-1 {
@@ -62,12 +62,11 @@
         padding:10px 0px;
         text-align:center;
         font-size:13px;
-        color:#fff;
+        color:$gray;
         margin-left: 10px;
     }
     .background-darkgray {
         width:100%;
-        background:$dark-gray;
     }
     .footer-wrap h5 {
         color:#fff;
