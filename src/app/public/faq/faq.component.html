@@ -1,0 +1,51 @@
+<header-page-green></header-page-green>
+<content>
+<div  class="inner-content-faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-header-content">
+            <div class="ekreasi-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+            </div>
+            <h1>{{faqData.title}}</h1>
+            <div class="ekreasi-summary-faq">
+                <p>{{faqData.summary}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-faq-wrap">
+              <ngb-tabset class="ekreasi-faq-tab">
+                  <ngb-tab *ngFor="let faq of faqData.faqs" title="{{faq.title}}">
+                    <ng-template ngbTabContent>
+                        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion-faq" >
+                            
+                            <ngb-panel *ngFor="let faqItem of faq.data" class="icon-question" title="{{faqItem.title}}">
+                               
+                              <ng-template ngbPanelContent>
+                                <div class="ekreasi-detail-agent">
+                                  <div class="icon-answer-svg"></div>
+                                  <p>{{faqItem.description}}</p>
+                                </div>
+                              </ng-template>
+                            </ngb-panel>
+                            
+                          </ngb-accordion>
+                    </ng-template>
+                  </ngb-tab>
+                  
+              </ngb-tabset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

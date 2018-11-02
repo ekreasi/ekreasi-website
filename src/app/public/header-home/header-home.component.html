@@ -1,0 +1,39 @@
+<header class="ekreasi-header">
+  <section class="top-nav">
+    <nav class="navbar navbar-expand-lg navbar-light no-padding">
+      <button class="ekreasi-navbar navbar-toggler float-right " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+          <span class="navbar-toggler-icon ekreasi-custom-menu"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-mobile float-right" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 no-padding">
+              <div class="language-wrap">
+                <button class="btn btn-transparent btn-language" (click)="changeLanguage('en')">English</button>
+                <button class="btn btn-transparent btn-language btn-border-left" (click)="changeLanguage('id')">Indonesia</button>
+              </div>
+            </div>
+          </div>
+          <div class="row nav-padding">
+            <div class="col-lg-8">
+              <div class="ekreasi-logo-header">
+                <a [routerLink]="['']" routerLinkActive="active">
+                  <img src="assets/img/ekreasi-logo.svg">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="nav-right-top">
+                <ul>
+                  <li class="hover1"><a [routerLink]="['/about/about-ekreasi']" routerLinkActive="active">About Us</a></li>
+                  <li class="hover2"><a [routerLink]="['/agents']" routerLinkActive="active">Works</a></li>
+                  <li class="hover3"><a [routerLink]="['/contact']" routerLinkActive="active">Contact</a></li>
+                </ul>    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+</header>

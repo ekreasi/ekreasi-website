@@ -1,0 +1,122 @@
+@import '~assets/sass/vars';
+// Footer 
+    .logo-footer {
+        height: 20px;
+        margin: 0 20px 0 0;
+    }
+    .footer-about, .footer-shortcut, .footer-call, .footer-wrap {
+        padding:30px 0px 10px 0px;
+    }
+    .footer-about h5, .footer-shortcut h5 {
+        color: #fff;
+        padding: 0px 0px 10px 0px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .footer-about ul li{
+        list-style:none;
+        line-height:38px;
+    }
+    .footer-about ul li a {
+        color:#fff;
+        font-size:15px;
+    }
+    .footer-shortcut ul li {
+        list-style:none;
+        line-height:38px;
+    }
+    .footer-shortcut ul li a {
+        color:#fff;
+        font-size:15px;   
+    }
+    p.date-nav {
+        padding:10px 8px;
+        margin:auto;
+    }
+    .ekreasi-logo-footer {
+        width:100px;
+    }
+    .footer-section-1 {
+        padding:15px 0px;
+    }
+    .terms-link ul {
+        margin:auto;
+        float:right;
+    }
+    .terms-link ul li {
+        list-style:none;
+        float:left;
+        padding:0px 10px;
+    }
+    .terms-link ul li a {
+        color:#fff;
+        font-size:15px;
+    }
+    .copyright span {
+        color:#fff;
+        font-size:14px;
+    }
+    .footer-section-1 {
+        border-bottom:1px solid rgba(255, 255, 255, 0.25)
+    }
+    .footer-section-2 {
+        padding:10px 0px;
+        text-align:center;
+        font-size:13px;
+        color:#fff;
+        margin-left: 10px;
+    }
+    .background-darkgray {
+        width:100%;
+        background:$dark-gray;
+    }
+    .footer-wrap h5 {
+        color:#fff;
+        padding:0px 0px 10px 0px;
+        border-bottom:1px solid rgba(255,255,255,0.25)
+    }
+    .footer-wrap p {
+        color:#fff;
+        padding:10px 0px 10px 0px;
+        line-height:35px;
+        font-size:15px;
+    }
+    .ekreasi-footer-bottom {
+        background: rgba(0,0,0,0.25)
+    }
+    .footer-call ul {
+        border-top:1px solid rgba(255,255,255,0.25);
+        margin-top:34px;
+    }
+    .footer-call ul li {
+        list-style:none;
+        padding: 10px 0px;
+    }
+    .footer-call ul li a {
+        color:#fff;
+    }
+    .footer-call ul li a span {
+        font-size:30px;
+        position: relative;
+        margin-right:40px;
+    }
+    .footer-call ul li a span:before {
+        position:absolute;
+        top:6px;
+    }
+
+    .footer-call ul li a span.icon-watch {
+        color:$magenta;
+    }
+    .footer-call ul li a span.icon-callcenter:before {
+        color: #9254de;
+        font-size: 45px !important;
+        top: 0px;
+        left: -7px;
+    }
+
+    .footer-call ul li a span.icon-mail:before {
+        color: $green;
+        font-size: 40px !important;
+        top: 0px;
+        left: -7px;
+    }

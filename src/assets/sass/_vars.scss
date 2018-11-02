@@ -1,0 +1,465 @@
+// General 
+
+    // Color
+    $magenta:gray;
+    $violet:#6E27C5;
+    $tosca:#01C1D5;
+    $cyan:#01C1D5;
+    $green:#00b050;
+    $yellow:#ffff00;
+    $orange:#FF6600;
+    $red:#F1352B;
+    $blue:#0070c0;
+    $gray:#828282;
+    $gray2:#949494;
+    $grey:#b2b2b2;
+    $dark-gray:#464646;
+    $soft-gray1:#ECEBEB;
+    $light-gray:#f7f7f7;
+    $light-green:#f5f9ef;
+
+
+
+
+//Format 
+.text-align-right {
+    text-align:right !important;
+}
+.margin-auto {
+    margin:auto
+}
+    h1 {
+        font-size: 68px !important;
+        line-height: 60px !important;
+        font-family: 'TrebuchetMS-Bold',sans-serif !important;
+        color: $dark-gray !important;
+    }
+    a {
+        text-decoration:none !important;
+    }
+    .no-padding {
+        padding:0px;
+    }
+    html, body {
+        font-family:'TrebuchetMS',sans-serif !important;
+        letter-spacing:0.5px;
+    }
+    .clearfix {
+        clear: both;
+    }
+    ul, menu, dir {
+        display: block;
+        list-style-type: disc;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 0px;
+    }
+    .font-publico-roman {
+        font-family:'TrebuchetMS',sans-serif !important;
+    }
+    .border-gray-botom-1px {
+        border-bottom:1px solid #ccc;
+    }
+    .border-violet-bottom {
+        border-bottom:3px solid $violet
+    }
+    .no-border-radius {
+        border-radius:0px
+    }
+    .col-centered{
+        float: none;
+        margin: 0 auto;
+    }
+    .min-height-700 {
+        min-height:700px;
+    }
+
+    .headline-center-violet {
+        padding: 0px 0px 10px 0px;
+    }
+    .headline-center-violet h5 {
+        text-align:center;
+        font-size:24px;
+    }
+    .margin-top-1 {
+        margin-top:-1px;
+    }
+    .text-center {
+        text-align:center;
+    }
+    .field-text-wrap {
+        margin:20px auto;
+        border-bottom:1px solid #ccc;
+        
+    }
+    .field-text-wrap label {
+        margin:auto
+    }
+    .padding-20 {
+        padding:20px 40px;
+    }
+    .field-text {
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0px;
+        padding: 8px 0px;
+        color: #6c757d;
+    }
+    .margin-bottom-15 {
+        margin-bottom:15px;
+    }
+    .padding-15 {
+        padding:15px;
+    }
+    .card {
+        border-radius:0px;
+    }
+//Button 
+    .btn-language {
+        color: $grey !important;
+        font-size: 13px !important;
+        float: left;
+    }
+    .btn-border-left:before {
+        content: "|";
+        padding: 0 15px 0 0;
+    }
+    .btn-transparent {
+        background-color:transparent !important;
+        border:none;
+        color:#fff;
+        letter-spacing:1px;
+        font-weight:normal;
+        padding:12px 15px 0 0;
+        font-size:15px;
+    }
+    .btn-login {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+    }
+    .btn-violet {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$violet;
+    }
+    .btn-magenta {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$magenta;
+    }
+    .btn-yellow {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$yellow;
+    }
+    .btn-tosca {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$tosca;
+    }
+    .btn-orange {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$orange;
+    }
+
+    .btn-violet {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$violet;
+    }
+    .btn-blue {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$blue;
+    }
+    .btn-yellow {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$yellow;
+    }
+    .btn-green {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$green;
+    }
+
+    .btn-red {
+        width: 100%;
+        color: #fff;
+        border-radius: 0px;
+        background:$red;
+    }
+    .btn-search-fund {
+        margin:30px auto 15px auto;
+        border:none;
+        height:40px;
+    }
+//Font Color 
+    .color-magenta {
+        color:$magenta
+    }
+    .color-violet {
+        color:$violet
+    }
+    .color-tosca {
+        color:$tosca;
+    }
+    .color-cyan {
+        color:$cyan;
+    }
+    .color-green {
+        color:$green;
+    }
+    .color-yellow {
+        color:$yellow;
+    }
+    .color-orange {
+        color:$orange;
+    }
+    .color-red{
+        color:$red;
+    }
+    .color-blue{
+        color:$blue;
+    }
+    .color-gray{
+        color:#ccc;
+    }
+    .color-gray2 {
+        color:$gray2;
+    }
+    .color-dark-gray{
+        color:$dark-gray;
+    }
+    .color-white {
+        color:#fff;
+    }
+    .background-light-gray {
+        background:$light-gray;
+    }
+    .background-light-green {
+        background:$light-green;
+    }
+    .background-white {
+        background:#fff;
+    }
+    .background-green {
+        background:$green;
+    }
+    .background-violet {
+        background:$violet;
+    }
+    .background-tosca {
+        background:$tosca;
+    }
+    .background-red {
+        background:$red;
+    }
+    .background-magenta {
+        background:$magenta;
+    }
+    .background-blue {
+        background:$blue;
+    }
+    .background-yellow {
+        background:$yellow;
+    }
+    .background-orange {
+        background:$orange;
+    }
+//Border Color 
+    .border-top-violet {
+        border-top:4px solid $violet !important;
+    }
+    .border-top-red{
+        border-top:4px solid $red !important;
+    }
+    .border-top-magenta{
+        border-top:4px solid $magenta !important;
+    }
+    .border-left-magenta {
+        border-left:4px solid $magenta !important;
+    }
+    .border-left-violet {
+        border-left:4px solid $violet !important;
+    }
+    .border-left-green {
+        border-left:4px solid $green !important;
+    }
+    .border-left-red {
+        border-left:4px solid $red !important;
+    }
+    .border-left-blue {
+        border-left:4px solid $blue !important;
+    }
+    .border-left-yellow {
+        border-left:4px solid $yellow !important;
+    }
+    .border-left-tosca {
+        border-left:4px solid $tosca!important;
+    }
+
+
+    .border-right-magenta {
+        border-right:4px solid $magenta !important;
+    }
+    .border-right-violet {
+        border-right:4px solid $violet !important;
+    }
+    .border-right-green {
+        border-right:4px solid $green !important;
+    }
+    .border-right-red {
+        border-right:4px solid $red !important;
+    }
+    .border-right-blue {
+        border-right:4px solid $blue !important;
+    }
+    .border-right-yellow {
+        border-right:4px solid $yellow !important;
+    }
+    .border-right-tosca {
+        border-right:4px solid $tosca!important;
+    }
+
+
+
+    .border-bottom-magenta {
+        border-bottom:4px solid $magenta !important;
+    }
+    .border-bottom-violet {
+        border-bottom:4px solid $violet !important;
+    }
+    .border-bottom-green {
+        border-bottom:4px solid $green !important;
+    }
+    .border-bottom-gray {
+        border-bottom:4px solid #eee !important;
+    }
+    .border-bottom-1-dark-gray {
+        border-bottom:1px solid $dark-gray!important;
+    }
+
+    .border-bottom-1-green {
+        border-bottom:1px solid $green!important;
+    }
+    .border-bottom-1-magenta {
+        border-bottom:1px solid $magenta!important;
+    }
+    .border-bottom-1-violet {
+        border-bottom:1px solid $violet!important;
+    }
+    .border-bottom-1-red {
+        border-bottom:1px solid $red!important;
+    }
+    .border-bottom-2-light-gray {
+        border-bottom:2px solid $gray!important;
+    }
+    .border-bottom-2-dark-gray {
+        border-bottom:2px solid $dark-gray!important;
+    }
+    .border-bottom-2-magenta {
+        border-bottom:2px solid $magenta!important;
+    }
+    .border-bottom-2-green {
+        border-bottom:2px solid $green!important;
+    }
+    .border-bottom-2-violet {
+        border-bottom:2px solid $violet!important;
+    }
+    .border-bottom-2-red {
+        border-bottom:2px solid $red!important;
+    }
+    .padding-lr-7 {
+        padding:0px 7px 0px 7px;
+    }
+    .border-top-1px-gray {
+        border-top:1px solid #ccc;
+    }
+    .border-top-gray {
+        border-top:3px solid #ccc;
+    }
+    .border-1-gray {
+        border:1px solid #ccc
+    }
+//Margin 
+    .margin-top-15 {
+        margin-top:15px;
+    }
+    .margin-bottom-15 {
+        margin-bottom:15px;
+    }
+
+    .margin-bottom-20 {
+        margin-bottom:20px;
+    }
+    .margin-bottom-30 {
+        margin-bottom:30px;
+    }
+    .margin-tb-40 {
+        margin-top:40px;
+        margin-bottom:40px;
+    }
+    .margin-tb-80 {
+        margin-top:80px;
+        margin-bottom:80px;
+    }
+//Padding 
+    .padding-tb-60 {
+        padding:60px 0px 60px 0px;
+    }
+    .padding-30 {
+        padding:30px;
+    }
+
+// Header 
+    .inner-content-white {
+        padding:80px 0px; 
+    }
+    .inner-content-gray {
+        padding:80px 0px;
+        background:#EEEEEE;
+    }
+    .ekreasi-header-content h1 {
+        margin:auto;
+        padding:20px 0px 0px 0px;
+    }
+
+    .ekreasi-breadcrumb a {
+        color:#BABABA;
+        text-decoration:none;
+        font-size:18px;
+    }
+    .annual span.icon-downloads:before {
+        color:$magenta;
+        font-size:28px;
+    }
+
+    .carousel-indicators {
+        bottom: -12px;
+    }
+.carousel-indicators li {
+        background:#eee !important;
+    }
+  .carousel-indicators li.active {
+         background:$magenta !important;
+    }
+    .table tr td.middle-top {
+        vertical-align:top !important;
+    }

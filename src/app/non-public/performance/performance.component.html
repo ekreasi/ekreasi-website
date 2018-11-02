@@ -1,0 +1,188 @@
+<header-non-public></header-non-public>
+<content>
+<div  class="inner-content-dashboard">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+            <div class="ekreasi-header-content-non-public">
+                <div class="ekreasi-breadcrumb">
+                    <a [routerLink]="['/dashboard']" routerLinkActive="active"><span class="icon-left"></span>Dashboard</a>
+                  </div>
+              <h1>Customer Corner</h1>
+            </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="ekreasi-header-content welcome-page float-right">
+                  <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
+                  <ul>
+                    <li>Last Login at Friday, 8 Feb 2018. 01:58pm </li>
+                    <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+  </div>
+  </div>
+  <div class="inner-content-gray">
+      <div class="side-menu-dashboard-vertical"> 
+          <menu-dashboard-vertical></menu-dashboard-vertical>
+      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal"> 
+                <menu-dashboard-horizontal></menu-dashboard-horizontal>
+            </div>
+            <div class="ekreasi-content-general">
+              <div class="headline-left border-bottom-gray">
+                <div class="row">
+                  <div  class="col-sm-12">
+                    <h5 class="color-orange">Performance</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="ekreasi-content-nonpublic">
+                <div class="performance-wrap">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ngb-tabset class="ekreasi-primary-tab tab-col-6 tab-col-2">
+                                <ngb-tab>
+                                  <ng-template ngbTabTitle>Monthly</ng-template>
+                                  <ng-template ngbTabContent>
+                                      <div class="background-white padding-30 box-shadow">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Fund Name</label>
+                                                        <select  class="form-control no-border-radius" id="exampleFormControlSelect1">
+                                                        <option>ekreasi Rupiah Equity Fund </option>
+                                                        <option>ekreasi Rupiah Equity Fund 2</option>
+                                                        <option>ekreasi Rupiah Equity Fund 3</option>
+                                                        <option>ekreasi Money Market Fund</option>
+                                                        <option>ekreasi Rupiah Stable Fund</option>
+                                                        <option>ekreasi USD Stable Fund</option>
+                                                        <option>ekreasi Syariah Balanced Fund</option>
+                                                        <option>ekreasi Rupiah Managed Fund</option>
+                                                        <option>ekreasi USD Stable Fund</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Select Year</label>
+                                                        <select  class="form-control no-border-radius" id="exampleFormControlSelect1">
+                                                        <option>2017 </option>
+                                                        <option>2016</option>
+                                                        <option>2015</option>
+                                                        <option>2014</option>
+                                                        <option>2015</option>
+                                                        <option>2014</option>
+                                                        <option>2013</option>
+                                                        <option>2012</option>
+                                                        <option>2011</option>
+                                                        <option>2010</option>
+                                                        <option>2009</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Select Month</label>
+                                                        <select  class="form-control no-border-radius" id="exampleFormControlSelect1">
+                                                            <option>January </option>
+                                                            <option>February</option>
+                                                            <option>March</option>
+                                                            <option>April</option>
+                                                            <option>May</option>
+                                                            <option>June</option>
+                                                            <option>July</option>
+                                                            <option>August</option>
+                                                            <option>September</option>
+                                                            <option>October</option>
+                                                            <option>November</option>
+                                                            <option>December</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <button class="btn-magenta btn-search-fund">Search</button>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="charts-performance-wrap border-top-1px-gray">
+                                                    <performance-fund-monthly></performance-fund-monthly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                      </div>
+                                      
+                                  </ng-template>
+                                </ngb-tab>
+                                <ngb-tab>
+                                  <ng-template ngbTabTitle>Yearly</ng-template>
+                                  <ng-template ngbTabContent>
+                                      <div class="background-white padding-30 box-shadow">
+                                        <div class="search-wrap">
+                                            <div class="row">
+                                              <div class="col-lg-4">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect1">Fund Name</label>
+                                                      <select  class="form-control no-border-radius" id="exampleFormControlSelect1">
+                                                        <option>ekreasi Rupiah Equity Fund </option>
+                                                        <option>ekreasi Rupiah Equity Fund 2</option>
+                                                        <option>ekreasi Rupiah Equity Fund 3</option>
+                                                        <option>ekreasi Money Market Fund</option>
+                                                        <option>ekreasi Rupiah Stable Fund</option>
+                                                        <option>ekreasi USD Stable Fund</option>
+                                                        <option>ekreasi Syariah Balanced Fund</option>
+                                                        <option>ekreasi Rupiah Managed Fund</option>
+                                                        <option>ekreasi USD Stable Fund</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-4">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect1">Select Year</label>
+                                                      <select  class="form-control no-border-radius" id="exampleFormControlSelect1">
+                                                        <option>2017 </option>
+                                                        <option>2016</option>
+                                                        <option>2015</option>
+                                                        <option>2014</option>
+                                                        <option>2015</option>
+                                                        <option>2014</option>
+                                                        <option>2013</option>
+                                                        <option>2012</option>
+                                                        <option>2011</option>
+                                                        <option>2010</option>
+                                                        <option>2009</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-4">
+                                                  <button class="btn-magenta btn-search-fund">Search</button>
+                                              </div>
+                                              <div class="col-lg-12">
+                                                  <div class="charts-performance-wrap border-top-1px-gray">
+                                                      <perfomance-fund-yearly></perfomance-fund-yearly>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      
+                                  </ng-template>
+                                </ngb-tab>
+                                
+                            </ngb-tabset>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>
+     </div>
+  </div>
+</div>
+</content>
+<app-footer></app-footer>

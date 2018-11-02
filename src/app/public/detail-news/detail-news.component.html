@@ -1,0 +1,23 @@
+<header-page-tosca></header-page-tosca>
+<content>
+  <div  class="inner-content-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-header-content">
+            <div class="ekreasi-breadcrumb">
+              <a [routerLink]="['/news']" routerLinkActive="active"><span class="icon-left"></span>News</a>
+            </div>
+            <h1>{{data.title}}</h1>
+          </div>
+          <div class="ekreasi-image-about">
+            <img [src]="data.image0Filename">
+          </div>
+          <div class="ekreasi-secondary-paragraph" [innerHTML]="data.description">             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

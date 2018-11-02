@@ -1,0 +1,49 @@
+@import '~assets/sass/vars';
+.inner-content-agents{
+    padding:80px 0px 80px 0px; 
+}
+.ekreasi-agent-wrap {
+    background:#fff;
+    padding:30px;
+}
+.tab-agent {
+
+}
+
+.ekreasi-detail-agent h6 {
+    font-family:'publico-roman',serif;
+    color:$violet;
+    border-bottom:2px solid $violet;
+    padding-bottom:15px;
+}
+.ekreasi-detail-agent table tr td {
+    font-size:15px;
+}
+.bottom-content {
+    padding:30px 0px 0px 0px;
+}
+.title-bottom-content p {
+    margin:auto;
+}
+.btn-ekreasi-agent-search {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none !important;
+    background: transparent;
+}
+.ekreasi-agent-search-bg {
+    border-top: 1px solid #ccc;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-radius: 0px;
+}
+.ekreasi-agent-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.ekreasi-agent-search {
+    margin-bottom:20px;
+    border-bottom:1px solid #ddd;
+}

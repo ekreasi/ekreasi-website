@@ -1,0 +1,241 @@
+<header-non-public></header-non-public>
+<content>
+<div  class="inner-content-dashboard">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="ekreasi-header-content">
+            <h1>Customer Corner</h1>
+          </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ekreasi-header-content welcome-page" data-step="1" data-intro="Welcome Page">
+                <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
+                <ul>
+                  <li>Last Login at Friday, 9 Feb, 2018. 01:58pm </li>
+                  <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
+                </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content-gray">
+      <div class="side-menu-dashboard-vertical" data-step="2" data-intro="Pilihan Menu" data-position='right' data-scrollTo='tooltip'> 
+          <menu-dashboard-vertical  ></menu-dashboard-vertical>
+      </div>
+    <div class="container popup-transparent" style="position: relative;" id="popup">
+        <div class="row">
+            <div class="col-lg-8 notif-tutorial ">
+                Jika membutuhkan tutorial dari kami silakan klik tombol berikut ini <a class="btn-tutorial" href="javascript:void(0);" onclick="javascript:introJs().start();">Mulai</a>
+                <a class="btn-close-tutorial" href="javascript:void(0);" onclick="document.getElementById('popup').style.display='none';return false;" id="close_popup"></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-content-dashboard-wrap">
+          <div class="side-menu-dashboard-horizontal"> 
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
+          </div>
+          <div class="ekreasi-slide-non-public" >
+              <ngx-carousel [inputs]="carouselOne" data-step="3" data-intro="Banner"  data-position='top'>
+                  <ngx-item NgxCarouselItem>
+                    <div class="ekreasi-banner-dashboard border-right-yellow">
+                      <div class="row">
+                        <div class="col-lg-6 no-padding">
+                            <div class="banner-dashboard">
+                                <div class="img-hero-banner">
+                                    <img src="./assets/img/dummy/family-banner.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 no-padding">
+                            <div class="ekreasi-banner-dashboard-text ">
+                                <h3>Asuransi, Salah Satu Cara Mewujudkan Cinta kepada Keluarga</h3>
+                                <p>Terdiagnosa penyakit kritis adalah risiko kesehatan yang bisa datang kapan dan kepada siapa saja. Faktor usia dan gaya hidup masih jadi penyebab utama…</p>
+                                <a href="#">Baca Lebih Lanjut<span class="icon-right"></span></a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ngx-item>
+                  <ngx-item NgxCarouselItem>
+                      <div class="ekreasi-banner-dashboard  border-right-magenta ">
+                        <div class="row">
+                          <div class="col-lg-6 no-padding">
+                              <div class="banner-dashboard">
+                                  <div class="img-hero-banner">
+                                      <img src="./assets/img/dummy/family-banner2.jpg">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 no-padding">
+                              <div class="ekreasi-banner-dashboard-text">
+                                  <h3>Asuransi, Salah Satu Cara Mewujudkan Cinta kepada Keluarga</h3>
+                                  <p>Terdiagnosa penyakit kritis adalah risiko kesehatan yang bisa datang kapan dan kepada siapa saja. Faktor usia dan gaya hidup masih jadi penyebab utama…</p>
+                                  <a href="#">Baca Lebih Lanjut<span class="icon-right"></span></a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ngx-item>
+                    <ngx-item NgxCarouselItem>
+                        <div class="ekreasi-banner-dashboard border-right-tosca">
+                            <div class="row">
+                            <div class="col-lg-6 no-padding">
+                                <div class="banner-dashboard">
+                                    <div class="img-hero-banner">
+                                        <img src="./assets/img/dummy/family-banner3.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 no-padding">
+                                <div class="ekreasi-banner-dashboard-text ">
+                                    <h3>Asuransi, Salah Satu Cara Mewujudkan Cinta kepada Keluarga</h3>
+                                    <p>Terdiagnosa penyakit kritis adalah risiko kesehatan yang bisa datang kapan dan kepada siapa saja. Faktor usia dan gaya hidup masih jadi penyebab utama…</p>
+                                    <a href="#">Baca Lebih Lanjut<span class="icon-right"></span></a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </ngx-item>
+                  <button NgxCarouselPrev class='leftRs'>&lt;</button>
+                  <button NgxCarouselNext class='rightRs'>&gt;</button>
+              </ngx-carousel>
+          </div>
+          <div class="policy-group-wrap" data-step="4" data-intro="Info Policy">
+            <div class="title-wrap-dashboard">
+                <div class="headline-policy">
+                    <div class="row">
+                        <div class="col-sm-6">
+                        <h5 class="color-cyan">Policy Summary</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="btn-next-text color-cyan float-right" [routerLink]="['/my-data/policy-information']"> Selengkapnya <span class="icon-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ekreasi-section-policy-wrap">
+                <div class="row">
+                <div class="col-lg-6">
+                        <div class="policy-item-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" >
+                                             <div class="sub-label" >Policy Number <a [routerLink]="['/my-data/policy-information']">09012312898</a></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td class="label">
+                                        Main Life Assured
+                                    </td>
+                                    <td>
+                                        Rosalina Prisca
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label">
+                                        Next Due Date
+                                    </td>
+                                    <td>
+                                        19-May-2018
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix"></div>
+                </div>
+                <div class="col-lg-6">
+                        <div class="policy-item-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" >
+                                                <div class="sub-label" >Policy Number <a [routerLink]="['/my-data/policy-information']">029203215642</a></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td class="label">
+                                        Main Life Assured
+                                    </td>
+                                    <td>
+                                            Maria Angela Kurniawati
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="label">
+                                        Next Due Date
+                                    </td>
+                                    <td>
+                                        17-May-2018
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix"></div>
+                </div>
+                </div>
+
+            </div>
+          </div>
+          <div class="ekreasi-section-fund">
+            <div class="row">
+              <div class="col-lg-6">
+                  <div class="ekreasi-section-nav background-white">
+                      <div class="headline-nav">
+                         <h5 class="color-cyan"><i class="fas fa-chart-line"></i><span>Your Top 3 Funds</span></h5>
+                      </div>
+                      <div class="background-white chub-chart">
+                          <ngb-carousel>
+                              <ng-template ngbSlide>
+                                  <chart-rupiah-equity-fund></chart-rupiah-equity-fund>
+                              </ng-template>
+                              <ng-template ngbSlide>
+                                    <chart-rupiah-syariah-bond-fund></chart-rupiah-syariah-bond-fund>
+                                </ng-template>
+                              <ng-template ngbSlide>
+                                    <chart-rupiah-equity-fund></chart-rupiah-equity-fund>
+                                </ng-template>
+                             
+                          </ngb-carousel>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="ekreasi-section-nav background-white">
+                      <div class="headline-nav">
+                         <h5 class="color-cyan"><i class="fas fa-chart-line"></i><span>ekreasi Life Top 3 Funds</span></h5>
+                      </div>
+                      <div class="background-white chub-chart">
+                          <ngb-carousel>
+                              
+                              <ng-template ngbSlide>
+                                  <chart-rupiah-syariah-bond-fund></chart-rupiah-syariah-bond-fund>
+                              </ng-template>
+                              <ng-template ngbSlide>
+                                    <chart-rupiah-equity-fund></chart-rupiah-equity-fund>
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                        <chart-rupiah-syariah-bond-fund></chart-rupiah-syariah-bond-fund>
+                                    </ng-template>
+                          </ngb-carousel>
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+
+<app-footer></app-footer>

@@ -1,0 +1,298 @@
+@import '~assets/sass/vars';
+
+
+//Navigation 
+
+
+
+
+//Hero
+    .hero-img {
+        width: inherit;
+    }
+    .hero-text {
+        text-align: left;
+        padding-top: 80px;
+        padding-left: 40px;
+    }
+    .col-lg-6, .hero-text p {
+        margin: 40px 0 0 0 !important;
+        color: $gray2 !important;
+        font-size: 22px !important;
+        line-height: 30px !important;
+    }
+    .ekreasi-hero {
+        width:100%;
+        height:550px;
+    }
+    .ekreasi-hero {
+        overflow: hidden;
+        position: relative;
+    }
+    .img-hero {
+        position:absolute;
+        width:100%;
+        height:100%;
+
+    }
+    .img-hero img {
+        height: 100%;
+    }
+    .bg-hero {
+        position: absolute;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5);
+        z-index:1;
+    }
+    .ekreasi-hero-content {
+        position: absolute;
+        z-index: 1;
+        bottom: 0px;
+        padding: 0px 30px;
+        color: #fff;
+        top: 60%;
+        left: 30%;
+        transform: translate(-30%, -60%);
+        border-left: 4px solid $green;
+    }
+    .leftRs, .rightRs {
+        display:none !important;
+    }
+    .ekreasi-hero-content a {
+        color:#fff;
+    }
+    .ekreasi-hero-content a span.icon-right{
+        line-height:0px;
+    }
+    .ekreasi-hero-content a span.icon-right:before {
+        position: relative;
+        top:2px;
+    }
+
+//Login 
+    .ekreasi-login-home {
+        border:1px solid #ccc;
+        padding:15px 25px;
+        width:100%;
+        height:260px;
+    }
+    .ekreasi-login-home  h5 {
+        text-align:center;
+    }
+    .ekreasi-login {
+        
+    }
+    .ekreasi-login-bg {
+        border:1px solid #ccc;
+        border-radius:0px;
+        padding-left:40px;
+    }
+
+    .icon-user:before {
+        font-size:36px;
+        color:#ccc;
+        border-right:none;
+    }
+    .icon-user,.icon-password{
+        position: absolute;
+        top: 1px;
+        z-index:1;
+    }
+
+    .icon-password:before {
+        font-size:36px;
+        color:#ccc;
+    }
+    .btn-login {
+        width:100%;
+        background:$violet;
+        color:#fff;
+        border-radius:0px;
+    }
+    .ekreasi-login-home a {
+        margin:8px auto 0px auto;
+        color:$dark-gray;
+        text-decoration:none
+    }
+    input.ng-invalid { border: 1px solid red !important; }
+    input.ng-valid { border: 1px solid #46bb46 !important; }
+    input.ng-untouched {border: 1px solid #ccc !important; }
+    input:-webkit-autofill { background-color: transparent !important; }
+    .ekreasi-alert {
+        font-size: 12px;
+        -webkit-animation: 2s alertAnim forwards;
+        animation: 2s alertAnim forwards;
+        color: red;
+        z-index: 0 !important;
+        border-radius:0px;
+    }
+    .form-control:focus {
+        z-index:0 !important;
+    }
+    .separator-login {
+        height:22px;
+    }
+    .btn.disabled, .btn:disabled {
+        background-color: gray;
+    }
+
+// feature item
+    .ekreasi-box .icon-education:before {
+        font-size: 130px;
+        top: 34px;
+        position: relative;
+        line-height: 0;
+        color:$magenta;
+    }
+    .ekreasi-item-download {
+        height: 190px;
+        width: 100%;
+        background:$violet;
+    }
+    .ekreasi-box {
+        border:1px solid #ccc;
+        width:100%;
+        height:190px;
+    }
+    .ekreasi-box h5 {
+        color:$dark-gray;
+        text-align:center;
+        padding:15px 0px 10px 0px;
+    }
+    .ekreasi-item-download {
+        text-align:center;
+    }
+    .ekreasi-item-download h5 {
+        color:#fff;
+        text-align:center;
+        padding:15px 0px 10px 0px;
+        font-size:17px;
+    }
+    .ekreasi-item-download .icon-pdf:before {
+        font-size: 130px;
+        top: 50px;
+        position: relative;
+        line-height: 0;
+        color:#fff;
+        text-align:center;
+    }
+    .ekreasi-item-download .icon-claimform:before {
+        font-size: 130px;
+        top: 50px;
+        position: relative;
+        line-height: 0;
+        color:#fff;
+        text-align:center;
+    }
+    .ekreasi-box .icon-product:before {
+        font-size: 130px;
+        top: 34px;
+        position: relative;
+        line-height: 0;
+        color:$magenta
+    }
+    .ekreasi-box .icon-hospital:before {
+        font-size: 130px;
+        top: 34px;
+        position: relative;
+        line-height: 0;
+        color:$violet
+    }
+    .ekreasi-box .icon-education:before {
+        font-size: 130px;
+        top: 34px;
+        position: relative;
+        line-height: 0;
+        color:$magenta
+    }
+    .ekreasi-box .icon-pdf:before {
+        font-size: 130px;
+        top: 34px;
+        position: relative;
+        line-height: 0;
+        color:$violet
+    }
+    .ekreasi-box .icon-claimform:before {
+        font-size: 110px;
+        top: 34px;
+        position: relative;
+        line-height: 0;
+        color:$violet;
+        margin-bottom:30px;
+    }
+    .ekreasi-box p {
+        color:$gray;
+    }
+    .ekreasi-box .icon-product,.ekreasi-box .icon-hospital, .ekreasi-box .icon-education, .ekreasi-box .icon-claimform{
+        line-height: 5;
+    }
+    .ekreasi-box {
+        text-align: center;
+    }
+    .ekreasi-box a {
+        color:#9B9B9B;
+        text-decoration:none;
+        font-size:15px;
+    }
+    .ekreasi-box a span.icon-right{
+        line-height:0px;
+    }
+    .ekreasi-box a span.icon-right:before {
+        position: relative;
+        top:2px;
+    }
+
+//Nav 
+.ekreasi-nab {
+    width:100%;
+    height:260px;
+    margin-top:30px;
+}
+
+.ekreasi-list-nab table tr td {
+    font-size: 13px;
+    padding: 19px 5px 18px 5px;
+    position: relative;
+}
+.ekreasi-list-nab table tr td span {
+    line-height:0;
+}
+.ekreasi-list-nab table tr td span.icon-triangleup:before {
+    font-size:22px;
+    color:green;
+    top:4px;
+    position:relative;
+}
+.ekreasi-list-nab table tr td span.icon-triangledown:before {
+    font-size:22px;
+    color:red;
+    top:4px;
+    position:relative;
+}
+.ekreasi-nab-bottom {
+    padding:10px;
+    background:$magenta;
+}
+.ekreasi-list-nab table, .ekreasi-nav-title table {
+    width:100%;
+    margin:auto;
+}
+.ekreasi-nav-title table tr td h5 {
+    font-size:18px;
+    margin:auto;
+    padding:10px;
+}
+.ekreasi-nav-title table tr td p{
+    font-size:14px;
+    margin:auto;
+    padding:10px 0px;
+}
+.ekreasi-nav-title table tr td  {
+    padding:0px;
+}
+.ekreasi-nab-bottom a {
+    float:right;
+    color:#fff;
+    font-size:14px;
+}

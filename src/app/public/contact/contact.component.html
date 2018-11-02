@@ -1,0 +1,122 @@
+<header-page-red></header-page-red>
+<content>
+<div  class="inner-content-contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-header-content">
+            <div class="ekreasi-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+            </div>
+            <h1>Contact</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-contact-wrap">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="ekreasi-contact-title">
+                        <h4>Contact Form</h4>
+                      </div>
+                      <div class="ekreasi-contact-form">
+                          <form>
+                              <div class="form-group">
+                                  <label>Name</label>
+                                  <input type="text" class="form-control no-border-radius" aria-describedby="emailHelp" placeholder="Your Name">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control no-border-radius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                              </div>
+                              <div class="form-group">
+                                  <label>Mobile Phone</label>
+                                  <input type="number" class="form-control no-border-radius" placeholder="ex : 08272772772">
+                              </div>
+                              <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Category</label>
+                                  <select class="form-control no-border-radius" id="exampleFormControlSelect1">
+                                    <option>Complain of Product</option>
+                                    <option>Info Product</option>
+                                    <option>Complain of Service</option>
+                                  </select>
+                                </div>
+                              <div class="form-group">
+                                  <label>Subject</label>
+                                  <input type="text" class="form-control no-border-radius" placeholder="Your Subject">
+                              </div>
+                              <div class="form-group">
+                                  <label for="exampleFormControlTextarea1">Your Message</label>
+                                  <textarea class="form-control no-border-radius" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                              <button type="submit" class="btn btn-submit green">Submit</button>
+                            </form>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="ekreasi-contact-title">
+                        <h4>Customer Service Centre</h4>
+                      </div>
+                      <div class="ekreasi-customer-service">
+                        <p><strong class="font-publico-roman">PT ekreasi Life Insurance Indonesia </strong><br>
+                           Plaza Permata, 1st Fl.<br>
+                           Jl. M.H. Thamrin No. 57 <br>
+                           Jakarta, 10310 
+                        </p>
+                        <div class="contact-call">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <span class="icon-watch"></span>
+                                  Senin-Jumat, 09.00-17.00 WIB
+                                </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                    <span class="icon-callcenter"></span>
+                                    +62 21 2356 8887
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                    <span class="icon-mail"></span>
+                                    Customer.Service.IDLife@ekreasi.com
+                                  </a>
+                              </li>
+                            </ul>
+                        </div>
+                        <div class="map-wrap">
+                            <agm-map 
+                            [latitude]="lat"
+                            [longitude]="lng"
+                            [zoom]="zoom"
+                            [disableDefaultUI]="false"
+                            [zoomControl]="false">
+                          
+                            <agm-marker 
+                                *ngFor="let m of markers; let i = index"
+                                [latitude]="m.lat"
+                                [longitude]="m.lng"
+                                [label]="m.label">
+                              
+                            </agm-marker>
+                          
+                          </agm-map>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

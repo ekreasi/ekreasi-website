@@ -1,0 +1,208 @@
+<header-non-public></header-non-public>
+<content>
+<div  class="inner-content-dashboard">
+  <div class="container">
+        <div class="row">
+                <div class="col-lg-6">
+                  <div class="ekreasi-header-content-non-public">
+                      <div class="ekreasi-breadcrumb">
+                          <a [routerLink]="['/dashboard']" routerLinkActive="active"><span class="icon-left"></span>Dashboard</a>
+                        </div>
+                    <h1>Customer Corner</h1>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                        <div class="ekreasi-header-content welcome-page float-right">
+                            <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
+                            <ul>
+                              <li>Last Login at Friday, 8 Feb 2018. 01:58pm </li>
+                              <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
+                            </ul>
+                        </div>
+                      </div>
+              </div>
+        </div>
+  </div>
+  <div class="inner-content-gray">
+      <div class="side-menu-dashboard-vertical"> 
+          <menu-dashboard-vertical></menu-dashboard-vertical>
+      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal"> 
+                <menu-dashboard-horizontal></menu-dashboard-horizontal>
+            </div>
+              
+            <div class="ekreasi-content-general">
+              <div class="headline-left border-bottom-gray">
+                <div class="row">
+                  <div  class="col-lg-12">
+                    <h5 class="color-orange">Daily Unit Price</h5>
+                  </div>
+                </div>
+              </div>
+                <div class="ekreasi-content-nonpublic">
+                    <div class="row">
+                        <div class="col-lg-12 headline-center-tab">
+                            <div class="background-white">
+                                    <div class="search-wrap">
+                                        <div class="row">
+                                          <div class="col-lg-3">
+                                              <div  class="form-group">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Fund Name</label>
+                                                        <select  class="form-control no-border-radius" id="exampleFormControlSelect1">
+                                                          <option>ekreasi Rupiah Equity Fund</option>
+                                                          <option>ekreasi Rupiah Equity Fund 2</option>
+                                                          <option>ekreasi Rupiah Equity Fund 3</option>
+                                                          <option>ekreasi Rupiah Equity Fund 4</option>
+                                                          <option>ekreasi Money Market Fund</option>
+                                                          <option>ekreasi Rupiah Stable Fund</option>
+                                                          <option>ekreasi USD Stable Fund</option>
+                                                          <option>ekreasi Syariah Balanced Fund</option>
+                                                          <option>ekreasi Rupiah Managed Fund</option>
+                                                        </select>
+                                                    </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-3">
+                                                <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Compare Price On</label>
+                                                <div class="input-group">
+                                                    <input class="form-control" placeholder="{{valuedate | date: 'dd-MM-yyyy'}}"  [(ngModel)]="modelStart" ngbDatepicker #start="ngbDatepicker">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" (click)="start.toggle()" type="button">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                          </div>
+                                          <div class="col-lg-3">
+                                                <div class="form-group">
+                                                <label for="exampleFormControlSelect1">With</label>
+                                                <div class="input-group">
+                                                    <input class="form-control" placeholder="{{valuedate | date: 'dd-MM-yyyy'}}"  [(ngModel)]="modelStart" ngbDatepicker #end="ngbDatepicker">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary" (click)="end.toggle()" type="button">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                          </div>
+                                          <div class="col-lg-3">
+                                              <button class="btn-magenta btn-search-fund">Search</button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-orange unit-price">
+                                        <table class="table table-striped border-gray-botom-1px thead-center">
+                                          <thead>
+                                              <tr>
+                                                  <th>Fund Name</th>
+                                                  <th>19 March 2018</th>
+                                                  <th>20 March 2018</th>
+                                                  <th><a href="#"><i class="fas fa-caret-up"></i></a>Percentage<a href="#"><i class="fas fa-caret-down"></i></a></th>
+                                              </tr>
+                                          </thead>
+                                          <tr>
+                                              <td>ekreasi Rupiah Equity Fund</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangleup"></span>Rp 3,467</td>
+                                              <td>5%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Rupiah Equity Fund 2</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangleup"></span>Rp 3,467</td>
+                                              <td>5%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Rupiah Equity Fund 3</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangleup"></span>Rp 3,467</td>
+                                              <td>5%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Rupiah Equity Fund 4</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangledown"></span>Rp 3,267</td>
+                                              <td>5%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Money Market Fund</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangleup"></span>Rp 3,567</td>
+                                              <td>5%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Rupiah Managed Fund</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangleup"></span>Rp 3,467</td>
+                                              <td>4%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Rupiah Stable Fund</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangledown"></span>Rp 3,267</td>
+                                              <td>5%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi USD Stable Fund</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangleup"></span>Rp 3,467</td>
+                                              <td>4%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Syariah Balanced Fund</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangledown"></span>Rp 3,267</td>
+                                              <td>5%</td>
+                                          </tr>
+                                          <tr>
+                                              <td>ekreasi Rupiah Managed Fund</td>
+                                              <td class="text-align-right">Rp 3,465</td>
+                                              <td class="text-align-right"><span class="icon-triangleup"></span>Rp 3,467</td>
+                                              <td>5%</td>
+                                          </tr>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="title-bottom-content">
+                                                <p>Total  <span class="color-magenta">25</span> Unit Price</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="pagination-magenta float-right">
+                                            <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <div class="ekreasi-content-nonpublic">
+                <div class="row">
+                  <div class="col-lg-12">
+                      
+                      
+                  </div>
+                 
+                  
+                </div>
+              </div>
+            </div>
+                 
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

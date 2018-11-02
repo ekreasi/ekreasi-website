@@ -1,0 +1,384 @@
+<header-page></header-page>
+<content>
+<div  class="inner-content-contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-header-content">
+            <div class="ekreasi-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+            </div>
+            <h1>Office Networking</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-section-networking">
+            <div class="title-category border-bottom-violet">
+            <h5 class="color-violet">Customer Service Centre</h5>
+            </div>
+            <div class="item-category-wrap">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="title-address">
+                    <h5>PT ekreasi Life Insurance Indonesia</h5>
+                    <p>Plaza Permata, 1st Floor<br>
+                        Jl. MH. Thamrin No. 57<br>
+                        Jakarta 10350</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-call">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span class="icon-watch"></span>
+                              Senin-Jumat, 09.00-17.00 WIB
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-callcenter"></span>
+                                +62 21 2356 8887
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-mail"></span>
+                                Customer.Service.IDLife@ekreasi.com
+                              </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                      <div class="map-wrap">
+                          <agm-map 
+                          [latitude]="lat"
+                          [longitude]="lng"
+                          [zoom]="zoom"
+                          [disableDefaultUI]="false"
+                          [zoomControl]="false">
+                        
+                          <agm-marker 
+                              *ngFor="let m of markers; let i = index"
+                              [latitude]="m.lat"
+                              [longitude]="m.lng"
+                              [label]="m.label">
+                            
+                          </agm-marker>
+                        
+                        </agm-map>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-category border-bottom-magenta">
+                <h5 class="color-magenta">Kantor Pemasaran</h5>
+            </div>
+            <div class="item-category-wrap">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="title-address">
+                    <h5>Jakarta (Head Office)</h5>
+                    <p>ekreasi Square, 6th Floor<br>
+                        Jl. MH. Thamrin No. 10<br>
+                        Jakarta 10340</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-call">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span class="icon-watch"></span>
+                              Senin-Jumat, 09.00-17.00 WIB
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-callcenter"></span>
+                                +62 21 2356 8887
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-mail"></span>
+                                Customer.Service.IDLife@ekreasi.com
+                              </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                      <div class="map-wrap">
+                          <agm-map 
+                          [latitude]="lat"
+                          [longitude]="lng"
+                          [zoom]="zoom"
+                          [disableDefaultUI]="false"
+                          [zoomControl]="false">
+                        
+                          <agm-marker 
+                              *ngFor="let m of markers; let i = index"
+                              [latitude]="m.lat"
+                              [longitude]="m.lng"
+                              [label]="m.label">
+                            
+                          </agm-marker>
+                        
+                        </agm-map>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-category-wrap">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="title-address">
+                    <h5>Jakarta (Marketing Office)</h5>
+                    <p>Plaza Permata, 1st Floor<br>
+                        Jl. MH. Thamrin No. 57<br>
+                        Jakarta 10350</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-call">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span class="icon-watch"></span>
+                              Senin-Jumat, 09.00-17.00 WIB
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-callcenter"></span>
+                                +62 21 2356 8887
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-mail"></span>
+                                Customer.Service.IDLife@ekreasi.com
+                              </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                      <div class="map-wrap">
+                          <agm-map 
+                          [latitude]="lat"
+                          [longitude]="lng"
+                          [zoom]="zoom"
+                          [disableDefaultUI]="false"
+                          [zoomControl]="false">
+                        
+                          <agm-marker 
+                              *ngFor="let m of markers; let i = index"
+                              [latitude]="m.lat"
+                              [longitude]="m.lng"
+                              [label]="m.label">
+                            
+                          </agm-marker>
+                        
+                        </agm-map>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-category-wrap">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="title-address">
+                    <h5>Surabaya</h5>
+                    <p>Wisma AGI, 4th Floor<br>
+                        Jl. Tidar No. 17-19<br>
+                        Surabaya 60251</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-call">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span class="icon-watch"></span>
+                              Senin-Jumat, 09.00-17.00 WIB
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-callcenter"></span>
+                                +62 21 2356 8887
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-mail"></span>
+                                Customer.Service.IDLife@ekreasi.com
+                              </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                      <div class="map-wrap">
+                          <agm-map 
+                          [latitude]="lat"
+                          [longitude]="lng"
+                          [zoom]="zoom"
+                          [disableDefaultUI]="false"
+                          [zoomControl]="false">
+                        
+                          <agm-marker 
+                              *ngFor="let m of markers; let i = index"
+                              [latitude]="m.lat"
+                              [longitude]="m.lng"
+                              [label]="m.label">
+                            
+                          </agm-marker>
+                        
+                        </agm-map>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-category-wrap">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="title-address">
+                    <h5>Tangerang</h5>
+                    <p>Jl. Boulevard Kelapa Gading Serpong<br>
+                        Blok BA-2 No. 15-15A<br>
+                        Tangerang 15810</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-call">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span class="icon-watch"></span>
+                              Senin-Jumat, 09.00-17.00 WIB
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-callcenter"></span>
+                                +62 21 2356 8887
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-mail"></span>
+                                Customer.Service.IDLife@ekreasi.com
+                              </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                      <div class="map-wrap">
+                          <agm-map 
+                          [latitude]="lat"
+                          [longitude]="lng"
+                          [zoom]="zoom"
+                          [disableDefaultUI]="false"
+                          [zoomControl]="false">
+                        
+                          <agm-marker 
+                              *ngFor="let m of markers; let i = index"
+                              [latitude]="m.lat"
+                              [longitude]="m.lng"
+                              [label]="m.label">
+                            
+                          </agm-marker>
+                        
+                        </agm-map>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-category-wrap">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="title-address">
+                    <h5>Lampung</h5>
+                    <p>Jl. Diponegoro No.100A-100B<br>
+                        Teluk Betung<br>
+                        Bandar Lampung 35214</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-call">
+                        <ul>
+                          <li>
+                            <a href="#">
+                              <span class="icon-watch"></span>
+                              Senin-Jumat, 09.00-17.00 WIB
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-callcenter"></span>
+                                +62 21 2356 8887
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                <span class="icon-mail"></span>
+                                Customer.Service.IDLife@ekreasi.com
+                              </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                      <div class="map-wrap">
+                          <agm-map 
+                          [latitude]="lat"
+                          [longitude]="lng"
+                          [zoom]="zoom"
+                          [disableDefaultUI]="false"
+                          [zoomControl]="false">
+                        
+                          <agm-marker 
+                              *ngFor="let m of markers; let i = index"
+                              [latitude]="m.lat"
+                              [longitude]="m.lng"
+                              [label]="m.label">
+                            
+                          </agm-marker>
+                        
+                        </agm-map>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+            <div class="row">
+              <div class="col-lg-6 no-padding">
+                <div class="title-bottom-content">
+                  <p>Page <span class="color-magenta">1</span> from <span class="color-magenta">5</span> Office Networking</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="pagination-magenta float-right">
+                      <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

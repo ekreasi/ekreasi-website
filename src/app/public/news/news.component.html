@@ -1,0 +1,41 @@
+<header-page></header-page>
+<content>
+  <div  class="inner-content-news">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="ekreasi-header-content">
+            <div class="ekreasi-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+            </div>
+            <h1>Berita</h1>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chub-news-pagination">
+              <ngb-pagination [collectionSize]="total" [(page)]="currentPage" [maxSize]="5" [pageSize]="perPage" (pageChange)="loadPage($event)" aria-label="Default pagination"></ngb-pagination>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" *ngFor="let news of data.news">
+          <div class="ekreasi-item-news-thumb magenta">
+            <div class="ekreasi-news-img">
+              <img [src]="news.image0Filename">
+            </div>
+            <div class="ekreasi-summary-news-item">
+              <h5>{{news.title}}</h5>
+              <p>{{news.summary}}</p>
+              <button class="btn-news magenta" [routerLink]="['/news/', news.id]" routerLinkActive="active" >Selengkapnya <span class="icon-right"></span></button>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

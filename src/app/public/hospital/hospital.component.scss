@@ -1,0 +1,64 @@
+@import '~assets/sass/vars';
+
+.inner-content-product{
+    padding:80px 0px 80px 0px; 
+}
+.ekreasi-hospital-wrap {
+    background:#fff;
+    padding:30px;
+    // border:1px solid #CCCCCC;
+}
+
+.ekreasi-hospital-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.ekreasi-hospital-tab .nav-tabs li a {
+    color:#ccc
+
+}
+.ekreasi-hospital-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.ekreasi-list-hospital {
+    padding:30px 0px 0px 0px;
+}
+.ekreasi-list-hospital table {
+    border-bottom:1px solid #ccc;
+}
+.ekreasi-list-hospital table.violet thead tr th {
+    background:$violet;
+    color:#fff;
+}
+.ekreasi-list-hospital table.green thead tr th {
+    background:$green;
+    color:#fff;
+}
+.ekreasi-list-hospital table.magenta thead tr th {
+    background:$magenta;
+    color:#fff;
+}
+.ekreasi-hospital-search-bg {
+    border-top:1px solid #ccc;
+    border-right:none;
+    border-bottom:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-radius:0px;
+}
+.btn-ekreasi-hospital-search {
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-left:none !important;
+    background:transparent;
+    
+}
+.btn-ekreasi-hospital-search .icon-search:before {
+    font-size:30px;
+    color:#ccc;
+}
+.ekreasi-hospital-search {
+    margin-bottom:20px;
+}

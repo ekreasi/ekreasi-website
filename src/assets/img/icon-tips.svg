@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="108px" viewBox="0 0 81 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.000192857143 0.259682143 80.8765714 0.259682143 80.8765714 107.999325 0.000192857143 107.999325"></polygon>
+        <polygon id="path-3" points="0 109 81 109 81 1 0 1"></polygon>
+    </defs>
+    <g id="10.1.ekreasi---Education-Center---Financial-Kalkulator---Step1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-950.000000, -965.000000)">
+        <g id="Page-1" transform="translate(950.000000, 965.000000)">
+            <g id="Group-3">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M55.82655,12.6854679 L68.9446929,26.7746464 L55.5449786,26.7746464 L55.82655,12.6854679 Z M79.5836571,24.049575 L59.0877643,2.03686071 C58.1813357,1.06293214 56.9123357,0.507503571 55.5825857,0.500753571 L4.84476429,0.259682143 L4.82162143,0.259682143 C3.54683571,0.259682143 2.32412143,0.764003571 1.42058571,1.66368214 C0.511264286,2.56818214 0.000192857143,3.79861071 0.000192857143,5.08111071 L0.000192857143,88.5516107 L9.64305,88.5516107 L9.64305,9.92568214 L49.1266929,10.1137179 L48.7274786,30.0821464 C48.7091571,30.988575 49.0563,31.8641464 49.6917643,32.5121464 C50.3262643,33.1591821 51.1950857,33.5246464 52.1015143,33.5246464 L71.2146214,33.5246464 L71.0256214,98.3564679 L0.730157143,98.3555036 L0.730157143,107.998361 L75.83355,107.999325 C78.4901571,107.999325 80.6463,105.849932 80.6549786,103.192361 L80.8767643,27.3493607 C80.8796571,26.1256821 80.4177643,24.9453964 79.5836571,24.049575 Z" id="Fill-1" fill="#6E27C5" mask="url(#mask-2)"></path>
+            </g>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <g id="Clip-5"></g>
+            <polygon id="Fill-4" fill="#6E27C5" mask="url(#mask-4)" points="19 57 61 57 61 47 19 47"></polygon>
+            <polygon id="Fill-6" fill="#6E27C5" mask="url(#mask-4)" points="19 72 61 72 61 62 19 62"></polygon>
+            <polygon id="Fill-7" fill="#6E27C5" mask="url(#mask-4)" points="19 88 61 88 61 78 19 78"></polygon>
+        </g>
+    </g>
+</svg>

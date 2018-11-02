@@ -1,0 +1,47 @@
+@import '~assets/sass/vars';
+    .inner-content-education{
+        padding:80px 0px 0px 0px; 
+    }
+    .ekreasi-summary-education {
+        width:70%;
+        padding:0px 30px;
+        border-left:4px solid $orange;
+        margin: 30px 0px 40px 0px;
+    }
+    .ekreasi-summary-education p {
+        line-height:30px;
+    }
+    .ekreasi-item-education-thumb {
+        background:#fff;
+        width:100%;
+        height:300px;
+        display:block;
+        padding:40px 30px;
+        text-align:center;
+        margin-bottom:30px;
+        
+    }
+    .ekreasi-item-education-thumb img {
+        height:150px;
+    }
+    .ekreasi-item-education-thumb.magenta {
+        border-bottom:4px solid $magenta;
+    }
+    .ekreasi-item-education-thumb.green {
+        border-bottom:4px solid $green;
+    }
+    .ekreasi-item-education-thumb.violet {
+        border-bottom:4px solid $violet;
+    }
+    .ekreasi-item-education-thumb h5 {
+        color:$dark-gray;
+        margin:auto;
+        padding:0px 0px 20px 0px;
+    }
+    .ekreasi-header-content-education {
+        margin-bottom:40px;
+    }
+    .ekreasi-item-education-thumb  p {
+        color:$dark-gray;
+        padding:20px 0px 0px 0px;
+    }

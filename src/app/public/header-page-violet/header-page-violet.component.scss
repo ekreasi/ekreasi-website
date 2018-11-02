@@ -1,0 +1,100 @@
+@import '~assets/sass/vars';
+
+//Top Header 
+.ekreasi-header {
+    width:100%;
+    height:145px;
+}
+
+.top-nav {
+    width:100%;
+    height:50px;
+}
+
+.top-nav .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:#04a4b6;
+    z-index: 7;
+}
+.nav-left-top {
+    float:left
+}
+.nav-right-top {
+    float:right
+}
+.nav-right-top ul li {
+    list-style:none;
+    float:left;
+    padding:14px 10px;
+    color:#fff;
+    font-size:15px;
+    letter-spacing: 0.8px;
+}
+.ekreasi-logo-header {
+    padding:34px 0px;
+}
+
+.nav-right-top ul li a {
+    padding-bottom:14px;
+}
+.nav-right-top ul li a.active {
+    color:#fff;
+    border-bottom:3px solid #fff;
+}
+.nav-right-top ul li a {
+    color:#fff;
+}
+//Search item 
+.ekreasi-search {
+    margin:30px auto;
+}
+.ekreasi-search-bg {
+    background: rgba(0,0,0,0.15);
+    border:none;
+    border-radius:0px;
+    color:#fff;
+}
+
+.ekreasi-search-bg::-moz-placeholder {
+    color: #fff;
+}
+.ekreasi-search-bg:-ms-input-placeholder {
+    color: #fff;
+}
+.ekreasi-search-bg::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.ekreasi-search-bg:focus {
+    background: rgba(0,0,0,0.15);
+    border:none;
+    border-radius:0px;
+}
+.btn-search {
+    background: rgba(0,0,0,0.15);
+    border:none;
+}
+.btn-search .icon-search:before {
+    font-size:30px;
+    color:#fff;
+}
+.btn-menu-dropdown {
+    background:transparent;
+    border:none;
+    color:#fff;
+}
+.dropdown-menu.show {
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    border-top:3px solid #fff;
+    border-radius:0px !important;
+    margin-top: 11px;
+    margin-left: -50%;
+}
+.nav-right-top ul li:hover {
+    background:transparent;
+    color:$magenta
+}

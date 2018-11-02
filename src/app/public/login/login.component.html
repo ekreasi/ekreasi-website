@@ -1,0 +1,57 @@
+<header-page></header-page>
+<content>
+<div  class="inner-login">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-header-content">
+            <div class="ekreasi-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+            </div>
+            <h1>Login</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-login-wrap">
+    <div class="bg-fullscren-black"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-8 col-lg-7 col-centered">
+          <div class="ekreasi-content-login-wrap">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-8  col-lg-6 col-centered">
+                      <form>
+                          <div class="input-group ekreasi-login">
+                              <div class="input-group-prepend">
+                                  <div class="icon-user"></div>
+                              </div>
+                              <input type="text" class="form-control ekreasi-login-bg" placeholder="Username" >
+                          </div>
+                          <div class="separator-login">
+                          </div>
+                          <div class="input-group ekreasi-login">
+                              <div class="input-group-prepend">
+                                  <div class="icon-password"></div>
+                              </div>
+                              <input type="password" class="form-control ekreasi-login-bg" placeholder="Password" >
+                          </div>
+                          <div class="separator-login"></div>
+                          <button class="btn btn-magenta" [routerLink]="['/dashboarad']" routerLinkActive="active"> Sign In</button>
+                          <a [routerLink]="['/auth/activation']" routerLinkActive="active" class="float-left">Activation</a>
+                          <a [routerLink]="['/auth/forget']" routerLinkActive="active" class="float-right">Forget Password?</a>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

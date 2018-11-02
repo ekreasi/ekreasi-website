@@ -1,0 +1,26 @@
+@import '~assets/sass/vars';
+
+
+    //Header Content 
+      
+
+        .ekreasi-image-about img {
+            width:100%;
+        }
+        .ekreasi-secondary-paragraph {
+            width:70%;
+            float:right;
+            padding:40px 0px;
+        }
+        .ekreasi-secondary-paragraph p {
+            line-height:40px;
+        }
+        .ekreasi-content-terms {
+            width:100%;
+            padding:0px 30px;
+            // border-left:3px solid $green;
+            margin: 30px 0px 40px 0px;
+        }
+        .ekreasi-content-terms p {
+            line-height:40px;
+        }

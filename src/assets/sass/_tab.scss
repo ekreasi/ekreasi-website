@@ -1,0 +1,113 @@
+.tab-col-2 ul li{
+    width:50%;
+}
+.tab-col-3 ul li{
+    width:33.3333%;
+}
+.tab-col-6 ul li{
+    width:16.6666%;
+}
+
+.ekreasi-download-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.ekreasi-download-tab .nav-tabs {
+    // border-bottom:2px solid #ccc;
+}
+.ekreasi-download-tab .nav-tabs li {
+    border:1px solid #eee;
+}
+.ekreasi-download-tab .nav-tabs li a {
+    color:#ccc;
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    border-top:3px solid #ccc;
+    border-radius:0px;
+    text-align:left;
+    font-size:30px;
+    padding-left:80px
+}
+.ekreasi-download-tab .nav-tabs li a .icon-claimform {
+    position: relative;
+}
+.ekreasi-download-tab .nav-tabs li a .icon-claimform:before {
+    position: absolute;
+    left: -60px;
+    font-size: 50px;
+    top: -3px;
+}
+
+.ekreasi-download-tab .nav-tabs li a .icon-customerform {
+    position: relative;
+}
+.ekreasi-download-tab .nav-tabs li a .icon-customerform:before {
+    position: absolute;
+    left: -60px;
+    font-size: 50px;
+    top: -3px;
+}
+.ekreasi-download-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    border-top:3px solid $magenta !important;
+    color:$magenta
+}
+.ekreasi-download-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    border-top:3px solid $magenta;
+    color:$magenta
+}
+.ekreasi-download-tab ul li {
+    width:50%;
+}
+
+// Primary Tab
+
+.ekreasi-primary-tab .nav-tabs li a:hover {
+    color: #8e8e8e;
+    border:none;
+}
+.ekreasi-primary-tab .nav-tabs li a {
+    color:#8e8e8e;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    // border-bottom:3px solid #ccc;
+    text-align:center;
+}
+.ekreasi-primary-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+    color:$magenta;
+    
+}
+.ekreasi-primary-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+    color:$magenta
+}
+
+.ekreasi-primary-tab .tab-content {
+    background:#f5f5f5;
+    padding:15px;
+}
+.section-tab {
+
+    margin-bottom:15px;
+}
+.tab-card {
+    background:#fff;
+  
+}
+
+
+

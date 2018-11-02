@@ -1,0 +1,45 @@
+<header-page-tosca></header-page-tosca>
+<content>
+<div  class="inner-content-awards">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-header-content">
+            <div class="ekreasi-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+            </div>
+            <h1>{{dataAwards.title}}</h1>
+            <div class="ekreasi-summary-awards">
+                <p>{{dataAwards.summary}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ekreasi-awards-wrap">
+            <ngb-tabset class="ekreasi-awards-tab">
+                <ngb-tab *ngFor="let data of dataAwards.awards" [title]="data.title">
+                  <ng-template ngbTabContent>
+                    <div class="ekreasi-list-awards">
+                      <table class="table table-striped violet">
+                        <tr *ngFor="let awards of data.data" [routerLink]="['/about/awards/', awards.id]">
+                          <td>{{awards.title}}</td>
+                          <td><span class="icon-right"></span></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </ng-template>
+                </ngb-tab>
+            </ngb-tabset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

@@ -1,0 +1,328 @@
+/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+@import "vars";
+@import "home";
+@import "responsive";
+@import "table";
+@import "pagination";
+@import "menu";
+@import "nonpublic";
+@import "tab";
+@import "forms";
+@import "proposal";
+@import "policy";
+
+
+.icon-prev.carousel-control-prev-icon {
+    display:none !important;
+}
+.icon-next.carousel-control-next-icon {
+    display:none !important;
+}
+.carousel-indicators li {
+    width:10px !important;
+    height:10px !important;
+    border-radius:50px;
+}
+ul.ngxcarouselPoint {
+   
+}
+ul.ngxcarouselPoint li {
+    background:rgba(255,255,255,0.4) !important;
+    padding:5px !important;
+    margin:auto 5px !important;
+}
+ul.ngxcarouselPoint li.active {
+    height:10px !important;
+    width:10px;
+    margin:auto 5px !important;
+    background:rgb(255,1,152) !important;
+    transform:scale(1) !important;
+}
+.ngxcarouselPointDefault {
+    margin: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index:2 ;
+}
+
+.ekreasi-hospital-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.ekreasi-hospital-tab .nav-tabs li a {
+    color:#ccc
+}
+
+.ekreasi-hospital-tab .nav-tabs li a.active {
+    color:$magenta;
+    font-family:'publico-roman',serif;
+    border-bottom:2px solid $magenta;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
+.ekreasi-list-nab ol.carousel-indicators {display:none !important}
+.chub-news-pagination .pagination .page-item.active .page-link {
+    background:$magenta;
+    color:#fff;
+    border-color:$magenta
+}
+.chub-news-pagination .pagination .page-item .page-link {
+    background: #e2e2e2;
+    color: #4A4A4A;
+    margin: 0px 8px;
+}
+.chub-tips-pagination .pagination .page-item.active .page-link {
+    background:$magenta;
+    color:#fff;
+    border-color:$magenta
+}
+.chub-tips-pagination .pagination .page-item .page-link {
+    background: #e2e2e2;
+    color: #4A4A4A;
+    margin: 0px 8px;
+}
+.card {
+    border-radius:0px !important;
+}
+.card-header a {
+    display:block;
+}
+.card-header {
+    border-bottom:none;
+}
+.collapse.show {
+    border-top:1px solid rgba(0,0,0,.125);
+}
+.card-header a {
+    color:$dark-gray;
+    font-family:"publico-roman",serif;
+}
+
+.card-header.active a {
+    background-image:url(../img/icon-up.png);
+    background-repeat:no-repeat;
+    background-position:right;
+    background-size:50%;
+    color:$magenta;
+} 
+.card-header a {
+    background-image:url(../img/icon-down.png);
+    background-repeat:no-repeat;
+    background-position:right;
+    background-size:15px;
+}
+.ekreasi-magenta-tab .nav-tabs li a {
+    color: #ccc;
+    font-family: 'publico-roman',serif;
+} 
+.ekreasi-magenta-tab .nav-tabs li a.active {
+    color: $magenta;
+    font-family: 'publico-roman',serif;
+    border-bottom: 2px solid $magenta;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.ekreasi-magenta-tab .nav-tabs li a:hover {
+    color: $violet;
+    font-family: 'publico-roman',serif;
+    border-bottom: 2px solid $violet;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.ekreasi-awards-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.ekreasi-awards-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.ekreasi-awards-tab .nav-tabs li a {
+    color:#ccc
+
+}
+.ekreasi-awards-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.ekreasi-awards-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+
+
+
+.border-bottom-magenta .icon-education:before {
+    color:$magenta
+} 
+
+.ekreasi-product-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.ekreasi-product-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.ekreasi-product-tab .nav-tabs li a {
+    color:#ccc
+
+}
+.ekreasi-product-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.ekreasi-product-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+
+
+.ekreasi-faq-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.ekreasi-faq-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.ekreasi-faq-tab .nav-tabs li a {
+    color:#ccc
+}
+.ekreasi-faq-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.ekreasi-faq-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+
+.accordion-faq .card-header {
+    background-image:url(../img/icon-question.svg);
+    background-repeat:no-repeat;
+    background-position:20px;
+}
+.accordion-faq .card-header a {
+    padding-left:40px;
+}
+.icon-answer-svg {
+    width:28px;
+    height:28px;
+    float:left;
+    background-repeat:no-repeat;
+    background-image:url(../img/icon-answer-svg.svg);
+    background-size:100%;
+}
+
+
+
+.side-menu-dashboard .accordion-menu .card .card-body {
+    padding:0px !important;
+}
+
+.side-menu-dashboard .accordion-menu .card .card-header {
+    padding:10px 10px 10px 5px !important;
+    background:#fff;
+}
+.side-menu-dashboard .accordion-menu .card .card-header .icon-user:before {
+    float: left;
+    font-size: 26px;
+    margin-top: -3px;
+}
+.side-menu-dashboard .accordion-menu .card .card-header .icon-claimform:before {
+    float: left;
+    font-size: 29px;
+    margin-top: -3px;
+}
+.side-menu-dashboard .accordion-menu .card .card-header .icon-fund:before{
+    float: left;
+    font-size: 29px;
+    margin-top: -3px;
+}
+.ekreasi-content-general {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.search-wrap {
+    margin:20px auto 5px auto;
+}
+.side-menu-single-link .card {
+    border-radius:0px 
+}
+.side-menu-non-public ul li.no-border-bottom{
+    border-bottom:none;
+}
+.language-wrap {
+    float:right;
+}
+
+.ekreasi-slide-non-public .ngxcarouselPointDefault {
+    left:25%;
+}
+
+.inner-content-dashboard {
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
+    position: relative;
+}
+.ekreasi-header {
+    z-index: 2;
+    position: relative;
+}
+.headline-nav h5 i:before {
+    font-size:26px;
+    margin-right:10px;
+
+}
+.color-white-style label {
+    color:#fff !important;
+}
+
+.color-white-style .form-control-disabled {
+    color:rgba(255,255,255,0.6) !important;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.no-border-bottom {
+    border-bottom:none !important
+}
+.no-margin-bottom {
+    margin-bottom:0px !important
+}
+.ekreasi-content-nonpublic .tr-no-hover table tr:hover {
+    background:transparent !important;
+    color:#212529 !important;
+    cursor:default;
+}
+.tr-no-hover table tr:hover {
+    background:transparent !important;
+    color:#212529 !important;
+    cursor:default;
+}
+
+.side-menu-dashboard-vertical {
+    position: sticky;
+    left: 0;
+    width: 220px;
+    height: auto;
+    background: #fff;
+    z-index: 1;
+    top: 0px;
+    float: left;
+}

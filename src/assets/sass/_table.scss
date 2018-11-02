@@ -1,0 +1,195 @@
+table  {
+    width:100% !important;
+}
+.table-violet {
+    overflow-x:scroll;
+}
+
+.table-green table thead tr th{
+    background: #7ACB00 !important;
+    color: #fff;
+    text-align:left;
+    padding: 8px;
+    white-space:nowrap;
+}
+.table-green table tr td a {
+    color:$magenta;
+}   
+.table-green table tr td {
+    padding: 8px;
+    font-size:16px;
+    white-space:nowrap;
+}
+.table-violet table thead tr th{
+    background: $violet !important;
+    color: #fff;
+    text-align:left;
+    padding: 8px;
+    white-space: nowrap;
+}
+.table-violet table tr td {
+    padding: 8px;
+    font-size:14px;
+    white-space: nowrap;
+}
+.table-violet table tr td a {
+    color:$magenta;
+}   
+
+.table-tosca table thead tr th{
+    background: $tosca !important;
+    color: #fff;
+    text-align:left;
+    padding: 8px;
+    white-space: nowrap;
+}
+.table-tosca table tr td {
+    padding: 8px;
+    font-size:14px;
+    white-space: nowrap;
+}
+.table-tosca table tr td a {
+    color:$magenta;
+}   
+
+.table-blue table thead tr th{
+    background: $blue !important;
+    color: #fff;
+    text-align:left;
+    padding: 8px;
+    white-space: nowrap;
+}
+.table-blue table tr td {
+    padding: 8px;
+    font-size:14px;
+    white-space: nowrap;
+}
+.table-blue table tr td a {
+    color:$magenta;
+}   
+
+
+.table-orange table thead tr th{
+    background: $orange !important;
+    color: #fff;
+    text-align:left;
+    padding: 8px;
+    white-space: nowrap;
+}
+.table-orange table tr td {
+    padding: 8px;
+    font-size:14px;
+    white-space: nowrap;
+}
+.table-orange table tr td a {
+    color:$magenta;
+}   
+
+
+
+.ekreasi-list-hospital {
+    overflow-x:scroll;
+}
+.ekreasi-list-hospital table tr td, .ekreasi-list-hospital table thead tr th {
+    white-space: nowrap;
+}
+.daily-nav {
+    overflow-x:scroll;
+}
+.daily-nav table {
+    width:100%;
+    border-bottom:1px solid #ddd;
+}
+
+.daily-nav table thead tr th {
+    border-bottom:1px solid #fff !important;
+}
+.daily-nav table thead tr th {
+    background:$violet;
+    color:#fff;
+    vertical-align:middle;
+    text-align:center;
+    white-space: nowrap;
+}
+.daily-nav table thead tr th.border-right-1px {
+    border-right:1px solid #fff;
+}
+.daily-nav table thead tr th.border-left-1px {
+    border-left:1px solid #fff;
+}
+.daily-nav table tr td  {
+    position:relative
+}
+.daily-nav table tr td span { text-align:center}
+.daily-nav table tr td span.icon-pdf:before {
+    font-size: 41px;
+    top: 4px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+.ekreasi-content-nonpublic .tr-hover-link table thead tr {
+    cursor:default;
+} 
+.ekreasi-content-nonpublic .tr-hover-link table tr {
+    cursor:pointer;
+}
+.ekreasi-content-nonpublic .tr-hover-link table tr td span {
+    color:$magenta;
+}
+.ekreasi-content-nonpublic .tr-hover-link table tr:hover {
+    background:$magenta !important;
+    color:#fff;
+}
+.ekreasi-content-nonpublic .tr-hover-link table tr:hover td span {
+    color:#fff;
+}
+table.thead-center thead tr th {
+    text-align:center;
+}
+table.thead-center tr td {
+    text-align:left;
+}
+table.thead-center thead tr th{
+    vertical-align: middle !important
+}
+table tr td, table thead tr th {
+    font-size:14px !important;
+}
+.table td, .table th {
+    vertical-align:middle !important
+}
+
+.policy-item-wrap table {
+    border:1px solid #ddd;
+}
+
+.policy-item-wrap table thead tr th {
+    background:$cyan;
+    color:#fff;
+    padding:10px;
+    text-align:center;
+    font-size:17px !important;
+}
+.policy-item-wrap table thead tr th a {
+    color:$magenta;
+    margin-left:5px;
+}
+.policy-item-wrap table tr td {
+    border-bottom:1px solid #ddd;
+    padding:15px !important;
+}
+
+.unit-price table thead tr th a {
+    color:#fff;
+    margin: 0px 14px;
+    position: relative;
+}
+
+.unit-price table thead tr th a i:before {
+    font-size: 25px;
+    position: absolute;
+    bottom: -5px;
+    left: -6px;
+}
