@@ -11,8 +11,11 @@
 @import "forms";
 @import "proposal";
 @import "policy";
+@import "override";
 
-
+a {
+    cursor: pointer;
+}
 .icon-prev.carousel-control-prev-icon {
     display:none !important;
 }
@@ -28,7 +31,7 @@ ul.ngxcarouselPoint {
    
 }
 ul.ngxcarouselPoint li {
-    background:rgba(255,255,255,0.4) !important;
+    background:rgba(0,0,0,0.4) !important;
     padding:5px !important;
     margin:auto 5px !important;
 }
@@ -36,26 +39,26 @@ ul.ngxcarouselPoint li.active {
     height:10px !important;
     width:10px;
     margin:auto 5px !important;
-    background:rgb(255,1,152) !important;
+    background-color:#fff !important;
     transform:scale(1) !important;
 }
 .ngxcarouselPointDefault {
     margin: auto;
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -60%);
     z-index:2 ;
 }
 
-.ekreasi-hospital-tab .nav-tabs {
+.chubb-hospital-tab .nav-tabs {
     border-bottom:2px solid #ccc;
 }
-.ekreasi-hospital-tab .nav-tabs li a {
+.chubb-hospital-tab .nav-tabs li a {
     color:#ccc
 }
 
-.ekreasi-hospital-tab .nav-tabs li a.active {
+.chubb-hospital-tab .nav-tabs li a.active {
     color:$magenta;
     font-family:'publico-roman',serif;
     border-bottom:2px solid $magenta;
@@ -63,7 +66,7 @@ ul.ngxcarouselPoint li.active {
     border-left:none;
     border-right:none;
 }
-.ekreasi-list-nab ol.carousel-indicators {display:none !important}
+.chubb-list-nab ol.carousel-indicators {display:none !important}
 .chub-news-pagination .pagination .page-item.active .page-link {
     background:$magenta;
     color:#fff;
@@ -102,23 +105,26 @@ ul.ngxcarouselPoint li.active {
 }
 
 .card-header.active a {
-    background-image:url(../img/icon-up.png);
+    background-image:url(../img/icon_arrowup_gray.png);
     background-repeat:no-repeat;
     background-position:right;
-    background-size:50%;
-    color:$magenta;
+    background-size: 12px;
 } 
 .card-header a {
-    background-image:url(../img/icon-down.png);
+    background-image:url(../img/icon_arrowdown_gray.png);
     background-repeat:no-repeat;
     background-position:right;
-    background-size:15px;
+    background-size: 12px;
 }
-.ekreasi-magenta-tab .nav-tabs li a {
+.chubb-magenta-tab .nav-tabs li a {
     color: #ccc;
     font-family: 'publico-roman',serif;
+    padding: 0px!important;
 } 
-.ekreasi-magenta-tab .nav-tabs li a.active {
+.chubb-magenta-tab .nav-tabs li a > div {
+    padding: .5rem 1rem;
+}
+.chubb-magenta-tab .nav-tabs li a.active {
     color: $magenta;
     font-family: 'publico-roman',serif;
     border-bottom: 2px solid $magenta;
@@ -126,7 +132,7 @@ ul.ngxcarouselPoint li.active {
     border-left: none;
     border-right: none;
 }
-.ekreasi-magenta-tab .nav-tabs li a:hover {
+.chubb-magenta-tab .nav-tabs li a:hover {
     color: $violet;
     font-family: 'publico-roman',serif;
     border-bottom: 2px solid $violet;
@@ -135,24 +141,24 @@ ul.ngxcarouselPoint li.active {
     border-right: none;
 }
 
-.ekreasi-awards-tab .nav-tabs li a:hover {
+.chubb-awards-tab .nav-tabs li a:hover {
     color: #ccc;
     border:none;
 }
-.ekreasi-awards-tab .nav-tabs {
+.chubb-awards-tab .nav-tabs {
     border-bottom:2px solid #ccc;
 }
-.ekreasi-awards-tab .nav-tabs li a {
+.chubb-awards-tab .nav-tabs li a {
     color:#ccc
 
 }
-.ekreasi-awards-tab .nav-tabs li a.active {
+.chubb-awards-tab .nav-tabs li a.active {
     border-left:none;
     border-right:none;
     border-top:none;
     border-bottom:3px solid $magenta;
 }
-.ekreasi-awards-tab .nav-tabs li a:hover {
+.chubb-awards-tab .nav-tabs li a:hover {
     border-left:none;
     border-right:none;
     border-top:none;
@@ -165,24 +171,24 @@ ul.ngxcarouselPoint li.active {
     color:$magenta
 } 
 
-.ekreasi-product-tab .nav-tabs li a:hover {
+.chubb-product-tab .nav-tabs li a:hover {
     color: #ccc;
     border:none;
 }
-.ekreasi-product-tab .nav-tabs {
+.chubb-product-tab .nav-tabs {
     border-bottom:2px solid #ccc;
 }
-.ekreasi-product-tab .nav-tabs li a {
+.chubb-product-tab .nav-tabs li a {
     color:#ccc
 
 }
-.ekreasi-product-tab .nav-tabs li a.active {
+.chubb-product-tab .nav-tabs li a.active {
     border-left:none;
     border-right:none;
     border-top:none;
     border-bottom:3px solid $magenta;
 }
-.ekreasi-product-tab .nav-tabs li a:hover {
+.chubb-product-tab .nav-tabs li a:hover {
     border-left:none;
     border-right:none;
     border-top:none;
@@ -190,23 +196,23 @@ ul.ngxcarouselPoint li.active {
 }
 
 
-.ekreasi-faq-tab .nav-tabs li a:hover {
+.chubb-faq-tab .nav-tabs li a:hover {
     color: #ccc;
     border:none;
 }
-.ekreasi-faq-tab .nav-tabs {
+.chubb-faq-tab .nav-tabs {
     border-bottom:2px solid #ccc;
 }
-.ekreasi-faq-tab .nav-tabs li a {
+.chubb-faq-tab .nav-tabs li a {
     color:#ccc
 }
-.ekreasi-faq-tab .nav-tabs li a.active {
+.chubb-faq-tab .nav-tabs li a.active {
     border-left:none;
     border-right:none;
     border-top:none;
     border-bottom:3px solid $magenta;
 }
-.ekreasi-faq-tab .nav-tabs li a:hover {
+.chubb-faq-tab .nav-tabs li a:hover {
     border-left:none;
     border-right:none;
     border-top:none;
@@ -228,6 +234,7 @@ ul.ngxcarouselPoint li.active {
     background-repeat:no-repeat;
     background-image:url(../img/icon-answer-svg.svg);
     background-size:100%;
+    margin-right: 10px;
 }
 
 
@@ -237,12 +244,12 @@ ul.ngxcarouselPoint li.active {
 }
 
 .side-menu-dashboard .accordion-menu .card .card-header {
-    padding:10px 10px 10px 5px !important;
+    padding:10px 14px 10px 5px !important;
     background:#fff;
 }
 .side-menu-dashboard .accordion-menu .card .card-header .icon-user:before {
     float: left;
-    font-size: 26px;
+    font-size: 32px;
     margin-top: -3px;
 }
 .side-menu-dashboard .accordion-menu .card .card-header .icon-claimform:before {
@@ -255,7 +262,7 @@ ul.ngxcarouselPoint li.active {
     font-size: 29px;
     margin-top: -3px;
 }
-.ekreasi-content-general {
+.chubb-content-general {
     background: #fff;
     padding: 30px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
@@ -270,19 +277,19 @@ ul.ngxcarouselPoint li.active {
     border-bottom:none;
 }
 .language-wrap {
-    float:right;
+    float:left;
 }
 
-.ekreasi-slide-non-public .ngxcarouselPointDefault {
-    left:25%;
+.chubb-slide-non-public .ngxcarouselPointDefault {
+    // left:25%;
 }
 
 .inner-content-dashboard {
     box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
     position: relative;
 }
-.ekreasi-header {
-    z-index: 2;
+.chubb-header {
+    z-index: 10;
     position: relative;
 }
 .headline-nav h5 i:before {
@@ -305,7 +312,7 @@ ul.ngxcarouselPoint li.active {
 .no-margin-bottom {
     margin-bottom:0px !important
 }
-.ekreasi-content-nonpublic .tr-no-hover table tr:hover {
+.chubb-content-nonpublic .tr-no-hover table tr:hover {
     background:transparent !important;
     color:#212529 !important;
     cursor:default;
@@ -323,6 +330,103 @@ ul.ngxcarouselPoint li.active {
     height: auto;
     background: #fff;
     z-index: 1;
-    top: 0px;
+    top: 80px;
     float: left;
+}
+
+.chubb-primary-tab > ul {
+    width: 100%;
+}
+
+select .ng-invalid, input.ng-invalid { border: 1px solid red !important; }
+select .ng-valid, input.ng-valid { border: 1px solid #46bb46 !important; }
+select .ng-untouched, input.ng-untouched {border: 1px solid #ccc !important; }
+input:-webkit-autofill { background-color: transparent !important; }
+.chubb-alert {
+    font-size: 12px;
+    -webkit-animation: 2s alertAnim forwards;
+    animation: 2s alertAnim forwards;
+    color: red;
+    z-index: 0 !important;
+    border-radius:0px;
+}
+
+.chubb-alert p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.nav-home {
+    background:#efefef;
+    min-height:218px;
+}
+
+.overflow-x {
+    overflow-x: scroll;
+}
+
+.recaptcha {
+    display: inline-block;
+}
+
+#swal2-content {
+    line-height: 24px;
+}
+
+.form-control[readonly] {
+    background: #FFF!important;
+}
+
+.chubb-hospital-tab .nav-tabs li a {
+    padding: 0px
+}
+
+.chubb-hospital-tab .nav-tabs li a .tab-title {
+    padding: .5rem 1rem;
+}
+
+.fa-loading {
+    float: right;
+    line-height: 24px;
+}
+
+.reset-filter {
+    position: absolute;
+    right: 15px;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.form-control.no-style-invalidate {
+    border: 1px solid #ced4da!important;
+}
+
+.reset-filter a {
+    color: #ff0198!important;
+}
+
+.container-content-white {
+    background:#fff;
+    padding: 30px;
+}
+.chubb-image-about {
+    margin:auto;
+    text-align:center; 
+    img {
+        width:400px !important;
+        margin:auto;
+    }
+} 
+.chubb-header-content h1 {
+    text-align:center;
+    color:$dark-gray;
+    font-family: 'TrebuchetMS-Bold',sans-serif;
+}
+.title-about {
+    padding:20px 0px 40px 0px;
+    text-align:center;
+    h1 {
+        text-align:center;
+        color:$dark-gray;
+        font-family: 'TrebuchetMS-Bold',sans-serif; 
+    }
 }

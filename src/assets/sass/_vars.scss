@@ -1,25 +1,28 @@
 // General 
 
     // Color
-    $magenta:gray;
+    $magenta:#FF0198;
     $violet:#6E27C5;
     $tosca:#01C1D5;
     $cyan:#01C1D5;
-    $green:#00b050;
-    $yellow:#ffff00;
+    $green:#7ACB00;
+    $yellow:rgb(255,182,23);
     $orange:#FF6600;
     $red:#F1352B;
-    $blue:#0070c0;
-    $gray:#828282;
-    $gray2:#949494;
-    $grey:#b2b2b2;
-    $dark-gray:#464646;
+    $blue:#150F96;
+    $gray:#979797;
+    $gray2:#6c757d;
+    $dark-gray:#4A4A4A;
     $soft-gray1:#ECEBEB;
     $light-gray:#f7f7f7;
     $light-green:#f5f9ef;
-
-
-
+    $ekreasi-red:red;
+    $ekreasi-orange:#F15A24;
+    $ekreasi-blue:#0071BC;
+    $ekreasi-red:#ED0009;
+    $ekreasi-violet:#93008E;
+    $ekreasi-green :#009F58;
+    $ekreasi-darkblue :#004573;
 
 //Format 
 .text-align-right {
@@ -28,20 +31,14 @@
 .margin-auto {
     margin:auto
 }
-    h1 {
-        font-size: 68px !important;
-        line-height: 60px !important;
-        font-family: 'TrebuchetMS-Bold',sans-serif !important;
-        color: $dark-gray !important;
-    }
     a {
         text-decoration:none !important;
     }
     .no-padding {
-        padding:0px;
+        padding:0px !important;
     }
     html, body {
-        font-family:'TrebuchetMS',sans-serif !important;
+        font-family:'TrebuchetMS',serif !important;
         letter-spacing:0.5px;
     }
     .clearfix {
@@ -57,7 +54,7 @@
         -webkit-padding-start: 0px;
     }
     .font-publico-roman {
-        font-family:'TrebuchetMS',sans-serif !important;
+        font-family:'publico-roman',serif !important;
     }
     .border-gray-botom-1px {
         border-bottom:1px solid #ccc;
@@ -120,22 +117,14 @@
         border-radius:0px;
     }
 //Button 
-    .btn-language {
-        color: $grey !important;
-        font-size: 13px !important;
-        float: left;
-    }
-    .btn-border-left:before {
-        content: "|";
-        padding: 0 15px 0 0;
-    }
+
     .btn-transparent {
         background-color:transparent !important;
         border:none;
         color:#fff;
         letter-spacing:1px;
         font-weight:normal;
-        padding:12px 15px 0 0;
+        padding:12px 10px;
         font-size:15px;
     }
     .btn-login {
@@ -340,17 +329,20 @@
 
 
 
-    .border-bottom-magenta {
-        border-bottom:4px solid $magenta !important;
-    }
-    .border-bottom-violet {
-        border-bottom:4px solid $violet !important;
-    }
-    .border-bottom-green {
-        border-bottom:4px solid $green !important;
-    }
+    // .border-bottom-magenta {
+    //     border-bottom:4px solid $magenta !important;
+    // }
+    // .border-bottom-violet {
+    //     border-bottom:4px solid $violet !important;
+    // }
+    // .border-bottom-green {
+    //     border-bottom:4px solid $green !important;
+    // }
     .border-bottom-gray {
         border-bottom:4px solid #eee !important;
+    }
+    .border-bottom-gray-3 {
+        border-bottom:3px solid #eee !important;
     }
     .border-bottom-1-dark-gray {
         border-bottom:1px solid $dark-gray!important;
@@ -436,12 +428,12 @@
         padding:80px 0px;
         background:#EEEEEE;
     }
-    .ekreasi-header-content h1 {
+    .chubb-header-content h1 {
         margin:auto;
         padding:20px 0px 0px 0px;
     }
 
-    .ekreasi-breadcrumb a {
+    .chubb-breadcrumb a {
         color:#BABABA;
         text-decoration:none;
         font-size:18px;
@@ -462,4 +454,86 @@
     }
     .table tr td.middle-top {
         vertical-align:top !important;
+    }
+
+
+
+    .border-left-violet  {
+        border-left:4px solid $ekreasi-violet !important;
+        h5 {
+            color:$ekreasi-violet ;
+        }
+    }
+    
+    .border-left-green  {
+        border-left:4px solid $ekreasi-green !important;
+        h5 {
+            color:$ekreasi-green ;
+        }
+    }
+    
+    .border-left-orange  {
+        border-left:4px solid $ekreasi-orange !important;
+        h5 {
+            color:$ekreasi-orange ;
+        }
+    }
+    
+    
+    .border-bottom-violet  {
+        border-bottom:4px solid $ekreasi-violet !important;
+        h5 {
+            color:$ekreasi-violet ;
+        }
+    }
+    
+    .border-bottom-green  {
+        border-bottom:4px solid $ekreasi-green !important;
+        h5 {
+            color:$ekreasi-green ;
+        }
+    }
+    
+    .border-bottom-orange  {
+        border-bottom:4px solid $ekreasi-orange !important;
+        h5 {
+            color:$ekreasi-orange ;
+        }
+    }
+    .navbar-light {
+        background:rgba(0,0,0,0.5);
+    }
+
+    .navbar-blue {
+        background:$ekreasi-blue;
+    }
+    .navbar-red {
+        background:$ekreasi-red;
+    }
+    .navbar-blue-dark {
+        background: $ekreasi-darkblue;
+    }    
+    .navbar-red {
+        background:$ekreasi-orange;
+    }
+
+
+    .chubb-image-portfolio {
+        margin: auto auto 20px auto;
+        text-align: center;
+        img {
+            width:100%;
+        }
+    }
+
+    .chubb-summary-portfolio {
+        h2{
+            font-family: 'TrebuchetMS-Bold';
+            padding:0px 0px 20px 0px;
+            text-align:center;
+            border-bottom:1px solid #ccc;
+            color:$dark-gray;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
     }

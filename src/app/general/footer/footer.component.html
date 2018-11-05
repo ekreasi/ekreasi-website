@@ -1,27 +1,106 @@
 <footer class="background-darkgray ">
-  <section>
-      <section class="container">
-        <div>
-          <div class="row">
-            <div class="col-lg-6 copyright">
-              <a  href="#" class="ekreasi-logo-footer">
-                <img class="logo-footer" src="assets/img/ekreasi-logo.svg">
+  <section class="container">
+    <div class="row ">
+      <div class="col-lg-4">
+        <div class="footer-wrap">
+          <!-- <h5> {{'_customer_service_centre' | translate}} </h5> -->
+          <h5> Office</h5>
+          <!-- <div [innerHTML]="data.description | safeHtml"></div> -->
+          <p>PT Integrasi Media Kreasi <br>
+            Wisma Staco Lantai 5 Unit B<br>
+            Jl. Casablanca Kav. 18<br>
+            Jakarta 12870
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-call">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon-footer"><img src="./assets/img/icon-workday.svg"> </span>
+                <p>{{data.officeHour}}</p>
+               
               </a>
-              <span>Copyright 2018 PT Integrasi Media Kreasi</span>
-            </div>
-            <div class="col-lg-6">
-              <div class="terms-link">
-                <ul>
-                  <li><a [routerLink]="['/term-of-use']">Terms of Use</a></li>
-                  <li><a [routerLink]="['/privacy-policy']">Privacy Policy</a></li>
-                </ul>
-              </div>
-            </div>
+            </li>
+            <li>
+              <a href="tel:{{data.telephone}}">
+                  <span class="icon-footer"><img src="./assets/img/icon-call.svg"> </span>
+                <!-- {{data.telephone}} -->
+                <p>+62 21 2854 2025</p>
+              </a>
+            </li>
+            <li>
+              <a href="mail:{{data.email}}">
+                  <span class="icon-footer"><img src="./assets/img/icon-email.svg"> </span>
+                <!-- {{data.email}} -->
+                <p>support@ekreasi.com</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-shortcut">
+          <h5> {{'_quick_links' | translate}} </h5>
+          <ul>
+            <li>
+              <!-- <a href="{{linkMenu.product}}" target="_blank">{{'_product' | translate}}</a> -->
+              <a href="/about-ekreasi" target="_blank">About eKreasi</a>
+            </li>
+            <li>
+              <!-- <a href="{{linkMenu.download}}" target="_blank">{{'_form_download' | translate}}</a> -->
+              <a href="/portfolio" target="_blank">Portfolio</a>
+            </li>
+            <li>
+              <!-- <a [routerLink]="['/faq']" routerLinkActive="active">{{'_faq' | translate}}</a> -->
+              <a [routerLink]="['/career']" routerLinkActive="active">Career</a>
+            </li>
+            <li>
+              <!-- <a [routerLink]="['/office-network']" routerLinkActive="active">{{'_office_network' | translate}}</a> -->
+              <a [routerLink]="['/office-network']" routerLinkActive="active">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="chubb-footer-bottom">
+    <section class="container">
+      <div class="footer-section-1">
+        <div class="row">
+          <div class="col-lg-12 copyright">
+            <!-- <a href="#" class="chubb-logo-footer">
+              <img src="assets/img/chubb-logo.png">
+            </a> -->
+            <span>Copyright 2018 PT Integrasi Media Kreasi</span>
           </div>
         </div>
-        <div class="footer-section-2">
-          © 2018 <b>PT Integrasi Media Kreasi</b> — All Rights Reserved
-        </div>
-      </section>
+      </div>
+    </section>
   </section>
 </footer>
+
+<section *ngIf="hideBrowserInformation == 'false'" id="browser-information">
+  <div class="container clearfix">
+    <div class="left-area float-left">
+      <div class="icon float-left">
+        <img src="./assets/img/favicon.png" />
+      </div>
+      <div class="text">
+        <p>Untuk tampilan terbaik, mohon pastikan Anda menggunakan browser versi terkini: Chrome, Firefox, Safari,
+          Internet Explorer/Edge.</p>
+      </div>
+    </div>
+    <div class="right-area icon-close float-right" (click)="closeBrowserInformation()">
+      <img src="./assets/img/icon-close.svg"/>
+    </div>
+  </div>
+</section>
+
+<swal #swalError title="{{'_oops' | translate}}" text="{{errorMessage}}" type="error">
+</swal>
+
+<swal #swalSession title="Session Timeout Notification" text="Your session is about to expire." type="question"
+  confirmButtonText='Stay Connected' [showCancelButton]="true" [focusCancel]="true" (confirm)="doResetTime()" (cancel)="doLogout()">
+</swal>

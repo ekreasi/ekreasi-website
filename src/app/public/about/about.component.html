@@ -1,26 +1,45 @@
-<header-page-tosca></header-page-tosca>
+
+<header-page-green></header-page-green>
+<div class="clearfix"></div>
 <content>
-  <div  class="inner-content-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="ekreasi-header-content">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
-            </div>
-            <h1>{{data.title}}</h1>
-            <div class="ekreasi-summary-about">
-              <p>{{data.summary}}</p>
+    <!-- <div  class="inner-content-white no-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 title-about">
+                <h1>About eKreasi</h1>
             </div>
           </div>
-          <div class="ekreasi-image-about">
-            <img [src]="data.image">
-          </div>
-          <div class="ekreasi-secondary-paragraph" [innerHTML]="data.description">
+        </div>
+      </div> -->
+  <div class="inner-content-gray">
+      <div class="container container-content-white">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="load-data" *ngIf="loadingData">
+                  <div class="chubb-header-content">
+                    <!-- <div class="chubb-breadcrumb">
+                      <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>{{'_home' | translate}}</a>
+                    </div> -->
+      
+                    <!-- <h1>{{data.title}}</h1> -->
+                    
+                    <div class="chubb-image-about">
+                        <!-- <img [lazyLoad]="data.image"> -->
+                        <img src="assets/img/img-about.png" width="300">
+                      </div>
+                      
+                    <div class="chubb-summary-about" *ngIf="data.summary != '---'">
+                      <!-- <p>{{data.summary}}</p> -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed purus odio, egestas in dictum eu, aliquet nec ex. Aenean interdum mi nec lorem mollis efficitur. Cras volutpat ante lectus, quis molestie lorem dignissim faucibus. In maximus iaculis odio, non sodales odio. Praesent accumsan purus nec sem hendrerit, sed interdum elit suscipit. Nulla felis elit, elementum sit amet semper in, elementum et mauris. Sed gravida est id lectus consequat tincidunt. Nullam accumsan, eros vestibulum pretium laoreet, sem sem dapibus orci, sit amet condimentum ante lectus sit amet justo. Sed malesuada vehicula pretium. Donec eu metus egestas, mattis risus ac, ornare lacus. Phasellus ornare metus sagittis, fringilla erat accumsan, posuere lacus. Etiam sagittis ante a condimentum pretium. Quisque vitae eleifend turpis.</p>
+                    </div>
+                  </div>
+ 
+                  <!-- <div class="chubb-secondary-paragraph" [innerHTML]="data.description | safeHtml">
+                  </div> -->
+                </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
 </content>
 <app-footer></app-footer>

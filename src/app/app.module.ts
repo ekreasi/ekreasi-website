@@ -1,21 +1,51 @@
+import { LocalizedDatePipe } from './localize-ddate.pipe';
+import { ExcerptFilter } from './excerpt.pipe';
+import { HighlightSearch, } from './highlight.pipe';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+// Providers
+import { CacheService } from './cache.service';
 
 // Bootstrap
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxCarouselModule } from 'ngx-carousel';
 
 // Gmap
 import { AgmCoreModule } from '@agm/core';
 
 import 'hammerjs';
+
+// Translation
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { registerLocaleData } from '@angular/common';
+import localeId from '@angular/common/locales/id';
+
+// Loading Bar
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
+import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
+
+// Countdown Timer
+import { CountdownTimerModule } from 'ngx-countdown-timer';
+
+// Google Recaptcha
+import { RECAPTCHA_SETTINGS, RecaptchaSettings, RecaptchaModule } from 'ng-recaptcha';
+
+// Reorder Sort
+import { OrderModule } from 'ngx-order-pipe';
+
+// User Idle
+import { UserIdleModule } from 'angular-user-idle';
 
 //  Page 
 import { AppComponent } from './app.component';
@@ -24,8 +54,8 @@ import { AboutComponent } from './public/about/about.component';
 import { FooterComponent } from './general/footer/footer.component';
 import { ProductComponent } from './public/product/product.component';
 import { HospitalComponent } from './public/hospital/hospital.component';
-import { NewsComponent } from './public/news/news.component';
-import { AgentsComponent } from './public/agents/agents.component';
+import { PortfolioComponent } from './public/portfolio/portfolio.component';
+import { CareerComponent } from './public/career/career.component';
 import { ContactComponent } from './public/contact/contact.component';
 import { ActivationComponent } from './public/activation/activation.component';
 import { HeaderHomeComponent } from './public/header-home/header-home.component';
@@ -37,9 +67,9 @@ import { FormDownloadsComponent } from './public/form-downloads/form-downloads.c
 import { FaqComponent } from './public/faq/faq.component';
 import { OfficeNetworkComponent } from './public/office-network/office-network.component';
 import { DetailAwardComponent } from './public/detail-award/detail-award.component';
-import { DetailNewsComponent } from './public/detail-news/detail-news.component';
+import { DetailPortfolioComponent } from './public/detail-portfolio/detail-portfolio.component';
 import { FinancialReportComponent } from './public/financial-report/financial-report.component';
-import { AboutekreasiLifeComponent } from './public/about-ekreasi-life/about-ekreasi-life.component';
+import { AboutChubbLifeComponent } from './public/about-chubb-life/about-chubb-life.component';
 import { HeaderNonPublicComponent } from './non-public/header-non-public/header-non-public.component';
 import { DashboardComponent } from './non-public/dashboard/dashboard.component';
 import { MenuDashboardHorizontalComponent } from './non-public/menu-dashboard-horizontal/menu-dashboard-horizontal.component';
@@ -56,7 +86,7 @@ import { TransactionComponent } from './non-public/transaction/transaction.compo
 import { TrackingComponent } from './non-public/tracking/tracking.component';
 import { HistoryComponent } from './non-public/history/history.component';
 import { UnitPriceComponent } from './non-public/unit-price/unit-price.component';
-import { FundFactsheetComponent} from './non-public/fund-fact-sheet/fund-fact-sheet.component';
+import { FundFactsheetComponent } from './non-public/fund-fact-sheet/fund-fact-sheet.component';
 import { InboxComponent } from './non-public/inbox/inbox.component';
 import { InboxDetailComponent } from './non-public/inbox-detail/inbox-detail.component';
 import { ChartRupiahEquityFundComponent } from './non-public/chart-rupiah-equity-fund/chart-rupiah-equity-fund.component';
@@ -83,6 +113,12 @@ import { ReimbursementTrackingDetailComponent } from './non-public/reimbursement
 import { CustomerServiceComponent } from './non-public/customer-service/customer-service.component';
 import { CustomerServiceDetailComponent } from './non-public/customer-service-detail/customer-service-detail.component';
 import { ChangePasswordComponent } from './non-public/change-password/change-password.component';
+import { NotfoundComponent } from './general/notfound/notfound.component';
+import { environment } from '../environments/environment';
+import { SafeHtmlPipe } from './safeHtml.pipe';
+import { EqualValidator } from './equal-validator.directive';
+import { AuthGuard } from './AuthGuard';
+
 
 const appRoutes: Routes = [
   {
@@ -90,7 +126,7 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'about/about-ekreasi',
+    path: 'about-ekreasi',
     component: AboutComponent
   },
   {
@@ -98,8 +134,8 @@ const appRoutes: Routes = [
     component: FinancialReportComponent
   },
   {
-    path: 'about/about-ekreasi-life',
-    component: AboutekreasiLifeComponent
+    path: 'about/about-chubb-life',
+    component: AboutChubbLifeComponent
   },
   {
     path: 'privacy-policy',
@@ -118,23 +154,23 @@ const appRoutes: Routes = [
     component: HospitalComponent
   },
   {
-    path: 'news',
-    component: NewsComponent
+    path: 'portfolio',
+    component: PortfolioComponent
   },
   {
-    path: 'news/:id',
-    component: DetailNewsComponent
+    path: 'portfolio/portfolio-detail',
+    component: DetailPortfolioComponent
   },
   {
-    path: 'agents',
-    component: AgentsComponent
+    path: 'career',
+    component: CareerComponent
   },
   {
     path: 'contact',
     component: ContactComponent
   },
   {
-    path: 'auth/activation',
+    path: 'auth/activation/:activationId',
     component: ActivationComponent
   },
   {
@@ -166,26 +202,6 @@ const appRoutes: Routes = [
     component: OfficeNetworkComponent
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent
-  },
-  {
-    path: 'my-data/personal-data',
-    component: PersonalDataComponent
-  },
-  {
-    path: 'my-data/proposal-information',
-    component: ProposalInformationComponent
-  },
-  {
-    path: 'my-data/policy-information',
-    component: PolicyInformationComponent
-  },
-  {
-    path: 'my-data/proposal-information/proposal-detail',
-    component: ProposalDetailComponent
-  },
-  {
     path: 'education-center',
     component: EducationCenterComponent
   },
@@ -198,92 +214,142 @@ const appRoutes: Routes = [
     component: ContactProductComponent
   },
   {
-    path: 'my-data/policy-information/policy-detail',
-    component: PolicyDetailComponent
-  },
-  {
-    path: 'transaction',
-    component: TransactionComponent
-  },
-  {
-    path: 'claim/tracking',
-    component: TrackingComponent
-  },
-  {
-    path: 'claim/history',
-    component: HistoryComponent
-  },
-  {
-    path: 'fund/unit-price',
-    component: UnitPriceComponent
-  },
-  {
-    path: 'fund/fund-fact-sheet',
-    component: FundFactsheetComponent
-  },
-  {
-    path: 'fund/performance',
-    component: PerformanceComponent
-  },
-  {
-    path: 'inbox',
-    component: InboxComponent
-  },
-  {
-    path: 'inbox-detail',
-    component: InboxDetailComponent
-  },
-  {
     path: 'terms-of-use',
     component: TermsOfUseComponent
   },
   {
     path: 'daily-nav',
-    component:DailyNavComponent
+    component: DailyNavComponent
   },
   {
-    path: 'result-page',
-    component:ResultPageComponent
+    path: 'result-page/:query',
+    component: ResultPageComponent
   },
   {
     path: 'tips-trick',
-    component:TipsTrickComponent
+    component: TipsTrickComponent
   },
   {
-    path: 'detail-tips-trick',
-    component:DetailTipsTrickComponent
+    path: 'tips-trick/:id',
+    component: DetailTipsTrickComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'my-data/policy-information/:policyNo',
+    component: PolicyDetailComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'transaction',
+    component: TransactionComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'claim/tracking',
+    component: TrackingComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'claim/history',
+    component: HistoryComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'fund/unit-price',
+    component: UnitPriceComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'fund/fund-fact-sheet',
+    component: FundFactsheetComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'fund/performance',
+    component: PerformanceComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'inbox',
+    component: InboxComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'inbox-detail/:id',
+    component: InboxDetailComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'my-data/personal-data',
+    component: PersonalDataComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'my-data/proposal-information',
+    component: ProposalInformationComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'my-data/policy-information',
+    component: PolicyInformationComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'my-data/proposal-information/:ppajNo',
+    component: ProposalDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'fund-monthly',
-    component:FundMonthlyComponent
+    component: FundMonthlyComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'fund-yearly',
-    component:FundYearlyComponent
+    component: FundYearlyComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'history-detail',
-    component:HistoryDetailComponent
+    path: 'history-detail/:claimId',
+    component: HistoryDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'cashless-tracking-detail',
-    component:CashlessTrackingDetailComponent
+    path: 'cashless-tracking-detail/:claimId',
+    component: CashlessTrackingDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'reimbursement-tracking-detail',
-    component:ReimbursementTrackingDetailComponent
+    path: 'reimbursement-tracking-detail/:claimId',
+    component: ReimbursementTrackingDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'customer-service',
-    component:CustomerServiceComponent
+    component: CustomerServiceComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'customer-service-detail',
-    component:CustomerServiceDetailComponent
+    component: CustomerServiceDetailComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'change-password',
-    component:ChangePasswordComponent
+    component: ChangePasswordComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '404',
+    component: NotfoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/404'
   }
 ];
 @NgModule({
@@ -294,8 +360,8 @@ const appRoutes: Routes = [
     AboutComponent,
     ProductComponent,
     HospitalComponent,
-    NewsComponent,
-    AgentsComponent,
+    PortfolioComponent,
+    CareerComponent,
     ContactComponent,
     ActivationComponent,
     HeaderHomeComponent,
@@ -307,9 +373,9 @@ const appRoutes: Routes = [
     FaqComponent,
     OfficeNetworkComponent,
     DetailAwardComponent,
-    DetailNewsComponent,
+    DetailPortfolioComponent,
     FinancialReportComponent,
-    AboutekreasiLifeComponent,
+    AboutChubbLifeComponent,
     PrivacyPolicyComponent,
     TermOfUseComponent,
     HeaderNonPublicComponent,
@@ -352,7 +418,13 @@ const appRoutes: Routes = [
     ReimbursementTrackingDetailComponent,
     CustomerServiceComponent,
     CustomerServiceDetailComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    NotfoundComponent,
+    HighlightSearch,
+    ExcerptFilter,
+    LocalizedDatePipe,
+    SafeHtmlPipe,
+    EqualValidator
   ],
   imports: [
     BrowserModule,
@@ -365,9 +437,35 @@ const appRoutes: Routes = [
     HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAOeOWlCQqgmJjo6lM6XAQyeW1cI3HgiQk'
-    })
+    }),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    LoadingBarHttpClientModule,
+    LazyLoadImageModule,
+    SweetAlert2Module.forRoot(),
+    PasswordStrengthBarModule,
+    CountdownTimerModule.forRoot(),
+    RecaptchaModule.forRoot(),
+    OrderModule,
+    UserIdleModule.forRoot({ idle: 240, timeout: 60, ping: 120 })
   ],
-  providers: [],
+  providers: [CacheService,
+    {
+      provide: RECAPTCHA_SETTINGS,
+      useValue: { siteKey: environment.googleRecaptchaKey } as RecaptchaSettings,
+    },
+    AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient, environment.apiEndpoint + "/language/frontend/lang/");
+}
+
+registerLocaleData(localeId);
