@@ -1,0 +1,102 @@
+<header-non-public></header-non-public>
+<content>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
+            </div>
+
+            <div class="chubb-content-general">
+              <div class="headline-left border-bottom-tosca">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h5 class="color-tosca">
+                      <a (click)="backClicked()">
+                        <i class="fa fa-arrow-left"></i>
+                      </a>
+                      {{'_reimbursement_tracking_detail' | translate}}
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="chubb-content-nonpublic">
+                <div class="row">
+                  <div class="col-lg-12">
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="section-wrap-claim">
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_claim_number' | translate}}</label>
+                            <div class="form-control-disabled"> {{claimHeaderData.claimNumber}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_policy_number' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.policyNo}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_life_assured' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.lifeAssured}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_submission_date' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.submissionDate}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_admission_date' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.admissionDate}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_discharge_date' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.disschargedDate}}</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="section-wrap-claim">
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_type_rider' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.typeRider}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_hospital' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.hospitalName}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_paid_amount' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.actualAmountPaid}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_diagnose' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.diagnosis}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_status' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.statusName}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_remarks' | translate}}</label>
+                            <div class="form-control-disabled">{{claimHeaderData.remark}}</div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

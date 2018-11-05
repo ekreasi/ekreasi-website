@@ -1,0 +1,139 @@
+<header-home></header-home>
+<section class="margin-tb-40">
+  <div class="container margin-bottom-30">
+    <div class="row">
+      <div class="col-lg-12 carousel-wrap">
+        <!-- <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)" *ngIf="loadingBanner && dataCarousel.length > 0">
+          <ngx-item NgxCarouselItem *ngFor="let carousel of dataCarousel">
+            <div class="chubb-hero" [ngClass]="{'clickable': carousel.url != null}" (click)="doLoadBanner(carousel.url)">
+                  <span class="img-hero">
+                    <img [src]="carousel.image">
+                  </span>
+                <div class="chubb-hero-content {{bannerBorderColor}}" *ngIf="carousel.showText == '1'">
+                  <h3>{{carousel.title | excerpt:100}}</h3>
+                  <div [innerHTML]="carousel.description | excerpt:150"></div>
+                  <a target="blank" [href]="carousel.url">{{'_read_more_banner' | translate}}
+                    <span class="icon-right"></span>
+                  </a>
+                </div>
+            </div>
+          </ngx-item>
+          <button NgxCarouselPrev class='leftRs'>
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </button>
+          <button NgxCarouselNext class='rightRs'>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </button>
+        </ngx-carousel> -->
+        <ngx-carousel [inputs]="carouselOne"(carouselLoad)="myfunc($event)">
+            <ngx-item NgxCarouselItem>
+                <div class="chubb-hero">
+                  <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6">
+                        <div class="img-hero">
+                            <img src="./assets/img/hero-image-home.png">
+                        </div>
+                    </div><div class="col-lg-6">
+                        <div class="chubb-hero-content">
+                            <h2>We Make Your Digital Stronger</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur exercitation.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            </ngx-item>
+            <!-- <ngx-item NgxCarouselItem>
+                <div class="chubb-hero">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="img-hero">
+                                <img src="./assets/img/hero-image-home.png">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="chubb-hero-content">
+                                <h3>Asuransi, Salah Satu Cara Mewujudkan Cinta kepada Keluarga</h3>
+                                <p>Terdiagnosa penyakit kritis adalah risiko kesehatan yang bisa datang kapan dan kepada siapa saja. Faktor usia dan gaya hidup masih jadi penyebab utama…</p>
+                                <a href="#">Baca Lebih Lanjut<span class="icon-right"></span></a>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </ngx-item>
+            <ngx-item NgxCarouselItem>
+                <div class="chubb-hero">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="img-hero">
+                                <img src="./assets/img/hero-image-home.png">
+                            </div>
+                        </div><div class="col-lg-6">
+                            <div class="chubb-hero-content">
+                                <h3>Asuransi, Salah Satu Cara Mewujudkan Cinta kepada Keluarga</h3>
+                                <p>Terdiagnosa penyakit kritis adalah risiko kesehatan yang bisa datang kapan dan kepada siapa saja. Faktor usia dan gaya hidup masih jadi penyebab utama…</p>
+                                <a href="#">Baca Lebih Lanjut<span class="icon-right"></span></a>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </ngx-item> -->
+            <button NgxCarouselPrev class='leftRs'>&lt;</button>
+            <button NgxCarouselNext class='rightRs'>&gt;</button>
+        </ngx-carousel>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 ">
+        <div class="chubb-box border-bottom-violet">
+          <a [routerLink]="['/about-ekreasi']" routerLinkActive="active" >
+            <!-- <h5>{{'_chubb_product' | translate}}</h5> -->
+           
+            <div class="thumbnail">
+              <img src="./assets/img/thumbnail-about.png">
+            </div>
+            <h5>About Us</h5>
+            <div class="clearfix"></div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="chubb-box border-bottom-green">
+          <a [routerLink]="['/portfolio']" routerLinkActive="active">
+            <!-- <h5>{{'_hospital_provider' | translate}}</h5> -->
+            
+            <div class="thumbnail">
+                <img src="./assets/img/thumbnail-portfolio.png">
+              </div>
+              <h5>Portfolio</h5>
+            <div class="clearfix"></div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="chubb-box border-bottom-orange">
+          <a [routerLink]="['/career']" routerLinkActive="active">
+            <!-- <h5>{{'_education_center' | translate}}</h5> -->
+            <div class="thumbnail">
+                <img src="./assets/img/thumbnail-career.png">
+              </div>
+              <h5>Career</h5>
+            <div class="clearfix"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<swal #loginErrorSwal title="{{'_oops' | translate}}" text="User ID or Password is incorrect" type="error">
+</swal>
+
+<swal #swal title="{{swalData.title}}" text="{{swalData.message}}" type="{{swalData.type}}">
+</swal>
+
+<app-footer></app-footer>

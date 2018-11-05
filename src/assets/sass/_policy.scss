@@ -1,0 +1,33 @@
+// .header-tab ul {
+//     display: -webkit-box;
+// }
+
+.policy-table table thead tr th {
+    color:#fff;
+    padding:10px;
+}
+.policy-table table tr td a {
+    color:$dark-gray !important;
+}
+.policy-table table  {
+    border-bottom:1px solid #eee;
+}
+.fund-rider-table {
+    overflow-x:scroll
+}
+.table-green table thead tr th {
+    background:$green;
+}
+.table-violet table thead tr th {
+    background:$violet;
+}
+.table-tosca table thead tr th {
+    background:$tosca;
+}
+.input-group-append button {
+    border-color:#ccc;
+    border-radius:0px !important;
+}
+.input-group .form-control {
+    border-radius:0px !important;
+}

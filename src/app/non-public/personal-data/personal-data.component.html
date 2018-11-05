@@ -1,0 +1,149 @@
+<header-non-public></header-non-public>
+<content>
+    <div class="inner-content-gray min-height-nonpublic">
+        <div class="side-menu-dashboard-vertical">
+            <menu-dashboard-vertical></menu-dashboard-vertical>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="chubb-content-dashboard-wrap">
+                        <div class="side-menu-dashboard-horizontal">
+                            <menu-dashboard-horizontal></menu-dashboard-horizontal>
+                        </div>
+
+                        <div class="chubb-content-general">
+                            <div class="headline-left border-bottom-violet">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h5 class="color-violet">
+                                            {{'_personal_information' | translate}}
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chubb-content-nonpublic">
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="row">
+                                            <div class="col-lg-4">
+
+                                                <div class="title-personal">
+                                                    <h5 class="color-violet">{{'_identity' | translate}}</h5>
+                                                </div>
+                                                <div class="section-wrap">
+                                                    <div class="form-group form-group-disabled">
+                                                        <label>{{'_policy_holder_name' | translate}}</label>
+                                                        <div class="form-control-disabled">{{data.policyHolderName}}</div>
+                                                    </div>
+                                                    <div class="form-group form-group-disabled">
+                                                        <label>{{'_id_type' | translate}}</label>
+                                                        <div class="form-control-disabled">{{data.idType}}</div>
+                                                    </div>
+                                                    <div class="form-group form-group-disabled">
+                                                        <label>{{'_id_card_number' | translate}}</label>
+                                                        <div class="form-control-disabled">{{data.idCardNumber}}</div>
+                                                    </div>
+                                                    <div class="form-group form-group-disabled">
+                                                        <label>{{'_gender' | translate}}</label>
+                                                        <div class="form-control-disabled">{{data.gender | translate}}</div>
+                                                    </div>
+                                                    <div class="form-group form-group-disabled">
+                                                        <label>{{'_birth_of_date' | translate}}</label>
+                                                        <div class="form-control-disabled">{{data.birthday}}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="title-personal margin-bottom-15">
+                                                    <h5 class="color-violet">{{'_address' | translate}}</h5>
+                                                </div>
+                                                <div class="form-group-disabled">
+                                                    <label>{{'_correspondence_address' | translate}}</label>
+                                                    <div class="form-control-disabled address">
+                                                        <p>{{data.correspondenceAddress1}}</p>
+                                                        <p *ngIf="data.correspondenceAddress2">{{data.correspondenceAddress2}}
+                                                            <span *ngIf="data.correspondenceAddress3">, {{data.correspondenceAddress3}}</span>
+                                                            <span *ngIf="data.correspondenceAddress4">, {{data.correspondenceAddress4}}</span>
+                                                        </p>
+                                                        <p *ngIf="data.correspondenceAddress5">{{data.correspondenceAddress5}}
+                                                            <span *ngIf="data.correspondenceAddress6">, {{data.correspondenceAddress6}}</span>
+                                                            <span *ngIf="data.correspondenceAddress7">, {{data.correspondenceAddress7}}</span>
+                                                        </p>
+                                                        <p *ngIf="data.correspondenceState">{{data.correspondenceState}}</p>
+                                                        <p *ngIf="data.correspondencePostCode">{{data.correspondencePostCode}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-disabled">
+                                                    <label>{{'_home_address' | translate}}</label>
+                                                    <div class="form-control-disabled address">
+                                                        <p>{{data.homeAddress1}}</p>
+                                                        <p *ngIf="data.homeAddress2">{{data.homeAddress2}}
+                                                            <span *ngIf="data.homeAddress3">, {{data.homeAddress3}}</span>
+                                                            <span *ngIf="data.homeAddress4">, {{data.homeAddress4}}</span>
+                                                        </p>
+                                                        <p *ngIf="data.homeAddress5">{{data.homeAddress5}}
+                                                            <span *ngIf="data.homeAddress6">, {{data.homeAddress6}}</span>
+                                                            <span *ngIf="data.homeAddress7">, {{data.homeAddress7}}</span>
+                                                        </p>
+                                                        <p *ngIf="data.homeState">{{data.homeState}}</p>
+                                                        <p *ngIf="data.homePostCode">{{data.homePostCode}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group-disabled">
+                                                    <label>{{'_office_address' | translate}}</label>
+                                                    <div class="form-control-disabled address">
+                                                        <p>{{data.officeAddress1}}</p>
+                                                        <p *ngIf="data.officeAddress2">{{data.officeAddress2}}
+                                                            <span *ngIf="data.officeAddress3">, {{data.officeAddress3}}</span>
+                                                            <span *ngIf="data.officeAddress4">, {{data.officeAddress4}}</span>
+                                                        </p>
+                                                        <p *ngIf="data.officeAddress5">{{data.officeAddress5}}
+                                                            <span *ngIf="data.officeAddress6">, {{data.officeAddress6}}</span>
+                                                            <span *ngIf="data.officeAddress7">, {{data.officeAddress7}}</span>
+                                                        </p>
+                                                        <p *ngIf="data.officeState">{{data.officeState}}</p>
+                                                        <p *ngIf="data.officePostCode">{{data.officePostCode}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="title-personal margin-bottom-15">
+                                                    <h5 class="color-violet">{{'_contact' | translate}}</h5>
+                                                </div>
+                                                <div class="form-group form-group-disabled">
+                                                    <label>{{'_mobile_phone_number' | translate}}</label>
+                                                    <div class="form-control-disabled">{{data.mobile}}</div>
+                                                </div>
+                                                <div class="form-group form-group-disabled">
+                                                    <label>{{'_home_phone_number' | translate}}</label>
+                                                    <div class="form-control-disabled">{{data.homeTel}}</div>
+                                                </div>
+                                                <div class="form-group form-group-disabled">
+                                                    <label>{{'_office_phone_number' | translate}}</label>
+                                                    <div class="form-control-disabled">{{data.officeTel}}</div>
+                                                </div>
+                                                <div class="form-group form-group-disabled">
+                                                    <label>{{'_email' | translate}}</label>
+                                                    <div class="form-control-disabled">{{data.email}}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</content>
+<app-footer></app-footer>

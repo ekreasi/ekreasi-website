@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <button class="chubb-navbar navbar-toggler float-right " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed; addCloseClass()">
+        <div class="float-left title-menu-burger"> Menu Customer Corner </div>
+        <div id="burger-bottom" class="menu-burger-icon chubb-custom-menu chubb-menu-dashboard">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </div>
+    </button>
+    <div class="collapse navbar-collapse nav-mobile nav-mobile-dashboard float-right" id="navbarSupportedContent"
+        [ngbCollapse]="isCollapsed">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 no-padding">
+                    <div class="nav-right-top menu-dashboard-horizontal">
+                        <ul>
+                            <li ngbDropdown>
+                                <button class="btn-menu-dropdown" id="dropdownMyData" ngbDropdownToggle>
+                                    <div class="icon-user float-left"></div>{{'_my_data' | translate}}
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownMyData">
+                                    <ul>
+                                        <li>
+                                            <a [routerLink]="['/my-data/personal-data']" routerLinkActive="active">{{'_personal_information'
+                                                | translate}}</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="['/my-data/proposal-information']" routerLinkActive="active">{{'_proposal_information'
+                                                | translate}}</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="['/my-data/policy-information']" routerLinkActive="active">{{'_policy_information'
+                                                | translate}}</a>
+                                        </li>
+                                        <!-- <li class="no-border-bottom"><a [routerLink]="['/my-data/letter-estatement']" routerLinkActive="active">Letter & e Statement</a></li> -->
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/claim/history']" routerLinkActive="active">
+                                    <div class="icon-claimform float-left"></div>{{'_claim' | translate}}
+                                </a>
+                            </li>
+                            <li ngbDropdown>
+                                <button class="btn-menu-dropdown" id="dropdownFund" ngbDropdownToggle>
+                                    <div class="icon-fund float-left"></div>{{'_fund' | translate}}
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownFund">
+                                    <ul>
+                                        <li>
+                                            <a [routerLink]="['/fund/unit-price']" routerLinkActive="active">{{'_unit_price'
+                                                | translate}}</a>
+                                        </li>
+                                        <li>
+                                            <a [routerLink]="['/fund/performance']" routerLinkActive="active">{{'_performance'
+                                                | translate}}</a>
+                                        </li>
+                                        <li class="no-border-bottom">
+                                            <a [routerLink]="['/fund/fund-fact-sheet']" routerLinkActive="active">{{'_fund_fact_name'
+                                                | translate}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/inbox']" routerLinkActive="active">
+                                    <div class="icon-mail float-left"></div>{{'_inbox' | translate}}
+                                </a>
+                            </li>
+                            <li ngbDropdown>
+                                <button class="btn-menu-dropdown" id="dropdownInbox" ngbDropdownToggle>
+                                    <div class="ico-setting float-left"></div>{{'_account_setting' | translate}}
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownInbox">
+                                    <ul>
+                                        <li>
+                                            <a [routerLink]="['/change-password']" routerLinkActive="active">{{'_change_password'
+                                                | translate}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a (click)="doLogout()">
+                                    <div class="icon-signout"></div>{{'_log_out' | translate}}
+                                </a>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="clearfix"></div>
+</nav>

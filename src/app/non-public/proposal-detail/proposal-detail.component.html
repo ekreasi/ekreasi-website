@@ -1,0 +1,564 @@
+<header-non-public></header-non-public>
+<content>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
+            </div>
+
+            <div class="chubb-content-general">
+              <div class="headline-left border-bottom-violet">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h5 class="color-violet">
+                      <a (click)="backClicked()">
+                        <i class="fa fa-arrow-left"></i>
+                      </a>
+                      {{'_proposal_detail' | translate}}
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="chubb-content-nonpublic">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class=" section-wrap">
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_ppaj_number' | translate}}</label>
+                            <div class="form-control-disabled"> {{proposalHeaderData.ppajNo}} </div>
+                          </div>
+
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_main_life_assured' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.mainLifeAssured}}</div>
+                          </div>
+
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_proposal_tracking' | translate}}</label>
+                            <div class="form-control-disabled"> {{proposalTrackingData.endStatus}}</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+
+                        <div class="section-wrap">
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_product_name' | translate}}</label>
+                            <div class="form-control-disabled"> {{proposalHeaderData.productName}} </div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_total' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.totalPremium | currency:'Rp '}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_sum_assured' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.sumAssured | currency:'Rp '}}</div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+
+                        <div class=" section-wrap">
+                          <div class="form-group-disabled">
+                            <label>{{'_payment_frequency' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.paymentFrequency}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_agent_name' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.agentName}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_agent_phone' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.agentPhone}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ngb-tabset class="chubb-primary-tab">
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_proposal_detail' | translate}}</ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab proposal-item-list box-shadow">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled no-margin-bottom">
+                              <label>{{'_policy_holder_name' | translate}}</label>
+                              <div class="form-control-disabled no-border-bottom">{{proposalHeaderData.policyHolderName}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled no-margin-bottom">
+                              <label>{{'_identity_type' | translate}}</label>
+                              <div class="form-control-disabled no-border-bottom">{{proposalHeaderData.idType}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled no-margin-bottom">
+                              <label>{{'_identity_number' | translate}}</label>
+                              <div class="form-control-disabled no-border-bottom">{{proposalHeaderData.idCardNumber}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box-soft-highlight padding-15 section-wrap section-tab">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_email' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.email}}</div>
+                            </div>
+
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label class="color-white"> {{'_mobile_phone_number' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.mobilePhone}}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled">
+                              <label>{{'_correspondence_address' | translate}}</label>
+                              <div class="form-control-disabled address">
+                                <p>{{proposalHeaderData.correspondenceAddress1}}</p>
+                                <p *ngIf="proposalHeaderData.correspondenceAddress2">{{proposalHeaderData.correspondenceAddress2}}
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress3">, {{proposalHeaderData.correspondenceAddress3}}</span>
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress4">, {{proposalHeaderData.correspondenceAddress4}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.correspondenceAddress5">{{proposalHeaderData.correspondenceAddress5}}
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress6">, {{proposalHeaderData.correspondenceAddress6}}</span>
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress7">, {{proposalHeaderData.correspondenceAddress7}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.correspondenceState">{{proposalHeaderData.correspondenceState}}</p>
+                                <p *ngIf="proposalHeaderData.correspondencePostCode">{{proposalHeaderData.correspondencePostCode}}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled">
+                              <label>{{'_home_address' | translate}}</label>
+                              <div class="form-control-disabled address">
+                                <p>{{proposalHeaderData.homeAddress1}}</p>
+                                <p *ngIf="proposalHeaderData.homeAddress2">{{proposalHeaderData.homeAddress2}}
+                                  <span *ngIf="proposalHeaderData.homeAddress3">, {{proposalHeaderData.homeAddress3}}</span>
+                                  <span *ngIf="proposalHeaderData.homeAddress4">, {{proposalHeaderData.homeAddress4}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.homeAddress5">{{proposalHeaderData.homeAddress5}}
+                                  <span *ngIf="proposalHeaderData.homeAddress6">, {{proposalHeaderData.homeAddress6}}</span>
+                                  <span *ngIf="proposalHeaderData.homeAddress7">, {{proposalHeaderData.homeAddress7}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.homeState">{{proposalHeaderData.homeState}}</p>
+                                <p *ngIf="proposalHeaderData.homePostCode">{{proposalHeaderData.homePostCode}}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled address">
+                              <label>{{'_office_address' | translate}}</label>
+                              <div class="form-control-disabled">
+                                <p>{{proposalHeaderData.officeAddress1}}</p>
+                                <p *ngIf="proposalHeaderData.officeAddress2">{{proposalHeaderData.officeAddress2}}
+                                  <span *ngIf="proposalHeaderData.officeAddress3">, {{proposalHeaderData.officeAddress3}}</span>
+                                  <span *ngIf="proposalHeaderData.officeAddress4">, {{proposalHeaderData.officeAddress4}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.officeAddress5">{{proposalHeaderData.officeAddress5}}
+                                  <span *ngIf="proposalHeaderData.officeAddress6">, {{proposalHeaderData.officeAddress6}}</span>
+                                  <span *ngIf="proposalHeaderData.officeAddress7">, {{proposalHeaderData.officeAddress7}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.officeState">{{proposalHeaderData.officeState}}</p>
+                                <p *ngIf="proposalHeaderData.officePostCode">{{proposalHeaderData.officePostCode}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled">
+                              <label>{{'_basic_premium' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.basicPremium | currency:'Rp '}}</div>
+                            </div>
+                            <div class="form-group-disabled">
+                              <label>{{'_regular_top_up' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.regularTopUp | currency:'Rp '}}</div>
+                            </div>
+
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_proposal_receive_date' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.proposalRecieveDate}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_payment_method' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.paymentMethod}}</div>
+                            </div>
+                            <div class="form-group-disabled">
+                              <label>{{'_currency' | translate}}</label>
+                              <div class="form-control-disabled"> {{proposalHeaderData.currency}} </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_life_assured' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="fund-product-table tr-nohover">
+                          <table class="table table-striped thead-center">
+                            <thead>
+                              <tr>
+                                <th>
+                                  {{'_name' | translate}}
+                                </th>
+                                <th>
+                                  {{'_gender' | translate}}
+                                </th>
+                                <th>
+                                  {{'_birth_date' | translate}}
+                                </th>
+                              </tr>
+                            </thead>
+                            <tr *ngIf="proposalLifeAssuredData == false">
+                              <td colspan="7">{{'_data_not_found' | translate}}</td>
+                            </tr>
+                            <tbody *ngIf="proposalLifeAssuredData">
+                              <tr *ngFor="let proposalLifeAssured of proposalLifeAssuredData">
+                                <td>
+                                  {{proposalLifeAssured.lifeAssured}}
+                                </td>
+                                <td>
+                                  {{proposalLifeAssured.gender | translate}}
+                                </td>
+                                <td>
+                                  {{proposalLifeAssured.birthDay}}
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_fund' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="row">
+                          <div *ngIf="policyInvestmentData == false">
+                              <div>{{'_data_not_found' | translate}}</div>
+                          </div>
+                          <div class="col-lg-6" *ngFor="let fund of proposalFundData">
+                            <!-- <div class="fund-table">
+                              <table class="table table-striped thead-center">
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      {{'_fund_code' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_fund_name' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_fund_allocation' | translate}}
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tr *ngIf="proposalFundData == false">
+                                  <td colspan="7">{{'_data_not_found' | translate}}</td>
+                                </tr>
+                                <tbody *ngIf="proposalFundData">
+                                  <tr *ngFor="let fund of proposalFundData">
+                                    <td>
+                                      {{fund.accountCode}}
+                                    </td>
+                                    <td>
+                                      {{fund.fundName}}
+                                    </td>
+                                    <td>
+                                      {{fund.allocationRate}}%
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div> -->
+
+                            <div class="tab-card box-shadow">
+                              <div class="card-table">
+                                  <table>
+                                      <thead>
+                                          <tr>
+                                              <th>{{fund.accountCode}}</th>
+                                          </tr>
+                                      </thead>
+                                      <tr>
+                                          <td>
+                                              <div class="row">
+                                                  <div class="col-lg-6">
+                                                      <div class="color-dark-gray">{{'_fund_name' | translate}} </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                      <div class="color-gray2"> {{fund.fundName}} </div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <div class="row">
+                                                  <div class="col-lg-6">
+                                                      <div class="color-dark-gray">{{'_fund_allocation' | translate}} </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                      <div class="color-gray2">{{fund.allocationRate}}%</div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_product' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-tab box-shadow">
+                        <div class="header-product-info">
+                          <h5>{{'_product' | translate}}</h5>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="fund-product-table">
+                              <table class="table table-striped thead-center">
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      {{'_product_code' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_product_name' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_premi' | translate}} / {{'_cost' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_sum_assured' | translate}}/{{'_unit' | translate}}/{{'_plan' | translate}}
+                                    </th>
+                                  </tr>
+                                </thead>
+
+                                <tr *ngIf="proposalLifeProductData.length == 0">
+                                  <td colspan="7">{{'_data_not_found' | translate}}</td>
+                                </tr>
+                                <tbody *ngIf="proposalLifeProductData">
+                                  <tr *ngFor="let proposalProduct of proposalLifeProductData">
+                                    <td class="text-center">
+                                      {{proposalProduct.productCode}}
+                                    </td>
+                                    <td class="text-center">
+                                      {{proposalProduct.productName}}
+                                    </td>
+                                    <td class="text-center">
+                                      {{proposalProduct.premi | currency:'Rp '}}
+                                    </td>
+                                    <td class="text-center" [innerHTML]="proposalProduct.sumAssured | currency:'Rp '"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="background-white padding-15 section-tab box-shadow">
+                        <div class="header-product-info">
+                          <h5>{{'_rider' | translate}}</h5>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="fund-rider-table">
+
+                              <table class="table table-striped thead-center">
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      {{'_rider_code' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_rider_name' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_premi' | translate}}/{{'_cost' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_sum_assured' | translate}}/{{'_unit' | translate}}/{{'_plan' | translate}}
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tr *ngIf="proposalRiderData == false">
+                                  <td colspan="7">{{'_data_not_found' | translate}}</td>
+                                </tr>
+                                <tbody *ngIf="proposalRiderData">
+                                  <tr *ngFor="let proposalRider of proposalRiderData">
+                                    <td>
+                                      {{proposalRider.riderCode}}
+                                    </td>
+                                    <td>
+                                      {{proposalRider.riderName}}
+                                    </td>
+                                    <td class="text-align-right">
+                                      {{proposalRider.basicPremium | currency:'Rp '}}
+                                    </td>
+                                    <td class="text-align-right">
+                                      <span *ngIf="proposalRider.sumAssured > 0">{{proposalRider.sumAssured | currency:'Rp '}}</span>
+                                      <span *ngIf="proposalRider.plan != null">{{proposalRider.plan}}</span>
+                                      <span *ngIf="proposalRider.unit != '0 Unit' && proposalRider.plan == null">{{proposalRider.unit}}</span>
+</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_beneficiary' | translate}}</ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="row">
+                        <div class="col-lg-12" *ngIf="proposalBeneficiaryData.length == 0">
+                          <div class="background-white padding-15 section-wrap section-tab proposal-item-list box-shadow">
+                            <span>{{'_data_not_found' | translate }}</span>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6" *ngFor="let proposalBenef of proposalBeneficiaryData">
+                          <div class="tab-card box-shadow">
+                            <div class="card-table tr-no-hover">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>{{proposalBenef.fullName}}</th>
+                                  </tr>
+                                </thead>
+
+                                <tr>
+                                  <td>
+                                    <div class="row">
+                                      <div class="col-lg-6">
+                                        <div class="color-dark-gray">{{'_birth_date' | translate}} </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="color-gray2"> {{proposalBenef.birthday}} </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="row">
+                                      <div class="col-lg-6">
+                                        <div class="color-dark-gray">{{'_gender' | translate}} </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="color-gray2">{{proposalBenef.gender | translate}}</div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="row">
+                                      <div class="col-lg-6">
+                                        <div class="color-dark-gray">{{'_relationship' | translate}} </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="color-gray2">{{proposalBenef.designationDesc}}</div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_servicing_agent' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_agent_code' | translate}}</label>
+                              <div class="form-control-disabled"> {{proposalAgentData.agentCode}}</div>
+                            </div>
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_agent_name' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.realName}}</div>
+                            </div>
+
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_email' | translate}}</label>
+                              <div class="form-control-disabled"> {{proposalAgentData.email}}</div>
+                            </div>
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_mobile_number' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.mobile}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_status_agent' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.agentStatus}}</div>
+                            </div>
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_branch' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.physicalLocation}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+
+
+                </ngb-tabset>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

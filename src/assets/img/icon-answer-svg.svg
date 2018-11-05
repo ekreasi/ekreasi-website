@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 15 0 15 15 0 15"></polygon>
+    </defs>
+    <g id="6.Chubb---FAQ" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-145.000000, -634.000000)">
+        <g id="Group-3" transform="translate(145.000000, 634.000000)">
+            <g id="Group" fill="#7ACB00">
+                <circle id="Oval" cx="13.5" cy="13.5" r="13.5"></circle>
+            </g>
+            <g id="Page-1" transform="translate(6.000000, 6.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M12.9207256,0.389521207 L5.45493501,8.50396767 L1.74303671,6.40311607 C0.966147693,5.9598918 0,6.52081404 0,7.4154043 L0,8.91276814 L1.1426939,9.56082115 L1.1426939,7.37626687 L5.67976003,9.94776751 L13.8573061,1.05914266 L13.8573061,5.94832198 L6.51664048,13.9266445 L1.1426939,10.8996355 L1.1426939,10.8743533 L0,10.2264432 L0,11.5652575 L5.77003285,14.8168068 C6.3398086,15.1399048 7.05699186,15.0272062 7.50021426,14.5451301 L15,6.39368881 L15,1.19998028 C15,0.108560159 13.6593344,-0.413938832 12.9207256,0.389521207" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,74 @@
+@import '~assets/sass/vars';
+
+.inner-content-product{
+    padding:80px 0px 80px 0px; 
+}
+.chubb-hospital-wrap {
+    background:#fff;
+    padding:30px;
+    // border:1px solid #CCCCCC;
+}
+
+.chubb-hospital-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.chubb-hospital-tab .nav-tabs li a {
+    color:#ccc
+
+}
+.chubb-hospital-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.chubb-list-hospital {
+    padding:30px 0px 0px 0px;
+}
+.chubb-list-hospital table {
+    border-bottom:1px solid #ccc;
+}
+.chubb-list-hospital table.violet thead tr th {
+    background:$violet;
+    color:#fff;
+}
+.chubb-list-hospital table.green thead tr th {
+    background:$green;
+    color:#fff;
+}
+.chubb-list-hospital table.magenta thead tr th {
+    background:$magenta;
+    color:#fff;
+}
+.chubb-hospital-search-bg {
+    border-top:1px solid #ccc;
+    border-right:none;
+    border-bottom:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-radius:0px;
+}
+.btn-chubb-hospital-search {
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-left:none !important;
+    background:transparent;
+    
+}
+.btn-chubb-hospital-search .icon-search:before {
+    font-size:30px;
+    color:#ccc;
+}
+.chubb-hospital-search {
+    margin-bottom:20px;
+}
+.chubb-hospital-tab .nav-tabs li a {
+    padding: 0px
+}
+
+.chubb-hospital-tab .nav-tabs li a .tab-title {
+    padding: .5rem 1rem;
+}
+.chubb-meta {
+    padding: 20px 0;
+}

@@ -1,0 +1,172 @@
+<header-non-public></header-non-public>
+<content>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
+    <!-- <div class="container popup-transparent" style="position: relative;" id="popup">
+      <div class="row">
+          <div class="col-lg-8 notif-tutorial ">
+              Jika membutuhkan tutorial dari kami silakan klik tombol berikut ini <a class="btn-tutorial" href="javascript:void(0);" onclick="javascript:introJs().start();">Mulai</a>
+              <a class="btn-close-tutorial" href="javascript:void(0);" onclick="document.getElementById('popup').style.display='none';return false;" id="close_popup"></a>
+          </div>
+      </div>
+    </div> -->
+    <div class="container popup-transparent" style="position: relative;" id="popup">
+      <div class="row">
+          <div class="col-lg-8 notif-tutorial ">
+              Apabila terdapat perbedaan pada data di dalam portal dengan data pada Polis, maka data yang berlaku adalah data yang tercantum dalam Polis Bapak/Ibu
+
+              <a class="btn-close-tutorial" href="javascript:void(0);" onclick="document.getElementById('popup').style.display='none';return false;" id="close_popup"></a>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
+            </div>
+            <div class="chubb-slide-non-public" *ngIf="loadingBanner">
+              <ngx-carousel [inputs]="carouselOne">
+                <ngx-item NgxCarouselItem *ngFor="let carousel of dataCarousel">
+                  <div class="chubb-banner-dashboard {{bannerBorderColor}}">
+                    <div class="row">
+                      <div class="no-padding slide-img" [ngClass]="{ 'col-lg-12' : carousel.showText == '0', 'col-lg-6' : carousel.showText == '1' }">
+                        <div class="banner-dashboard">
+                          <div class="img-hero-banner img-clipped-wrapper">
+                            <img class="img-responsive clipped-img" (click)="doLoadBanner(carousel.url)" [src]="carousel.image">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 no-padding slide-text" *ngIf="carousel.showText == '1'" [hidden]="!carousel.showTextSection">
+                        <div class="chubb-banner-dashboard-text"> 
+                          <h3>{{carousel.title | excerpt: 100}}</h3>
+                          <div [innerHTML]="carousel.description | excerpt:150"></div>
+                          <a (click)="doLoadBanner(carousel.url)">{{'_read_more' | translate}}
+                            <span class="icon-right"></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="carousel.showText == '1' && !carousel.showTextSection" class="slide-text-btn btn-one showBtn" (click)="showSlideText(carousel)">
+                    <span><a href="javascript:;"><i class="fa fa-chevron-down"></i></a></span>
+                  </div>
+                  <div *ngIf="carousel.showText == '1' && carousel.showTextSection" class="slide-text-btn btn-two" (click)="hideSlideText(carousel)">
+                      <span><a href="javascript:;"><i class="fa fa-chevron-up"></i></a></span>
+                  </div>
+                </ngx-item>
+                <button NgxCarouselPrev class='leftRs'>&lt;</button>
+                <button NgxCarouselNext class='rightRs'>&gt;</button>
+              </ngx-carousel>
+            </div>
+
+            <div class="policy-group-wrap" *ngIf="loadingDataPolicy && policySummaryData.length > 0">
+              <div class="title-wrap-dashboard">
+                <div class="headline-policy">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h5 class="color-cyan">{{'_policy_summary' | translate}}</h5>
+                    </div>
+                    <div class="col-sm-6">
+                      <a class="btn-next-text color-cyan float-right" [routerLink]="['/my-data/policy-information']"> {{'_read_more' | translate}}
+                        <span class="icon-right"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chubb-section-policy-wrap">
+                <div class="row">
+                  <div *ngFor="let policySummary of policySummaryData" class="col-lg-6">
+                    <div class="policy-item-wrap overflow-x">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th colspan="2">
+                              <div class="sub-label">{{'_policy_number' | translate}}
+                                <a [routerLink]="['/my-data/policy-information', policySummary.policyNo]">{{ policySummary.policyNo }}</a>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tr>
+                          <td class="label">
+                            {{'_main_life_assured' | translate}}
+                          </td>
+                          <td>
+                            {{ policySummary.mainLifeAssured }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="label">
+                            {{'_next_due_date' | translate}}
+                          </td>
+                          <td>
+                            {{ policySummary.nextDueDate }}
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chubb-section-fund">
+              <div class="row">
+
+                <ng-container *ngIf="loadingDataYourTop3Funds && topGlobalFundUseridData.length > 0">
+                  <!-- <div class="col-lg-6" [ngClass]="{'col-lg-12': topGlobalFundChubbLifeData.length == 0}"> -->
+                  <div class="col-lg-6">
+                    <div class="chubb-section-nav background-white">
+                      <div class="headline-nav">
+                        <h5 class="color-cyan">
+                          <i class="fas fa-chart-line"></i>
+                          <span>{{'_your_top_3_funds' | translate}}</span>
+                        </h5>
+                      </div>
+                      <div class="background-white chub-chart">
+                        <ngb-carousel>
+                          <ng-template ngbSlide *ngFor="let data of topGlobalFundUseridData">
+                            <chart-rupiah-equity-fund modelFundName="{{data}}"></chart-rupiah-equity-fund>
+                          </ng-template>
+                        </ngb-carousel>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+
+                <ng-container *ngIf="loadingDataChubbLifeTop3Funds && topGlobalFundChubbLifeData.length > 0">
+                  <!-- <div class="col-lg-6" [ngClass]="{'col-lg-12': topGlobalFundUseridData.length == 0}"> -->
+                  <div class="col-lg-6">
+                    <div class="chubb-section-nav background-white">
+                      <div class="headline-nav">
+                        <h5 class="color-cyan">
+                          <i class="fas fa-chart-line"></i>
+                          <span>{{'_chubb_life_top_3_funds' | translate}}</span>
+                        </h5>
+                      </div>
+                      <div class="background-white chub-chart">
+                        <ngb-carousel>
+                          <ng-template ngbSlide *ngFor="let data of topGlobalFundChubbLifeData">
+                            <chart-rupiah-syariah-bond-fund modelFundName="{{data}}"></chart-rupiah-syariah-bond-fund>
+                          </ng-template>
+                        </ngb-carousel>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

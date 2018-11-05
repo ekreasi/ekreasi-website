@@ -1,0 +1,37 @@
+.form-disabled:disabled {
+    background:transparent !important;
+    border-bottom:1px solid #efefef !important;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-radius:0px;
+    padding:8px 0px;
+    color:#ccc !important;
+}
+.form-control-disabled {
+    background:transparent !important;
+    border-bottom:1px solid #efefef !important;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-radius:0px;
+    padding:8px 0px;
+    color:#6c757d !important;
+}
+.form-control-disabled label {
+    color:$dark-gray;
+    font-family:'publico-roman',serif;
+   }
+.form-group-disabled label {
+    margin:auto;
+}
+.form-group-disabled {
+    margin-bottom: 10px;
+}
+.chubb-search .input-group-prepend .btn-search {
+    position: absolute;
+    right: 0px;
+    background: transparent;
+    z-index: 0 !important;
+    top: 2px;
+}
