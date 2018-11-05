@@ -4,11 +4,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-header-content">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['/product']" routerLinkActive="active"><span class="icon-left"></span>Product</a>
+          <div class="chubb-header-content">
+            <div class="chubb-breadcrumb">
+              <a href="https://www2.chubb.com/id-en/personal/" target="_blank"><span class="icon-left"></span>{{'_product' | translate}}</a>
             </div>
-            <h1>{{detailProductData.title}}</h1>
+            <h1>{{data.title}}</h1>
           </div>
         </div>
       </div>
@@ -18,9 +18,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-product-wrap">
-              <ngb-tabset class="ekreasi-product-tab">
-                  <ngb-tab *ngFor="let detailProduct of detailProductData.sub_product">
+          <div class="chubb-product-wrap">
+              <ngb-tabset class="chubb-product-tab">
+                  <ngb-tab *ngFor="let detailProduct of data.sub_product">
                     <ng-template ngbTabTitle>{{detailProduct.title}}</ng-template>
                     <ng-template ngbTabContent>
                        <div class="detail-product-wrap">
@@ -30,8 +30,8 @@
                                 <h5>{{detailProduct.summary}}</h5>
                               </div>
                               <div class="col-lg-6">
-                                <button class="btn-mail float-left" [routerLink]="['/contact-product']">Contact us for more info <span class="icon-mail"></span></button>
-                                <button class="btn-brochure float-right">Download Brochure <span class="icon-pdf"></span></button>
+                                <button class="btn-mail float-left" [routerLink]="['/contact-product']">{{'_contact_us_more_info' | translate}} <span class="icon-mail"></span></button>
+                                <a [href]="detailProduct.brochure" target="_blank" class="btn-brochure float-right">{{'_download_brochure' | translate}} <span class="icon-pdf"></span></a>
                                 <div class="clearfix"></div>
                               </div>
                             </div>
@@ -44,8 +44,8 @@
                               <div class="col-lg-6">
                               </div>
                               <div class="col-lg-6">
-                                <button class="btn-mail float-left" [routerLink]="['/contact-product']">Contact us for more info <span class="icon-mail"></span></button>
-                                <button class="btn-brochure float-right">Download Brochure <span class="icon-pdf"></span></button>
+                                <button [routerLink]="['/contact-product']" class="btn-mail float-left">{{'_contact_us_more_info' | translate}} <span class="icon-mail"></span></button>
+                                <a [href]="detailProduct.brochure" target="_blank" class="btn-brochure float-right">{{'_download_brochure' | translate}} <span class="icon-pdf"></span></a>
                                 <div class="clearfix"></div>
                               </div>
                             </div>
@@ -54,59 +54,6 @@
                        </div>
                     </ng-template>
                   </ngb-tab>
-
-                  <!-- <ngb-tab *ngFor="let detailProduct of detailProductData.sub_product">
-                    <ng-template ngbTabTitle>Asuransi Family Saver</ng-template>
-                    <ng-template ngbTabContent>
-                       <div class="detail-product-wrap">
-                          <div class="header-detail-product">
-                            <div class="row">
-                              <div class="col-lg-6">
-                                <h5>Fokus Perlindungan</h5>
-                              </div>
-                              <div class="col-lg-6">
-                                <button class="btn-mail float-left">Contact us for more info <span class="icon-mail"></span></button>
-                                <button class="btn-brochure float-right">Download Brochure <span class="icon-pdf"></span></button>
-                                <div class="clearfix"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="content-detail-product">
-                            <img src="./assets/img/dummy/img-product.jpg">
-                            <p>Anda bekerja keras untuk mencukupi semua kebutuhan keluarga Anda. Namun seperti yang kita ketahui bersama, hidup penuh ketidakpastian. Tidak ada jaminan bahwa tingkat kesehatan seseorang saat ini tidak akan berubah di masa depan.
-                                Untuk mengatasi ketidakpastian ini, kami akan membantu Anda membuat sebuah perencanaan yang matang bagi perlindungan terbaik dan masa depan keluarga Anda.
-                            </p>
-                            <h5 class="border-green">Manfaat Produk</h5>
-                            <p>Family Saver merupakan produk asuransi berjangka, yang memberikan jaminan asuransi kepada Tertanggung selama jangka waktu tertentu. Jika terjadi klaim selama kontrak berlangsung, maka perusahaan akan membayar sejumlah uang pertanggungan kepada penerima manfaat. Jika tidak terjadi klaim, maka perusahaan akan mengembalikan seluruh premi yang telah terkumpul kepada pemegang polis.
-                            </p>
-
-                            <h5 class="border-orange">Keunggulan</h5>
-                            <ul>
-                              <li>Family Saver™ akan mengembalikan seluruh premi terkumpul jika tidak terjadi klaim selama 15 tahun dan akan terus memberikan perlindungan tambahan hingga 10 tahun ke depan. Ini membuat total jangkauan perlindungan yang diberikan akan mencapai 25 tahun.</li>
-                              <li>Family Saver™ memberikan 200% uang pertanggungan jika terjadi risiko meninggal karena kecelakaan.</li>
-                            </ul>
-
-                            <h5 class="border-orange">Ketentuan Produk</h5>
-                            <ul>
-                              <li>Premi yang dibayarkan selama 8 tahun pertama berjumlah tetap. Hal ini berarti tidak ada kenaikan premi meskipun usia nasabah bertambah.</li>
-                              <li>Family Saver memberikan jangkauan perlindungan hingga 25 tahun</li>
-                            </ul>
-                          </div>
-                          <div class="header-detail-product">
-                              <div class="row">
-                                <div class="col-lg-6">
-                                </div>
-                                <div class="col-lg-6">
-                                  <button class="btn-mail float-left">Contact us for more info <span class="icon-mail"></span></button>
-                                  <button class="btn-brochure float-right">Download Brochure <span class="icon-pdf"></span></button>
-                                  <div class="clearfix"></div>
-                                </div>
-                              </div>
-                            </div>
-
-                       </div>
-                    </ng-template>
-                  </ngb-tab> -->
                 </ngb-tabset>
           </div>
         </div>

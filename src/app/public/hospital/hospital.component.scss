@@ -3,51 +3,51 @@
 .inner-content-product{
     padding:80px 0px 80px 0px; 
 }
-.ekreasi-hospital-wrap {
+.chubb-hospital-wrap {
     background:#fff;
     padding:30px;
     // border:1px solid #CCCCCC;
 }
 
-.ekreasi-hospital-tab .nav-tabs {
+.chubb-hospital-tab .nav-tabs {
     border-bottom:2px solid #ccc;
 }
-.ekreasi-hospital-tab .nav-tabs li a {
+.chubb-hospital-tab .nav-tabs li a {
     color:#ccc
 
 }
-.ekreasi-hospital-tab .nav-tabs li a:hover {
+.chubb-hospital-tab .nav-tabs li a:hover {
     border-left:none;
     border-right:none;
     border-top:none;
     border-bottom:3px solid $magenta;
 }
-.ekreasi-list-hospital {
+.chubb-list-hospital {
     padding:30px 0px 0px 0px;
 }
-.ekreasi-list-hospital table {
+.chubb-list-hospital table {
     border-bottom:1px solid #ccc;
 }
-.ekreasi-list-hospital table.violet thead tr th {
+.chubb-list-hospital table.violet thead tr th {
     background:$violet;
     color:#fff;
 }
-.ekreasi-list-hospital table.green thead tr th {
+.chubb-list-hospital table.green thead tr th {
     background:$green;
     color:#fff;
 }
-.ekreasi-list-hospital table.magenta thead tr th {
+.chubb-list-hospital table.magenta thead tr th {
     background:$magenta;
     color:#fff;
 }
-.ekreasi-hospital-search-bg {
+.chubb-hospital-search-bg {
     border-top:1px solid #ccc;
     border-right:none;
     border-bottom:1px solid #ccc;
     border-left:1px solid #ccc;
     border-radius:0px;
 }
-.btn-ekreasi-hospital-search {
+.btn-chubb-hospital-search {
     border-top:1px solid #ccc;
     border-right:1px solid #ccc;
     border-bottom:1px solid #ccc;
@@ -55,10 +55,20 @@
     background:transparent;
     
 }
-.btn-ekreasi-hospital-search .icon-search:before {
+.btn-chubb-hospital-search .icon-search:before {
     font-size:30px;
     color:#ccc;
 }
-.ekreasi-hospital-search {
+.chubb-hospital-search {
     margin-bottom:20px;
+}
+.chubb-hospital-tab .nav-tabs li a {
+    padding: 0px
+}
+
+.chubb-hospital-tab .nav-tabs li a .tab-title {
+    padding: .5rem 1rem;
+}
+.chubb-meta {
+    padding: 20px 0;
 }

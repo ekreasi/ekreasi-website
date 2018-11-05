@@ -20,6 +20,7 @@
 .menu-dashboard-horizontal ul li a {
     border:none;
     color:$dark-gray; 
+    display: block;
 }
 .menu-dashboard-horizontal ul li a:hover {
     border:none;
@@ -45,6 +46,11 @@
     position: relative;
 }
 .menu-dashboard-horizontal ul li a .icon-mail:before {
+    font-size: 38px;
+    top: -7px;
+    position: relative;
+}
+.menu-dashboard-horizontal ul li a .icon-claimform:before {
     font-size: 38px;
     top: -7px;
     position: relative;
@@ -76,4 +82,15 @@
     text-decoration:none;
     border-right:none;
     width:100%;
+}
+
+.chubb-menu-dashboard.menu-burger-icon {
+    margin-top: 0px;
+    .bar1, .bar2, .bar3 {
+        background-color: #333;
+    }
+}
+
+.navbar {
+    padding: 0.8rem 1rem;
 }

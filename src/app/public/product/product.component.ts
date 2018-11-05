@@ -1,65 +1,56 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Config } from '../../config'; 
+import { AuditTrail } from './../../audit-trail';
+import { Title } from '@angular/platform-browser';
+import { CacheService } from '../../cache.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-product',
 	templateUrl: './product.component.html',
-	styleUrls: ['./product.component.scss']
+	styleUrls: ['./product.component.scss'],
+	providers: [ Config, AuditTrail ]
 })
 export class ProductComponent implements OnInit {
+	public loadingData: boolean = false;
+	data: any = {};
+	public preview: any = '';
+	public token: any = '';
 
-	productData : any = {};
-
-	constructor() { }
-
-	ngOnInit() {
-		this.loadData();
+	constructor(private cnf: Config, private auditTrail: AuditTrail, private titleService: Title, private http: HttpClient, private cacheService: CacheService, private route: ActivatedRoute) {
+		this.route.queryParams.subscribe(params => {
+			this.preview = params['preview'];
+			this.token = params['token'];
+		});
 	}
 
-	loadData(){
-		this.productData = {
+	ngOnInit() {
+		this.cacheService.get(this.cnf.lang + '/product', this.loadData()).subscribe((res: any) => {
+			this.loadingData = true;
+			if (res.status == 100) {
+				this.data = res.datas;
+				this.titleService.setTitle( this.cnf.prefixTitle + this.data.title + this.cnf.postfixTitle);
+			}
+		});
+	}
 
-			"title": "Product",
-			"summary": "Jenis asuransi yang tepat dapat melindungi dan membantu Anda mengejar tujuan hidup Anda dengan penuh percaya diri. Itulah yang menjadi tujuan kami menciptakan berbagai solusi komprehensif, yang dapat disesuaikan dengan kebutuhan Anda.",
-			"products": [
-				{
-					id: 1,
-					title: "Asuransi Kesehatan Perorangan",
-					icon: "ekreasi-product1.svg",
-					color: "magenta"
-				},
-				{
-					id: 2,
-					title: "Asuransi Kesehatan",
-					icon: "ekreasi-product2.svg",
-					color: "green"
-				},
-				{
-					id: 3,
-					title: "Asuransi Jiwa",
-					icon: "ekreasi-product3.svg",
-					color: "violet"
-				},
-				{
-					id: 4,
-					title: "Asuransi Syariah",
-					icon: "ekreasi-product4.svg",
-					color: "green"
-				},
-				{
-					id: 5,
-					title: "Asuransi Kredit",
-					icon: "ekreasi-product5.svg",
-					color: "violet"
-				},
-				{
-					id: 6,
-					title: "Asuransi Perjalanan",
-					icon: "ekreasi-product6.svg",
-					color: "magenta"
-				},
-			]
+	loadData() {
+		let params = new HttpParams();
+		params = params.append('appid', this.cnf.appid);
+		params.append('appkey', this.cnf.appkey);
+		params = params.append('lang', this.cnf.lang);
+
+		let url = this.cnf.URLWS + '/product';
+		if (this.preview) {
+			params = params.append('token', this.token);
+			url = url + '/preview';
+		} else {
+			url = url + '/frontend/all';
 		}
-		
+
+		return this.http.get(url, { params })
+			.map((response: Response) => response);
 	}
 
 }

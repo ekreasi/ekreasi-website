@@ -1,118 +1,87 @@
 <header-non-public></header-non-public>
 <content>
-<div  class="inner-content-dashboard">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-6">
-            <div class="ekreasi-header-content-non-public">
-                <div class="ekreasi-breadcrumb">
-                    <a [routerLink]="['/history']" routerLinkActive="active"><span class="icon-left"></span>Back</a>
-                  </div>
-              <h1>Customer Corner</h1>
-            </div>
-          </div>
-          <div class="col-lg-6">
-                <div class="ekreasi-header-content welcome-page float-right">
-                    <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
-                    <ul>
-                      <li>Last Login at Friday, 8 Feb 2018. 01:58pm </li>
-                      <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
-                    </ul>
-                </div>
-              </div>
-        </div>
-  </div>
-  </div>
-  <div class="inner-content-gray">
-      <div class="side-menu-dashboard-vertical"> 
-          <menu-dashboard-vertical></menu-dashboard-vertical>
-      </div>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-content-dashboard-wrap">
-            <div class="side-menu-dashboard-horizontal"> 
-                <menu-dashboard-horizontal></menu-dashboard-horizontal>
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
             </div>
-              
-            <div class="ekreasi-content-general">
+
+            <div class="chubb-content-general">
               <div class="headline-left border-bottom-tosca">
                 <div class="row">
-                  <div  class="col-sm-12">
-                    <a class="rotate-15" [routerLink]="['/claim/tracking']" routerLinkActive="active"><div class="icon-arrowup tosca"></div></a>
-                    <h5 class="color-tosca padding-left-25">Cashless Detail</h5>
+                  <div class="col-sm-12">
+                    <h5 class="color-tosca">
+                      <a (click)="backClicked()">
+                        <i class="fa fa-arrow-left"></i>
+                      </a>
+                      {{'_cashless_tracking_detail' | translate}}</h5>
                   </div>
                 </div>
               </div>
-              <div class="ekreasi-content-nonpublic">
+              <div class="chubb-content-nonpublic">
                 <div class="row">
                   <div class="col-lg-12">
-                    
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <div class="section-wrap-claim">
-                              <div class="form-group form-group-disabled">
-                                  <label>Claim ID</label>
-                                  <div class="form-control-disabled">098828288</div>
-                              </div>
-                              <div class="form-group form-group-disabled">
-                                  <label>Policy Number</label>
-                                  <div class="form-control-disabled">023782888</div>
-                              </div>
-                              <div class="form-group form-group-disabled">
-                                  <label>Policy Holder</label>
-                                  <div class="form-control-disabled">Anita Sinantya</div>
-                              </div>
-                              <div class="form-group form-group-disabled">
-                                  <label>Life Assured </label>
-                                  <div class="form-control-disabled">Anita Sinantya</div>
-                              </div>
-                              <div class="form-group-disabled">
-                                  <label>Admission Date </label>
-                                  <div class="form-control-disabled">15 Mar 2018</div>
-                              </div>
-                              <div class="form-group-disabled">
-                                  <label>Discharge Date </label>
-                                  <div class="form-control-disabled">16 Mar 2018</div>
-                              </div>
-                             
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="section-wrap-claim">
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_claim_id' | translate}}</label>
+                            <div class="form-control-disabled"> {{data.claim_id}}</div>
                           </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="section-wrap-claim">
-                              <div class="form-group form-group-disabled">
-                                  <label>Type (Rider)</label>
-                                  <div class="form-control-disabled">My Flexi Health</div>
-                              </div>
-                            <div class="form-group form-group-disabled">
-                                <label> Hospital</label>
-                                <div class="form-control-disabled">Siloam Hospital</div>
-                            </div>
-                            <div class="form-group form-group-disabled">
-                                <label>Diagnose <span class="color-red asterik">*</span> </label>
-                                <div class="form-control-disabled">Allergic Reaction</div>
-                            </div>
-                            <div class="form-group-disabled">
-                                <label>Paid Amount</label>
-                                <div class="form-control-disabled">Rp 3,000,000.00</div>
-                            </div>
-                            <div class="form-group form-group-disabled">
-                                <label> Status </label>
-                                <div class="form-control-disabled">In Progress</div>
-                            </div>
-                            <div class="form-group form-group-disabled">
-                                <label> Remarks</label>
-                                <div class="form-control-disabled">-</div>
-                            </div>
-                           
-                            
-                            
-                            
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_policy_number' | translate}}</label>
+                            <div class="form-control-disabled">{{data.policy_no}}</div>
                           </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_life_assured' | translate}}</label>
+                            <div class="form-control-disabled">{{data.member_name}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_paid_amount' | translate}}</label>
+                            <div class="form-control-disabled">{{data.cover | currency:'Rp '}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_admission_date' | translate}}</label>
+                            <div class="form-control-disabled">{{data.admission_date | date: 'dd MMM yyyy'}}</div>
+                          </div>
+
                         </div>
-                      
                       </div>
-                      <span class="asterik">*</span>  Ini merupakan diagnosa sementara, kami akan melakukan pembayaran jika diagnosa akhir telah dikeluarkan oleh Rumah Sakit
+                      <div class="col-lg-6">
+                        <div class="section-wrap-claim">
+                          <div class="form-group-disabled">
+                            <label>{{'_discharge_date' | translate}}</label>
+                            <div class="form-control-disabled">{{data.discharge_date | date: 'dd MMM yyyy'}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_hospital' | translate}}</label>
+                            <div class="form-control-disabled">{{data.provider_name}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_status' | translate}}</label>
+                            <div class="form-control-disabled">{{data.claim_status}}</div>
+                          </div>
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_final_diagnose' | translate}}</label>
+                            <div class="form-control-disabled">{{data.final_diagnose}}</div>
+                          </div>
+
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_type_rider' | translate}}</label>
+                            <div class="form-control-disabled">{{data.type}}</div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>

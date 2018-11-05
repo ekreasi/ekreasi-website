@@ -7,6 +7,9 @@
 .welcome-page ul li  {
     font-size:13px;
 }
+.min-height-nonpublic {
+    min-height: 450px;
+}
 
 table tr td span.icon-triangleup:before {
     font-size:22px;
@@ -17,7 +20,7 @@ table tr td span.icon-triangleup:before {
 table tr td span.icon-triangledown:before {
     font-size:22px;
     color:red;
-    top:4px;
+    top:0px;
     position:relative;
 }
 .charts-wrap {
@@ -50,13 +53,13 @@ table tr td span.icon-triangledown:before {
 a span.circle-mail {
     color:#fff;
 }
-.ekreasi-header-content-non-public {
+.chubb-header-content-non-public {
     padding:0px;
     margin:auto;
     float:right;
     width:100%;
 }
-.ekreasi-header-content-non-public ul {
+.chubb-header-content-non-public ul {
     width:100%;
 }
 .section-wrap {
@@ -77,7 +80,7 @@ a span.circle-mail {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
-.ekreasi-content-nonpublic .men h5 {
+.chubb-content-nonpublic .men h5 {
     color:$magenta;
     text-align:center;
     padding:10px 0px;
@@ -94,15 +97,16 @@ a span.circle-mail {
 }
 .page-item:first-child .page-link{
     border-radius:0px !important;
+    border: 1px solid #dee2e6
 }
 .page-item:first-child .page-link.disabled {
     background:#fff !important;
-    border:none !important;
+    border: 1px solid #dee2e6
 }   
 .page-item:last-child .page-link {
     border-radius:0px !important;
     background:#fff;
-    border:none !important
+    border: 1px solid #dee2e6
 }
 .card-item {
     border:1px solid #ccc;
@@ -172,18 +176,18 @@ span.sub-title-accordion ul li {
     font-size:34px;
     margin-top:0px;
 }
-
-.tab-col-2 ul li {
-    width:50% !important;
-}
-
 .policy-item-wrap table {
     width:100%;
-    margin-top:10px;
 }
+
+.chubb-slide-non-public .ngxcarouselPointDefault {
+    transform: translate(-50%, -10%);
+}
+
 .policy-item-wrap table tr td {
-    font-size:16px !important;
+    font-size:14px;
     padding:5px 0px;
+    padding-right: 10px;
 }
 
 .policy-item-wrap table tr td a {
@@ -197,8 +201,9 @@ span.sub-title-accordion ul li {
 }
 
 .policy-item-wrap table tr td.label {
-    font-size:16px;
+    font-size:14px;
     font-family:'publico-roman',serif;
+    padding: 15px 10px;
 }
 
 .monthly-wrap .highcharts-legend-item path {
@@ -235,8 +240,11 @@ span.sub-title-accordion ul li {
     padding:20px;
 }
 
-.overflow-x ul {
-    overflow-x:scroll;
+.overflow-x ul.nav-tabs {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: -webkit-inline-box;
+    width: 100%;
 }
 
 .section-wrap-claim {
@@ -284,6 +292,7 @@ span.sub-title-accordion ul li {
     margin:auto auto 5px auto;
     font-family:'publico-roman',serif;
     color:#000;
+    font-weight: bold;
     font-size:18px;
 }
 
@@ -390,9 +399,10 @@ span.sub-title-accordion ul li {
     float:right;
 }
 
-.ekreasi-primary-tab ul {
+.chubb-primary-tab > ul {
     overflow-x:scroll;
     overflow-y:hidden;
+    display: -webkit-inline-box;
 }
 
 .change-password {
@@ -403,7 +413,7 @@ span.sub-title-accordion ul li {
 }
 .tab-col-2 ul {
     width:100%; 
-    // margin-bottom: -7px;
+    margin-bottom: -7px;
 }
 .tab-col-2 .nav-tabs li {
     width:50% !important;
@@ -412,7 +422,7 @@ span.sub-title-accordion ul li {
     margin-top:30px;
 }
 
-.ekreasi-headline-banner {
+.chubb-headline-banner {
     width: 100%;
     height: 300px;
     overflow: hidden;
@@ -421,7 +431,7 @@ span.sub-title-accordion ul li {
     margin-bottom: 30px;
     background:#fff;
 }
-.ekreasi-headline-banner-text {
+.chubb-headline-banner-text {
     padding: 30px 30px 34px 30px;
     height:100%;
     position:relative;
@@ -448,51 +458,183 @@ span.sub-title-accordion ul li {
     margin-bottom:30px;
 }
 
-.ekreasi-summary-tips-item-horizontal {
+.chubb-summary-tips-item-horizontal {
     padding: 15px 15px 15px 0px;
 }
-.ekreasi-summary-tips-item-horizontal h5 {
+.chubb-summary-tips-item-horizontal h5 {
     font-family:'publico-roman',sans-serif;
     font-size:17px;
     margin:0px auto 15px auto;
 }
 
-.ekreasi-summary-tips-item-horizontal p {
+.chubb-summary-tips-item-horizontal p {
     font-size: 15px;
     margin: 10px auto 10px auto;
     line-height: 23px;
 }
-.ekreasi-tips-img-v2 {
+.chubb-tips-img-v2 {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
-.ekreasi-tips-img-v2 img {
+.chubb-tips-img-v2 img {
     height:100%;
 }
+
+.chubb-secondary-paragraph ul, .chubb-secondary-paragraph ol {
+    padding: 0 0 0 20px;
+}
+
 .btn-tips {
     padding:5px 0px;
     border:none !important;
 }
 
-.tr-hover-link table tr:hover {
-    background: #FF0198 !important;
-    color: #fff;
-    cursor:pointer;
+.inner-content-dashboard {
+    padding:30px 0px 40px 0px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
+    position: relative;
+}
+.welcome-page ul li {
+    margin-left:20px;
+}
+.welcome-page ul li  {
+    font-size:13px;
 }
 
-.tr-hover-link table tr:hover td a {
+.chubb-section-proposal {
+    background:#fff;
+    padding:30px;
+    margin-bottom:30px;
+    border: 1px solid #ddd;
+}
+.headline-proposal  {
+    padding:0px 0px 10px 0px;
+    border-bottom:4px solid $cyan;
+}
+.table-proposal table {width:100%}
+.table-proposal  {
+    margin:30px auto 0px 0px;
+}
+.table-proposal table thead tr th {
+    background:$cyan !important;
     color:#fff;
+    text-align:center;
+    width:100%;
+    padding:8px;
+}
+.table-proposal table tr td {
+    border:1px solid #ccc;
+    padding:8px;
+}
+.icon-panel .icon-user:before {
+    font-size:28px;
+}
+.chubb-section-policy {
+    background:#fff;
+    padding:30px;
+    margin-bottom:30px;
+    border: 1px solid #ddd;
 }
 
-.asterik {
+.chubb-section-nav {
+    padding:10px 30px 30px 30px;
+    margin-bottom:0px;
+    border: 1px solid #ddd;
+}
+.headline-nav  {
+    padding:10px 0px 10px 0px;
+    border-bottom:2px solid $cyan;
+}
+.headline-policy a:hover {
+    color:$magenta;
+}
+
+.headline-policy  {
+    padding:10px 0px 10px 0px;
+    margin-bottom: 20px;
+}
+.table-policy table {width:100%;}
+.table-policy  {
+
+}
+.table-policy table thead tr th {
+    color:#fff;
+    text-align:center;
+    width:100%;
+    padding:8px;
+}
+.table-policy table tr td {
+    // border-top:1px solid rgba(255,255,255,0.3);
+    // border-bottom:1px solid rgba(255,255,255,0.3);
+    // border-left:none;
+    // border-right:none;
+    border:none;
+    padding:8px;
+    color:$dark-gray;
+}
+.table-policy table tr td strong {
     color:#000;
 }
-.margin-top-10 {
-    margin-top:10px;
+.table-policy table {
+    width:70% !important;
+    margin:auto
 }
-table.thead-center tr td.text-align-center {
-    text-align:center !important;
+
+.table-policy  {
+    padding:20px 0px 20px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.side-menu-dashboard-horizontal {
+    background:#fff;
+}
+.chubb-section-policy-wrap {
+    margin-bottom:30px;
+}
+
+.btn-chubb-agent-search {
+    position:absolute;
+    right:0;
+    top:5px;
+    z-index:8;
+    .icon-search:before {
+        font-size: 23px;
+        color: gray;
+    }
+
+}
+
+a.sort i {
+    color:#fff;
+    margin-left:3px;
+}
+a.sort i:before {
+    font-size: 16px !important;
+    top: 0px;
+}
+
+.chubb-list-nab .carousel a {
+    position: absolute;
+    bottom: -55px;
+    z-index: 9;
+    top: auto;
+    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+.chubb-list-nab .carousel a.carousel-control-prev {
+    left:0;
+}
+.chubb-list-nab .carousel a.carousel-control-next{
+    left: 36px;
+}
+.chubb-list-nab .carousel {
+    display: inline !important;
+}
+
+.fa-equal:before {
+    content: "=";
 }
 
 .btn-tutorial {
@@ -502,21 +644,28 @@ table.thead-center tr td.text-align-center {
     border-radius: 3px;
     color:$violet;
     cursor:pointer;
-    
+    position: relative;
 }
+
 .notif-tutorial {
     background:$violet;
     padding:10px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
     border-radius:5px;
     color:#fff;
     margin:auto;
-    position:absolute;
+    position:absolute !important;
     left:0;
     right:0;
     top:-60px;
     font-size:14px;
     text-align: center;
     
+    @media screen and (max-width: 768px) {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
 }
 
 .btn-close-tutorial {
@@ -528,4 +677,7 @@ table.thead-center tr td.text-align-center {
     height:20px;
     border-radius:50px;
     cursor:pointer;
+    position: absolute;
+    top: 7px;
+    right:7px;
 }

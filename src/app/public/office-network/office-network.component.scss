@@ -2,16 +2,16 @@
     .inner-content-contact{
         padding:80px 0px 80px 0px; 
     }
-    .ekreasi-contact-wrap {
+    .chubb-contact-wrap {
         background:#fff;
         padding:30px;
     }
-    .ekreasi-contact-title h4 {
+    .chubb-contact-title h4 {
         text-align:center;
         padding:0px 20px 20px 20px;
         margin:auto;
     }
-    .ekreasi-section-networking  {
+    .chubb-section-networking  {
         background: #fff;
         padding: 30px;
         margin-bottom: 30px;
@@ -69,3 +69,11 @@
     agm-map {
         height: 120px;
       }
+
+    .chubb-loop-networking:nth-child(even) .title-category {
+        border-bottom: 4px solid #FF0198 !important;
+    }
+    
+    .chubb-loop-networking:nth-child(even) .color-violet {
+        color: #FF0198;
+    }

@@ -1,51 +1,61 @@
 <header-page-green></header-page-green>
 <content>
-<div  class="inner-content-faq">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="ekreasi-header-content">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+  <div class="inner-content-faq" *ngIf="!loadingData">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              
             </div>
-            <h1>{{faqData.title}}</h1>
-            <div class="ekreasi-summary-faq">
-                <p>{{faqData.summary}}</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="load-data" *ngIf="loadingData">
+      <div  class="inner-content-faq">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="chubb-header-content">
+                  <div class="chubb-breadcrumb">
+                    <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>{{'_home' | translate}}</a>
+                    <a [routerLink]="['/education-center']" routerLinkActive="active"><span class="icon-left"></span>{{'_education_center' | translate}}</a>
+                  </div>
+                  <h1>{{'_title_faq' | translate}}</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-content-gray">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="chubb-faq-wrap">
+                    <ngb-tabset class="chubb-faq-tab">
+                        <ngb-tab *ngFor="let faq of data.faq" title="{{faq.title}}">
+                          <ng-template ngbTabContent>
+                              <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion-faq" >
+                                  
+                                  <ngb-panel *ngFor="let faqItem of faq.data" class="icon-question" title="{{faqItem.title}}">
+                                    
+                                    <ng-template ngbPanelContent>
+                                      <div class="chubb-detail-agent chubb-faq-flex">
+                                        <div class="icon-answer-svg"></div>
+                                        <div [innerHTML]="faqItem.description | safeHtml"></div>
+                                      </div>
+                                    </ng-template>
+                                  </ngb-panel>
+                                  
+                                </ngb-accordion>
+                          </ng-template>
+                        </ngb-tab>
+                        
+                    </ngb-tabset>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="inner-content-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="ekreasi-faq-wrap">
-              <ngb-tabset class="ekreasi-faq-tab">
-                  <ngb-tab *ngFor="let faq of faqData.faqs" title="{{faq.title}}">
-                    <ng-template ngbTabContent>
-                        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion-faq" >
-                            
-                            <ngb-panel *ngFor="let faqItem of faq.data" class="icon-question" title="{{faqItem.title}}">
-                               
-                              <ng-template ngbPanelContent>
-                                <div class="ekreasi-detail-agent">
-                                  <div class="icon-answer-svg"></div>
-                                  <p>{{faqItem.description}}</p>
-                                </div>
-                              </ng-template>
-                            </ngb-panel>
-                            
-                          </ngb-accordion>
-                    </ng-template>
-                  </ngb-tab>
-                  
-              </ngb-tabset>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </content>
 <app-footer></app-footer>

@@ -28,3 +28,10 @@
 .form-group-disabled {
     margin-bottom: 10px;
 }
+.chubb-search .input-group-prepend .btn-search {
+    position: absolute;
+    right: 0px;
+    background: transparent;
+    z-index: 0 !important;
+    top: 2px;
+}

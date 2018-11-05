@@ -2,16 +2,16 @@
     .inner-content-product{
         padding:80px 0px 0px 0px; 
     }
-    .ekreasi-summary-product {
-        width:70%;
+    .chubb-summary-product {
+        width:100%;
         padding:0px 30px;
         border-left:4px solid $orange;
         margin: 30px 0px 40px 0px;
     }
-    .ekreasi-summary-product p {
+    .chubb-summary-product p {
         line-height:30px;
     }
-    .ekreasi-item-product-thumb {
+    .chubb-item-product-thumb {
         background:#fff;
         width:100%;
         height:300px;
@@ -21,19 +21,19 @@
         margin-bottom:30px;
         
     }
-    .ekreasi-item-product-thumb img {
+    .chubb-item-product-thumb img {
         height:150px;
     }
-    .ekreasi-item-product-thumb.magenta {
+    .chubb-item-product-thumb.magenta {
         border-bottom:4px solid $magenta;
     }
-    .ekreasi-item-product-thumb.green {
+    .chubb-item-product-thumb.green {
         border-bottom:4px solid $green;
     }
-    .ekreasi-item-product-thumb.violet {
+    .chubb-item-product-thumb.violet {
         border-bottom:4px solid $violet;
     }
-    .ekreasi-item-product-thumb h5 {
+    .chubb-item-product-thumb h5 {
         color:$dark-gray;
         margin:auto;
         padding:30px 0px 0px 0px;

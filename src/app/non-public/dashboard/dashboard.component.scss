@@ -12,7 +12,7 @@
     font-size:13px;
 }
 
-.ekreasi-section-proposal {
+.chubb-section-proposal {
     background:#fff;
     padding:30px;
     margin-bottom:30px;
@@ -20,14 +20,14 @@
 }
 .headline-proposal  {
     padding:0px 0px 10px 0px;
-    border-bottom:4px solid $violet;
+    border-bottom:4px solid $cyan;
 }
 .table-proposal table {width:100%}
 .table-proposal  {
     margin:30px auto 0px 0px;
 }
 .table-proposal table thead tr th {
-    background:$violet !important;
+    background:$cyan !important;
     color:#fff;
     text-align:center;
     width:100%;
@@ -40,14 +40,14 @@
 .icon-panel .icon-user:before {
     font-size:28px;
 }
-.ekreasi-section-policy {
+.chubb-section-policy {
     background:#fff;
     padding:30px;
     margin-bottom:30px;
     border: 1px solid #ddd;
 }
 
-.ekreasi-section-nav {
+.chubb-section-nav {
     padding:10px 30px 30px 30px;
     margin-bottom:0px;
     border: 1px solid #ddd;
@@ -98,30 +98,28 @@
 .side-menu-dashboard-horizontal {
     background:#fff;
 }
-.ekreasi-section-policy-wrap {
+.chubb-section-policy-wrap {
     margin-bottom:30px;
 }
 
 
 //Hero Slide show
-.ekreasi-banner-dashboard {
+.chubb-banner-dashboard {
     width:100%;
-    height:250px;
+    _height:250px;
     overflow: hidden;
     position: relative;
     background:#fff;
     margin-bottom:30px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.img-hero-banner {
-   
+.img-hero-banner {   
+    height: 100%;
     width:100%;
-    height:100%;
-
 }
 .img-hero-banner img {
     height: 100%;
-    width:100%
+    width:100%;
 }
 .bg-hero {
     width:100%;
@@ -129,7 +127,7 @@
     background:rgba(0,0,0,0.5);
     z-index:1;
 }
-.ekreasi-banner-dashboard-text {
+.chubb-banner-dashboard-text {
     background:#fff;
     padding: 30px 30px 34px 30px;
     color: $dark-gray;
@@ -137,13 +135,13 @@
 .leftRs, .rightRs {
     display:none !important;
 }
-.ekreasi-banner-dashboard-text a {
+.chubb-banner-dashboard-text a {
     color:$dark-gray;
 }
-.ekreasi-banner-dashboard-text a span.icon-right{
+.chubb-banner-dashboard-text a span.icon-right{
     line-height:0px;
 }
-.ekreasi-banner-dashboard-text a span.icon-right:before {
+.chubb-banner-dashboard-text a span.icon-right:before {
     position: relative;
     top:2px;
 }
@@ -186,4 +184,12 @@
 
 .headline-nav h5 {
     text-align:center
+}
+
+.img-hero-banner {
+    cursor: pointer;
+}
+
+.slide-text-btn {
+    display: none;
 }

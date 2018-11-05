@@ -1,1 +1,41 @@
-<div class="monthly-wrap"><div #FundYearly></div></div>
+<div class="background-white padding-30 box-shadow">
+    <div class="search-wrap">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">{{'_fund_name' | translate}}</label>
+                    <select class="form-control no-border-radius" [(ngModel)]="modelFundName" id="exampleFormControlSelect1">
+                        <option *ngFor="let fundName of fundNameData" value="{{fundName}}">{{ fundName }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">{{'_select_year' | translate}}</label>
+                    <select class="form-control no-border-radius" [(ngModel)]="modelYear" id="exampleFormControlSelect1">
+                        <option *ngFor="let year of yearOption" value="{{year}}">{{ year }} </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="reset-filter" *ngIf="modelFundName || modelYear">
+                    <a (click)="doResetFilter()">Reset Filter</a>
+                </div>
+                <button (click)="doSearch()" class="btn-magenta btn-search-fund">{{'_search' | translate}}</button>
+            </div>
+            <div class="col-lg-12 no-padding-mobile">
+                <div class="charts-performance-wrap border-top-1px-gray">
+                    <div *ngIf="!loadingData">
+                        <p class="text-center">{{'_loading_data' | translate}}</p>
+                    </div>
+                    <div class="not-found" *ngIf="yearlyData.length == 0 && loadingData">
+                        <p class="text-center">{{'_data_not_found' | translate}}</p>
+                    </div>
+                    <div class="monthly-wrap highchart-min-margin">
+                        <div #PerformanceFundYearly></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

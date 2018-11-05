@@ -1,34 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { Config } from '../../config';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Config } from '../../config'; 
+import { AuditTrail } from './../../audit-trail';
+import { Title } from '@angular/platform-browser';
+import { CacheService } from '../../cache.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-financial-report',
   templateUrl: './financial-report.component.html',
   styleUrls: ['./financial-report.component.scss'],
-	providers: [ Config ]
+	providers: [ Config, AuditTrail ]
 })
 export class FinancialReportComponent implements OnInit {
-  public data : any = {};
+  public data: any = {};
+  public loadingData: boolean = false;
+  public preview: any = '';
+  public token: any = '';
 
-  constructor( private cnf: Config, private http:HttpClient ) {
-
+  constructor(private cnf: Config, private auditTrail: AuditTrail, private titleService: Title, private http: HttpClient, private cacheService: CacheService, private route: ActivatedRoute ) {
+    this.route.queryParams.subscribe(params => {
+      this.preview = params['preview'];
+      this.token = params['token'];
+    });
   }
+
   ngOnInit() {
-    this.http.get( this.cnf.URLWS + '/financial_report/frontend/all?appid=3K123451&appkey=3K123451&token=QOQs22TWUQgSKeaUU457&lang=' + this.cnf.lang )
-		.subscribe(
-      (res:any) => {
-        if(res.status == 100){
-          this.data = res.datas;
-        }
-      },
-      response => {
-        console.log("GET call in error", response);
-      },
-      () => {
-        console.log("The GET observable is now completed.");
+    this.cacheService.get(this.cnf.lang + '/financial_report', this.loadData()).subscribe((res:any) => {
+      this.loadingData = true;
+      if (res.status == 100) {
+        this.data = res.datas;
+        this.titleService.setTitle( this.cnf.prefixTitle + this.data.title + this.cnf.postfixTitle );
       }
-    );
+    });
+  }
+
+  loadData(){
+    let params = new HttpParams();
+    params = params.append('appid', this.cnf.appid);
+    params.append('appkey', this.cnf.appkey);
+    params = params.append('lang', this.cnf.lang);
+
+    let url = this.cnf.URLWS + '/financial_report';
+    if (this.preview) {
+      params = params.append('token', this.token);
+      url = url + '/preview/' + this.preview;
+    } else {
+      url = url + '/frontend/all';
+    }
+
+    return this.http.get(url, { params })
+      .map((response: Response) => response);
   }
 
 }

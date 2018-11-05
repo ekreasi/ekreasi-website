@@ -3,23 +3,55 @@
 
     //Header Content 
       
-        .ekreasi-summary-about {
-            width:70%;
+        .chubb-summary-about {
+            width:100%;
             padding:0px 30px;
             border-left:3px solid $green;
             margin: 30px 0px 40px 0px;
         }
-        .ekreasi-summary-about p {
+        .chubb-summary-about p {
             line-height:40px;
         }
-        .ekreasi-image-about img {
-            width:100%;
+        .chubb-image-about img {
+            width: 400px !important;
+            margin: auto;
         }
-        .ekreasi-secondary-paragraph {
-            width:70%;
+        .chubb-secondary-paragraph {
+            width:100%;
             float:right;
             padding:40px 0px;
         }
-        .ekreasi-secondary-paragraph p {
+        .chubb-secondary-paragraph p {
             line-height:40px;
+        }.chubb-header-content {
+            background: #fff;
+            padding:30px;
+            margin:auto;
+        }
+
+        .container-content-white {
+            background:#fff;
+            padding: 30px;
+        }
+        .chubb-image-about {
+            margin:auto;
+            text-align:center; 
+            img {
+                width:400px !important;
+                margin:auto;
+            }
+        } 
+        .chubb-header-content h1 {
+            text-align:center;
+            color:$dark-gray;
+            font-family: 'TrebuchetMS-Bold',sans-serif;
+        }
+        .title-about {
+            padding:20px 0px 40px 0px;
+            text-align:center;
+            h1 {
+                text-align:center;
+                color:$dark-gray;
+                font-family: 'TrebuchetMS-Bold',sans-serif; 
+            }
         }

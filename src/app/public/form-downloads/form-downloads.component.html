@@ -1,119 +1,72 @@
 <header-page-orange></header-page-orange>
 <content>
-<div  class="inner-content-form">
+  <div class="chubb-faq-wrap" *ngIf="!loadingData">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-header-content">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
-            </div>
-            <h1>{{formDownloadData.title}}</h1>
-            <div class="ekreasi-summary-product">
-              <p>{{ formDownloadData.summary }}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="load-data" *ngIf="loadingData">
+    <div class="inner-content-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="chubb-header-content">
+              <div class="chubb-breadcrumb">
+                <a [routerLink]="['']" routerLinkActive="active">
+                  <span class="icon-left"></span>{{'_home' | translate}}</a>
+              </div>
+              <h1>{{'_title_form_download' | translate}}</h1>
+              <div class="chubb-summary-product">
+                <p>{{'_summary_form_download' | translate}}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="inner-content-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="ekreasi-faq-wrap">
-              <ngb-tabset class="ekreasi-download-tab">
-                  <ngb-tab *ngFor="let downloads of formDownloadData.downloads">
-                    <ng-template ngbTabTitle><div class="icon-claimform"></div>{{downloads.title}}</ng-template>
-                    <ng-template ngbTabContent>
-                        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                            <ngb-panel *ngFor="let downloadsItem of downloads.data" class="icon-question" title="Form {{downloadsItem.id}}">
-                               
-                              <ng-template ngbPanelContent>
-                                <div class="row">
-                                  <div class="col-sm-10">
-                                      <div class="form-download-content">
-                                          <h5>{{downloadsItem.title}}</h5>
-                                          <p>{{downloadsItem.description}}</p>
-                                          
-                                      </div>
-                                  </div>
-                                  <div class="col-sm-2">
-                                    <div class="link-downloads">
-                                      <a href="{{downloadsItem.url}}" class="float-right"><span class="icon-downloads"></span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                                 
-                              </ng-template>
-                            </ngb-panel>
-                          </ngb-accordion>
-                    </ng-template>
-                  </ngb-tab>
-                  <!-- <ngb-tab>
-                      <ng-template ngbTabTitle>Customer Care Forms</ng-template>
-                      <ng-template ngbTabContent>
-                          <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion-form" >
-                              
-                              <ngb-panel class="icon-question" title="Form 1">
-                                <ng-template ngbPanelContent>
-                                    <div class="row">
-                                        <div class="col-sm-10">
-                                            <div class="form-download-content">
-                                                <h5>Form Download 1</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar eu est vitae cursus. Pellentesque leo velit, laoreet eget efficitur vel, eleifend eget ante. Aenean et nisl in erat egestas vehicula. Nam tristique consectetur dui, id malesuada felis dictum sit amet. Etiam rhoncus, diam nec rhoncus iaculis, metus arcu rutrum lectus, id bibendum tellus elit ut dolor. Cras luctus sapien sed lorem commodo, vitae interdum urna ullamcorper.</p>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                          <div class="link-downloads">
-                                            <a href="#" class="float-right"><span class="icon-downloads"></span></a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </ng-template>
-                              </ngb-panel>
-                              <ngb-panel title="Form 2">
-                                  <ng-template ngbPanelContent>
-                                      <div class="row">
-                                          <div class="col-sm-10">
-                                              <div class="form-download-content">
-                                                  <h5>Form Download 2</h5>
-                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar eu est vitae cursus. Pellentesque leo velit, laoreet eget efficitur vel, eleifend eget ante. Aenean et nisl in erat egestas vehicula. Nam tristique consectetur dui, id malesuada felis dictum sit amet. Etiam rhoncus, diam nec rhoncus iaculis, metus arcu rutrum lectus, id bibendum tellus elit ut dolor. Cras luctus sapien sed lorem commodo, vitae interdum urna ullamcorper.</p>
-                                                  
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-2">
-                                            <div class="link-downloads">
-                                              <a href="#" class="float-right"><span class="icon-downloads"></span></a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </ng-template>
-                              </ngb-panel>
-                              <ngb-panel title="Form 3">
-                                  <ng-template ngbPanelContent>
-                                      <div class="row">
-                                          <div class="col-sm-10">
-                                              <div class="form-download-content">
-                                                  <h5>Form Download 3</h5>
-                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar eu est vitae cursus. Pellentesque leo velit, laoreet eget efficitur vel, eleifend eget ante. Aenean et nisl in erat egestas vehicula. Nam tristique consectetur dui, id malesuada felis dictum sit amet. Etiam rhoncus, diam nec rhoncus iaculis, metus arcu rutrum lectus, id bibendum tellus elit ut dolor. Cras luctus sapien sed lorem commodo, vitae interdum urna ullamcorper.</p>
-                                                  
-                                              </div>
-                                          </div>
-                                          <div class="col-sm-2">
-                                            <div class="link-downloads">
-                                              <a href="#" class="float-right"><span class="icon-downloads"></span></a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </ng-template>
-                              </ngb-panel>
-                              
-                            </ngb-accordion>
-                      </ng-template>
-                  </ngb-tab> -->
-                </ngb-tabset>
+    <div class="inner-content-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="chubb-faq-wrap">
+              <ngb-tabset class="chubb-download-tab">
+                <ngb-tab *ngFor="let downloads of data">
+                  <ng-template ngbTabTitle>
+                    <div class="{{ downloads.icon }}"></div>
+                    {{downloads.title}}
+                  </ng-template>
+                  <ng-template ngbTabContent>
+                    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                      <ngb-panel *ngFor="let downloadsItem of downloads.data" class="icon-question" title="{{downloadsItem.title}}">
+
+                        <ng-template ngbPanelContent>
+                          <div class="row">
+                            <div class="col-sm-10">
+                              <div class="form-download-content">
+                                <h5>{{downloadsItem.title}}</h5>
+                                <div class="tab-contents" [innerHTML]="downloadsItem.description | safeHtml"></div>
+                              </div>
+                            </div>
+                            <div class="col-sm-2">
+                              <div class="link-downloads">
+                                <a target="_blank" href="{{downloadsItem.url}}" class="float-right">
+                                  <span class="icon-downloads"></span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </ng-template>
+                      </ngb-panel>
+                    </ngb-accordion>
+                  </ng-template>
+                </ngb-tab>
+              </ngb-tabset>
+            </div>
           </div>
         </div>
       </div>

@@ -87,10 +87,10 @@ table  {
 
 
 
-.ekreasi-list-hospital {
+.chubb-list-hospital {
     overflow-x:scroll;
 }
-.ekreasi-list-hospital table tr td, .ekreasi-list-hospital table thead tr th {
+.chubb-list-hospital table tr td, .chubb-list-hospital table thead tr th {
     white-space: nowrap;
 }
 .daily-nav {
@@ -129,20 +129,20 @@ table  {
     left: 0;
     right: 0;
 }
-.ekreasi-content-nonpublic .tr-hover-link table thead tr {
+.chubb-content-nonpublic .tr-hover-link table thead tr {
     cursor:default;
 } 
-.ekreasi-content-nonpublic .tr-hover-link table tr {
+.chubb-content-nonpublic .tr-hover-link table tr {
     cursor:pointer;
 }
-.ekreasi-content-nonpublic .tr-hover-link table tr td span {
+.chubb-content-nonpublic .tr-hover-link table tr td span {
     color:$magenta;
 }
-.ekreasi-content-nonpublic .tr-hover-link table tr:hover {
+.chubb-content-nonpublic .tr-hover-link table tr:hover {
     background:$magenta !important;
     color:#fff;
 }
-.ekreasi-content-nonpublic .tr-hover-link table tr:hover td span {
+.chubb-content-nonpublic .tr-hover-link table tr:hover td span {
     color:#fff;
 }
 table.thead-center thead tr th {
@@ -161,7 +161,7 @@ table tr td, table thead tr th {
     vertical-align:middle !important
 }
 
-.policy-item-wrap table {
+.policy-item-wrap{
     border:1px solid #ddd;
 }
 
@@ -178,7 +178,7 @@ table tr td, table thead tr th {
 }
 .policy-item-wrap table tr td {
     border-bottom:1px solid #ddd;
-    padding:15px !important;
+    padding:15px   10px;
 }
 
 .unit-price table thead tr th a {
@@ -192,4 +192,11 @@ table tr td, table thead tr th {
     position: absolute;
     bottom: -5px;
     left: -6px;
+}
+.table-scroll-x {
+    overflow-x: scroll;
+}
+
+.table-reorder {
+    cursor: pointer;
 }

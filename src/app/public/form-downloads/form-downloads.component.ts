@@ -1,110 +1,78 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Config } from '../../config'; 
+import { AuditTrail } from './../../audit-trail';
+import { Title } from '@angular/platform-browser';
+import { CacheService } from '../../cache.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-form-downloads',
 	templateUrl: './form-downloads.component.html',
-	styleUrls: ['./form-downloads.component.scss']
+	styleUrls: ['./form-downloads.component.scss'],
+	providers: [ Config, AuditTrail ]
 })
 export class FormDownloadsComponent implements OnInit {
+	data : any = {};
+  public loadingData: boolean = false;
+  public preview: any = '';
+  public token: any = '';
+  public titleIcon: any;
 
-	formDownloadData : any = {}
+  constructor(private cnf: Config, private auditTrail: AuditTrail, private titleService: Title, private http: HttpClient, private cacheService: CacheService, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.preview = params['preview'];
+      this.token = params['token'];
+    });
+  }
 
-	constructor() { }
+  ngOnInit() {
+    this.cacheService.get(this.cnf.lang + '/form_download', this.loadData()).subscribe((res:any) => {
+      this.loadingData = true;
+      if (res.status == 100) {
+        this.data = res.datas.downloads;
 
-	ngOnInit() {
-		this.loadData();
-	}
+        var _titleIcons = [
+          { "icon": 'icon-claimform' },
+          { "icon": 'icon-customerform' },
+          { "icon": 'icon-claimform' },
+          { "icon": 'icon-customerform' },
+          { "icon": 'icon-claimform' },
+          { "icon": 'icon-customerform' }
+        ];
 
-	loadData(){
-		this.formDownloadData = {
-	    	"title": "Form Downloads",
-	      	"summary": "Beragam penghargaan berhasil diraih oleh PT ekreasi Life Insurance Indonesia (ekreasi Life) sejak awal unit operasionalnya diluncurkan di Indonesia.",
-	      	"downloads": [
-	        	{
-		          	"title": "Claim Forms",
-		          	"data": [
-		            	{
-		              		"id": "1",
-		              		"title": "Indonesia Prestige Brand Award - Warta Ekonomi",
-				      		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-				      		"url": "http://www.itsmefurzy.com/"
-	            		},
-			            {
-			              "id": "2",
-			              "title": "Excellent Service Experience Award 2017",
-					      "description" : "Lorem Ipsum",
-					      "url": "http://www.itsmefurzy.com/"
-			            },
-			            {
-			              "id": "3",
-			              "title": "The 2017 Indonesia WOW Brand Award",
-					      "description" : "Lorem Ipsum",
-					      "url": "http://www.itsmefurzy.com/"
-			            },
-			            {
-			              "id": "4",
-			              "title": "Indonesia Prestige Brand Award - Warta Ekonomi",
-					      "description" : "Lorem Ipsum",
-					      "url": "http://www.itsmefurzy.com/"
-			            },
-			            {
-			              "id": "5",
-			              "title": "Excellent Service Experience Award 2017",
-					      "description" : "Lorem Ipsum",
-					      "url": "http://www.itsmefurzy.com/"
-			            },
-			            {
-			              "id": "6",
-			              "title": "The 2017 Indonesia WOW Brand Award",
-					      "description" : "Lorem Ipsum",
-					      "url": "http://www.itsmefurzy.com/"
-			            },
-          			]
-        		},
-		        {
-					"title": "Customer Care Forms",
-					"data": [
-						{
-							"id": "1",
-							"title": "Indonesia Prestige Brand Award - Warta Ekonomi",
-							"description" : "Lorem Ipsum",
-							"url": "http://www.itsmefurzy.com/"
-						},
-						{
-							"id": "2",
-							"title": "Excellent Service Experience Award 2017",
-							"description" : "Lorem Ipsum",
-							"url": "http://www.itsmefurzy.com/"
-						},
-						{
-							"id": "3",
-							"title": "The 2017 Indonesia WOW Brand Award",
-							"description" : "Lorem Ipsum",
-							"url": "http://www.itsmefurzy.com/"
-						},
-						{
-							"id": "4",
-							"title": "Indonesia Prestige Brand Award - Warta Ekonomi",
-							"description" : "Lorem Ipsum",
-							"url": "http://www.itsmefurzy.com/"
-						},
-						{
-							"id": "5",
-							"title": "Excellent Service Experience Award 2017",
-							"description" : "Lorem Ipsum",
-							"url": "http://www.itsmefurzy.com/"
-						},
-						{
-							"id": "6",
-							"title": "The 2017 Indonesia WOW Brand Award",
-							"description" : "Lorem Ipsum",
-							"url": "http://www.itsmefurzy.com/"
-						},
-					]
-		        }
-      		]
-    	};
+        let dataPush = [];
+        for( let i in this.data ){
+          let dataTemp = this.data[i];
+          dataTemp.icon = _titleIcons[i].icon;
+          dataPush.push(dataTemp);
+        }
+        this.data = dataPush;
 
-	}
+
+        this.titleService.setTitle( this.cnf.prefixTitle + this.data.title + this.cnf.postfixTitle );
+
+      }
+    });
+
+  }
+
+  loadData(){
+    let params = new HttpParams();
+    params = params.append('appid', this.cnf.appid);
+    params.append('appkey', this.cnf.appkey);
+    params = params.append('lang', this.cnf.lang);
+
+    let url = this.cnf.URLWS + '/form_download';
+    if (this.preview) {
+      params = params.append('token', this.token);
+      url = url + '/preview/' + this.preview;
+    } else {
+      url = url + '/frontend/all';
+    }
+
+    return this.http.get(url, { params })
+      .map((response: Response) => response);
+  }
 
 }

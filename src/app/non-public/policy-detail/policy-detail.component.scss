@@ -10,7 +10,7 @@
     font-size:13px;
 }
 
-.ekreasi-section-proposal {
+.chubb-section-proposal {
     background:#fff;
     padding:30px;
     margin-bottom:30px
@@ -20,7 +20,7 @@
     border-bottom:4px solid $violet;
 }
 
-.ekreasi-content-nonpublic {
+.chubb-content-nonpublic {
     margin:40px auto 0px auto;
 }
 .form-disabled:disabled {
@@ -36,4 +36,15 @@
     margin:auto;
     color:#000;
     font-family:'publico-roman',serif;
+}
+.address p {
+    margin-bottom: 0px;
+}
+
+.btn-search-fund {
+    cursor: pointer;
+}
+
+div.not-found-text.transaction {
+    margin-bottom: 10px;
 }

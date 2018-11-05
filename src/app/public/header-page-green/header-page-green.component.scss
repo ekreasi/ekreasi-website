@@ -35,6 +35,14 @@
 .chubb-logo-header {
     padding:34px 0px;
     text-align:center;
+    a {
+
+         img {
+            width:200px;
+            height:auto;
+        } 
+    }
+   
 }
 
 .nav-right-top ul li a {
@@ -44,7 +52,7 @@
     background-image:url(../../../assets/img/icon-arrow.svg);
     background-repeat:no-repeat;
     background-position:bottom;
-    background-size: 21px;
+    background-size: 43px;
     border: none !important;
     padding-bottom: 17px;
 }
@@ -109,7 +117,7 @@
     background-repeat:no-repeat;
     background-position:bottom;
     background-color: white;
-    background-size: 21px;
+    background-size:43px;
     border: none !important;
     padding-bottom: 16px;
 }
@@ -117,4 +125,9 @@
 
 .btn-language {
     border-bottom: 3px solid transparent!important;
+}
+
+
+.chubb-logo-header a img {
+    width: 144px;
 }

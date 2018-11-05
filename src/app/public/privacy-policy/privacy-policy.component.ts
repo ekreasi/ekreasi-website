@@ -1,42 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { Config } from '../../config';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Config } from '../../config'; 
+import { AuditTrail } from './../../audit-trail';
+import { Title } from '@angular/platform-browser';
+import { CacheService } from '../../cache.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-privacy-policy',
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.scss'],
-	providers: [ Config ]
+	providers: [ Config, AuditTrail ]
 })
 export class PrivacyPolicyComponent implements OnInit {
   public data : any = {};
+  public loadingData: boolean = false;
+  public preview: any = '';
+  public token: any = '';
 
-  constructor( private cnf: Config, private http:HttpClient ) {
-
+  constructor(private cnf: Config, private auditTrail: AuditTrail, private titleService: Title, private http: HttpClient, private cacheService: CacheService, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.preview = params['preview'];
+      this.token = params['token'];
+    });
   }
 
   ngOnInit() {
-    // this.data = {
-    //   "title": "About ekreasi Life",
-    //   "summary": "Sebagai perusahaan underwriting, kami menilai, memperhitungkan dan mengelola risiko dengan kedisplinan dan pengetahuan yang mendalam. Kami melayani dan membayar klaim secara adil. Perusahaan ini juga dikenal karena penawaran produk dan layanannya yang luas, kemampuan distribusi yang luas, kekuatan keuangan yang andal serta jaringan perusahaan yang terdapat di seluruh dunia.",
-    //   "image": "./assets/img/ekreasi-img-about.jpg",
-    //   "description": "ekreasi merupakan pemimpin global dalam penyediaan asuransi properti dan tanggung gugat yang diperdagangkan secara publik. Beroperasi di 54 negara, ekreasi menyediakan asuransi properti dan tanggung gugat komersial serta individu, asuransi kecelakaan diri dan asuransi kesehatan tambahan, reasuransi dan asuransi jiwa bagi beragam kelompok nasabah. Perusahaan ini juga dikenal karena penawaran produk dan layanannya yang luas, kemampuan distribusi yang luas, kekuatan keuangan yang luar biasa serta perusahaan lokal yang terdapat di seluruh dunia. Perusahaan induknya, ekreasi Limited, terdaftar di Bursa Efek New York (NYSE: CB) dan merupakan komponen indeks S&P 500. ekreasi memiliki kantor eksekutif di Zurich, New York, London, dan lokasi-lokasi lainnya, serta mempekerjakan sekitar 31,000 orang di seluruh dunia. Lisensi ekreasi di Asia Pasifik terdiri dari jaringan operasi yang luas, melayani Australia, Hong Kong, Indonesia, Korea, Makau, Malaysia, Selandia Baru, Filipina, Singapura, Taiwan, Thailand dan Vietnam.",
-    // };
-
-    this.http.get( this.cnf.URLWS + '/privacy_policy/frontend/all?appid=3K123451&appkey=3K123451&token=QOQs22TWUQgSKeaUU457&lang=' + this.cnf.lang )
-		.subscribe(
-      (res:any) => {
-        if(res.status == 100){
-          this.data = res.datas;
-        }
-      },
-      response => {
-        console.log("GET call in error", response);
-      },
-      () => {
-        console.log("The GET observable is now completed.");
+    this.cacheService.get(this.cnf.lang + '/privacy_policy', this.loadData()).subscribe((res:any) => {
+      this.loadingData = true;
+      if (res.status == 100) {
+        this.data = res.datas;
+        this.titleService.setTitle( this.cnf.prefixTitle + this.data.title + this.cnf.postfixTitle );
       }
-    );
+    });
+  }
+
+  loadData(){
+    let params = new HttpParams();
+    params = params.append('appid', this.cnf.appid);
+    params.append('appkey', this.cnf.appkey);
+    params = params.append('lang', this.cnf.lang);
+
+    let url = this.cnf.URLWS + '/privacy_policy';
+    if (this.preview) {
+      params = params.append('token', this.token);
+      url = url + '/preview/' + this.preview;
+    } else {
+      url = url + '/frontend/all';
+    }
+
+    return this.http.get(url, { params })
+      .map((response: Response) => response);
   }
 
 }

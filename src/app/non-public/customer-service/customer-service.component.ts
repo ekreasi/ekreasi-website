@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-customer-service',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerServiceComponent implements OnInit {
   page = 1;
-  constructor() { }
+  constructor(private _location: Location) { }
 
   ngOnInit() {
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
 }

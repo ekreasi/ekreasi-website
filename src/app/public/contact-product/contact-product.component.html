@@ -4,11 +4,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-header-content">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['/Product']" routerLinkActive="active"><span class="icon-left"></span>Product</a>
+          <div class="chubb-header-content">
+            <div class="chubb-breadcrumb">
+              <a href="https://www2.chubb.com/id-en/personal/" target="_blank"><span class="icon-left"></span>{{'_product' | translate}}</a>
             </div>
-            <h1>Contact Form Product</h1>
+            <h1>{{'_contact_form_product' | translate}}</h1>
           </div>
         </div>
       </div>
@@ -18,35 +18,35 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-contact-wrap">
+          <div class="chubb-contact-wrap">
               <div class="container">
                   <div class="row">
                     <div class="col-lg-6">
                           <form>
                               <div class="form-group">
-                                  <label>Name</label>
-                                  <input type="text" class="form-control no-border-radius" aria-describedby="emailHelp" placeholder="Your Name">
+                                  <label>{{'_name' | translate}}</label>
+                                  <input autocomplete="off" type="text" class="form-control no-border-radius" aria-describedby="emailHelp" placeholder="{{'Your Name' | translate}}">
                               </div>
                               <div class="form-group">
-                                  <label>Mobile Phone</label>
-                                  <input type="number" class="form-control no-border-radius" placeholder="ex : 08272772772">
+                                  <label>{{'_mobile_phone' | translate}}</label>
+                                  <input autocomplete="off" type="number" class="form-control no-border-radius" placeholder="ex : 08272772772">
                               </div>
                               <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control no-border-radius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <label for="exampleInputEmail1">{{'_email_address' | translate}}</label>
+                                <input autocomplete="off" type="email" class="form-control no-border-radius" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{'_enter_email' | translate}}">
                               </div>
                               <div class="form-group">
-                                  <label>Province</label>
+                                  <label>{{'_province' | translate}</label>
                                   <select class="form-control no-border-radius" >
-                                    <option>Select Province</option>
+                                    <option>{{'_select_province' | translate}}</option>
                                     <option>DKI jakarta</option>
                                     <option>Jawa barat</option>
                                   </select>
                               </div>
                               <div class="form-group">
-                                  <label >Product Type</label>
+                                  <label >{{'_product_type' | translate}}</label>
                                   <select class="form-control no-border-radius">
-                                      <option>Select Product</option>
+                                      <option>{{'_select_product' | translate}}</option>
                                     <option>Asuransi Flexi Link</option>
                                   </select>
                               </div>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label>Your Message</label>
+                            <label>{{'_your_message' | translate}}</label>
                             <textarea class="form-control no-border-radius"  rows="15"></textarea>
                           </div>
                         <button type="submit" class="btn btn-submit green">Submit</button>

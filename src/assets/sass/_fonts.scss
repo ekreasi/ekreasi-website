@@ -126,6 +126,40 @@
  * Font Awesome Free 5.0.9 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
+
+ @font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/awesome-fonts/fa-brands-400.eot");
+  src: url("../fonts/awesome-fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/awesome-fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/awesome-fonts/fa-brands-400.woff") format("woff"), url("../fonts/awesome-fonts/fa-brands-400.ttf") format("truetype"), url("../fonts/awesome-fonts/fa-brands-400.svg#fontawesome") format("svg"); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/awesome-fonts/fa-regular-400.eot");
+  src: url("../fonts/awesome-fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/awesome-fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/awesome-fonts/fa-regular-400.woff") format("woff"), url("../fonts/awesome-fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/awesome-fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/awesome-fonts/fa-solid-900.eot");
+  src: url("../fonts/awesome-fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/awesome-fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/awesome-fonts/fa-solid-900.woff") format("woff"), url("../fonts/awesome-fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/awesome-fonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+
+
+  
 .fa,
 .fas,
 .far,
@@ -2947,33 +2981,3 @@ readers do not read off random characters that represent icons */
   overflow: visible;
   position: static;
   width: auto; }
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/awesome-fonts/fa-brands-400.eot");
-  src: url("../fonts/awesome-fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/awesome-fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/awesome-fonts/fa-brands-400.woff") format("woff"), url("../fonts/awesome-fonts/fa-brands-400.ttf") format("truetype"), url("../fonts/awesome-fonts/fa-brands-400.svg#fontawesome") format("svg"); }
-
-.fab {
-  font-family: 'Font Awesome 5 Brands'; }
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/awesome-fonts/fa-regular-400.eot");
-  src: url("../fonts/awesome-fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/awesome-fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/awesome-fonts/fa-regular-400.woff") format("woff"), url("../fonts/awesome-fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/awesome-fonts/fa-regular-400.svg#fontawesome") format("svg"); }
-
-.far {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/awesome-fonts/fa-solid-900.eot");
-  src: url("../fonts/awesome-fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/awesome-fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/awesome-fonts/fa-solid-900.woff") format("woff"), url("../fonts/awesome-fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/awesome-fonts/fa-solid-900.svg#fontawesome") format("svg"); }
-
-.fa,
-.fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900; }

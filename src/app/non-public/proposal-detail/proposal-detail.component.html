@@ -1,628 +1,560 @@
 <header-non-public></header-non-public>
 <content>
-<div  class="inner-content-dashboard">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-6">
-            <div class="ekreasi-header-content-non-public">
-                <div class="ekreasi-breadcrumb">
-                    <a [routerLink]="['/dashboard']" routerLinkActive="active"><span class="icon-left"></span>Dashboard</a>
-                  </div>
-              <h1>Customer Corner</h1>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="ekreasi-header-content welcome-page float-right">
-                <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
-                <ul>
-                  <li>Last Login at Friday, February 09, 2018. 01:58pm </li>
-                  <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
-                </ul>
-            </div>
-          </div>
-        </div>
-  </div>
-  </div>
-  <div class="inner-content-gray">
-      <div class="side-menu-dashboard-vertical"> 
-          <menu-dashboard-vertical></menu-dashboard-vertical>
-      </div>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-content-dashboard-wrap">
-            <div class="side-menu-dashboard-horizontal"> 
-                <menu-dashboard-horizontal></menu-dashboard-horizontal>
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
             </div>
-              
-            <div class="ekreasi-content-general">
-              <div class="headline-left border-violet-bottom">
+
+            <div class="chubb-content-general">
+              <div class="headline-left border-bottom-violet">
                 <div class="row">
-                  <div  class="col-sm-12">
-                    <h5 class="color-violet">Proposal Detail</h5>
+                  <div class="col-sm-12">
+                    <h5 class="color-violet">
+                      <a (click)="backClicked()">
+                        <i class="fa fa-arrow-left"></i>
+                      </a>
+                      {{'_proposal_detail' | translate}}
+                    </h5>
                   </div>
                 </div>
               </div>
-              <div class="ekreasi-content-nonpublic">
-                  <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                        <div class="col-lg-4">
-                            <div class=" section-wrap">
-                                <div class="form-group form-group-disabled">
-                                    <label>PPAJ Number</label>
-                                    <div class="form-control-disabled"> 0988282888 </div>
-                                </div>
-                                
-                                <div class="form-group form-group-disabled">
-                                    <label>Main Life Assured </label>
-                                    <div class="form-control-disabled">Oktaria Puspita</div>
-                                </div>
-                            </div>
+              <div class="chubb-content-nonpublic">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class=" section-wrap">
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_ppaj_number' | translate}}</label>
+                            <div class="form-control-disabled"> {{proposalHeaderData.ppajNo}} </div>
+                          </div>
+
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_main_life_assured' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.mainLifeAssured}}</div>
+                          </div>
+
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_proposal_tracking' | translate}}</label>
+                            <div class="form-control-disabled"> {{proposalTrackingData.endStatus}}</div>
+                          </div>
                         </div>
-                        <div class="col-lg-4">
-                            
-                            <div class="section-wrap">
-                                <div class="form-group form-group-disabled">
-                                    <label>Product Name</label>
-                                    <div class="form-control-disabled"> Asuransi Flexi Link </div>
-                                </div>
-                                <div class="form-group-disabled">
-                                    <label>Total Premium</label>
-                                    <div class="form-control-disabled"> Rp 10,000,000.00</div>
-                                </div>
-                                <div class="form-group-disabled">
-                                    <label>Sum Assured</label>
-                                    <div class="form-control-disabled"> Rp 150,000,000.00</div>
-                                </div>
-                                
-                            </div>
+                      </div>
+                      <div class="col-lg-4">
+
+                        <div class="section-wrap">
+                          <div class="form-group form-group-disabled">
+                            <label>{{'_product_name' | translate}}</label>
+                            <div class="form-control-disabled"> {{proposalHeaderData.productName}} </div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_total' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.totalPremium | currency:'Rp '}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_sum_assured' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.sumAssured | currency:'Rp '}}</div>
+                          </div>
+
                         </div>
-                        <div class="col-lg-4">
-                            
-                            <div class=" section-wrap">
-                                <div class="form-group-disabled">
-                                    <label>Payment Frequency</label>
-                                    <div class="form-control-disabled"> Monthly</div>
-                                </div>
-                                <div class="form-group-disabled">
-                                    <label>Agent Name</label>
-                                    <div class="form-control-disabled">Yoana Nita</div>
-                                </div>
-                                <div class="form-group-disabled">
-                                    <label>Agent Phone</label>
-                                    <div class="form-control-disabled">082929278882</div>
-                                </div>
-                            </div>
+                      </div>
+                      <div class="col-lg-4">
+
+                        <div class=" section-wrap">
+                          <div class="form-group-disabled">
+                            <label>{{'_payment_frequency' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.paymentFrequency}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_agent_name' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.agentName}}</div>
+                          </div>
+                          <div class="form-group-disabled">
+                            <label>{{'_agent_phone' | translate}}</label>
+                            <div class="form-control-disabled">{{proposalHeaderData.agentPhone}}</div>
+                          </div>
                         </div>
-                        </div>
+                      </div>
                     </div>
                   </div>
-                  <ngb-tabset class="ekreasi-primary-tab">
-                      <ngb-tab>
-                          <ng-template ngbTabTitle>Proposal Detail</ng-template>
-                          <ng-template ngbTabContent>
-                            <div class="background-white padding-15 section-wrap section-tab proposal-item-list box-shadow">
-                              <div class="row">
-                                <div class="col-lg-4">
-                                  <div class="form-group form-group-disabled no-margin-bottom">
-                                      <label>Policy Holder Name</label>
-                                      <div class="form-control-disabled no-border-bottom"> Diana Rihana</div>
-                                  </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group form-group-disabled no-margin-bottom">
-                                        <label>Identity Type</label>
-                                        <div class="form-control-disabled no-border-bottom">Identity Card (KTP)</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group form-group-disabled no-margin-bottom">
-                                        <label>Identity Number </label>
-                                        <div class="form-control-disabled no-border-bottom">0299822009198</div>
-                                    </div>
-                                </div>
+                </div>
+                <ngb-tabset class="chubb-primary-tab">
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_proposal_detail' | translate}}</ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab proposal-item-list box-shadow">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled no-margin-bottom">
+                              <label>{{'_policy_holder_name' | translate}}</label>
+                              <div class="form-control-disabled no-border-bottom">{{proposalHeaderData.policyHolderName}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled no-margin-bottom">
+                              <label>{{'_identity_type' | translate}}</label>
+                              <div class="form-control-disabled no-border-bottom">{{proposalHeaderData.idType}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled no-margin-bottom">
+                              <label>{{'_identity_number' | translate}}</label>
+                              <div class="form-control-disabled no-border-bottom">{{proposalHeaderData.idCardNumber}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box-soft-highlight padding-15 section-wrap section-tab">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_email' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.email}}</div>
+                            </div>
+
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label class="color-white"> {{'_mobile_phone_number' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.mobilePhone}}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled">
+                              <label>{{'_correspondence_address' | translate}}</label>
+                              <div class="form-control-disabled address">
+                                <p>{{proposalHeaderData.correspondenceAddress1}}</p>
+                                <p *ngIf="proposalHeaderData.correspondenceAddress2">{{proposalHeaderData.correspondenceAddress2}}
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress3">, {{proposalHeaderData.correspondenceAddress3}}</span>
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress4">, {{proposalHeaderData.correspondenceAddress4}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.correspondenceAddress5">{{proposalHeaderData.correspondenceAddress5}}
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress6">, {{proposalHeaderData.correspondenceAddress6}}</span>
+                                  <span *ngIf="proposalHeaderData.correspondenceAddress7">, {{proposalHeaderData.correspondenceAddress7}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.correspondenceState">{{proposalHeaderData.correspondenceState}}</p>
+                                <p *ngIf="proposalHeaderData.correspondencePostCode">{{proposalHeaderData.correspondencePostCode}}</p>
                               </div>
                             </div>
-                            <div class="box-soft-highlight padding-15 section-wrap section-tab">
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled">
+                              <label>{{'_home_address' | translate}}</label>
+                              <div class="form-control-disabled address">
+                                <p>{{proposalHeaderData.homeAddress1}}</p>
+                                <p *ngIf="proposalHeaderData.homeAddress2">{{proposalHeaderData.homeAddress2}}
+                                  <span *ngIf="proposalHeaderData.homeAddress3">, {{proposalHeaderData.homeAddress3}}</span>
+                                  <span *ngIf="proposalHeaderData.homeAddress4">, {{proposalHeaderData.homeAddress4}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.homeAddress5">{{proposalHeaderData.homeAddress5}}
+                                  <span *ngIf="proposalHeaderData.homeAddress6">, {{proposalHeaderData.homeAddress6}}</span>
+                                  <span *ngIf="proposalHeaderData.homeAddress7">, {{proposalHeaderData.homeAddress7}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.homeState">{{proposalHeaderData.homeState}}</p>
+                                <p *ngIf="proposalHeaderData.homePostCode">{{proposalHeaderData.homePostCode}}</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled address">
+                              <label>{{'_office_address' | translate}}</label>
+                              <div class="form-control-disabled">
+                                <p>{{proposalHeaderData.officeAddress1}}</p>
+                                <p *ngIf="proposalHeaderData.officeAddress2">{{proposalHeaderData.officeAddress2}}
+                                  <span *ngIf="proposalHeaderData.officeAddress3">, {{proposalHeaderData.officeAddress3}}</span>
+                                  <span *ngIf="proposalHeaderData.officeAddress4">, {{proposalHeaderData.officeAddress4}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.officeAddress5">{{proposalHeaderData.officeAddress5}}
+                                  <span *ngIf="proposalHeaderData.officeAddress6">, {{proposalHeaderData.officeAddress6}}</span>
+                                  <span *ngIf="proposalHeaderData.officeAddress7">, {{proposalHeaderData.officeAddress7}}</span>
+                                </p>
+                                <p *ngIf="proposalHeaderData.officeState">{{proposalHeaderData.officeState}}</p>
+                                <p *ngIf="proposalHeaderData.officePostCode">{{proposalHeaderData.officePostCode}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group-disabled">
+                              <label>{{'_basic_premium' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.basicPremium | currency:'Rp '}}</div>
+                            </div>
+                            <div class="form-group-disabled">
+                              <label>{{'_regular_top_up' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.regularTopUp | currency:'Rp '}}</div>
+                            </div>
+
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_proposal_receive_date' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.proposalRecieveDate}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_payment_method' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalHeaderData.paymentMethod}}</div>
+                            </div>
+                            <div class="form-group-disabled">
+                              <label>{{'_currency' | translate}}</label>
+                              <div class="form-control-disabled"> {{proposalHeaderData.currency}} </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_life_assured' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="fund-product-table tr-nohover">
+                          <table class="table table-striped thead-center">
+                            <thead>
+                              <tr>
+                                <th>
+                                  {{'_name' | translate}}
+                                </th>
+                                <th>
+                                  {{'_gender' | translate}}
+                                </th>
+                                <th>
+                                  {{'_birth_date' | translate}}
+                                </th>
+                              </tr>
+                            </thead>
+                            <tr *ngIf="proposalLifeAssuredData == false">
+                              <td colspan="7">{{'_data_not_found' | translate}}</td>
+                            </tr>
+                            <tbody *ngIf="proposalLifeAssuredData">
+                              <tr *ngFor="let proposalLifeAssured of proposalLifeAssuredData">
+                                <td>
+                                  {{proposalLifeAssured.lifeAssured}}
+                                </td>
+                                <td>
+                                  {{proposalLifeAssured.gender | translate}}
+                                </td>
+                                <td>
+                                  {{proposalLifeAssured.birthDay}}
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_fund' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="row">
+                          <div *ngIf="policyInvestmentData == false">
+                              <div>{{'_data_not_found' | translate}}</div>
+                          </div>
+                          <div class="col-lg-6" *ngFor="let fund of proposalFundData">
+                            <!-- <div class="fund-table">
+                              <table class="table table-striped thead-center">
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      {{'_fund_code' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_fund_name' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_fund_allocation' | translate}}
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tr *ngIf="proposalFundData == false">
+                                  <td colspan="7">{{'_data_not_found' | translate}}</td>
+                                </tr>
+                                <tbody *ngIf="proposalFundData">
+                                  <tr *ngFor="let fund of proposalFundData">
+                                    <td>
+                                      {{fund.accountCode}}
+                                    </td>
+                                    <td>
+                                      {{fund.fundName}}
+                                    </td>
+                                    <td>
+                                      {{fund.allocationRate}}%
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div> -->
+
+                            <div class="tab-card box-shadow">
+                              <div class="card-table">
+                                  <table>
+                                      <thead>
+                                          <tr>
+                                              <th>{{fund.accountCode}}</th>
+                                          </tr>
+                                      </thead>
+                                      <tr>
+                                          <td>
+                                              <div class="row">
+                                                  <div class="col-lg-6">
+                                                      <div class="color-dark-gray">{{'_fund_name' | translate}} </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                      <div class="color-gray2"> {{fund.fundName}} </div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <div class="row">
+                                                  <div class="col-lg-6">
+                                                      <div class="color-dark-gray">{{'_fund_allocation' | translate}} </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                      <div class="color-gray2">{{fund.allocationRate}}%</div>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_product' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-tab box-shadow">
+                        <div class="header-product-info">
+                          <h5>{{'_product' | translate}}</h5>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="fund-product-table">
+                              <table class="table table-striped thead-center">
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      {{'_product_code' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_product_name' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_premi' | translate}} / {{'_cost' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_sum_assured' | translate}}/{{'_unit' | translate}}/{{'_plan' | translate}}
+                                    </th>
+                                  </tr>
+                                </thead>
+
+                                <tr *ngIf="proposalLifeProductData.length == 0">
+                                  <td colspan="7">{{'_data_not_found' | translate}}</td>
+                                </tr>
+                                <tbody *ngIf="proposalLifeProductData">
+                                  <tr *ngFor="let proposalProduct of proposalLifeProductData">
+                                    <td class="text-center">
+                                      {{proposalProduct.productCode}}
+                                    </td>
+                                    <td class="text-center">
+                                      {{proposalProduct.productName}}
+                                    </td>
+                                    <td class="text-center">
+                                      {{proposalProduct.premi | currency:'Rp '}}
+                                    </td>
+                                    <td class="text-center" [innerHTML]="proposalProduct.sumAssured | currency:'Rp '"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="background-white padding-15 section-tab box-shadow">
+                        <div class="header-product-info">
+                          <h5>{{'_rider' | translate}}</h5>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="fund-rider-table">
+
+                              <table class="table table-striped thead-center">
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      {{'_rider_code' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_rider_name' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_premi' | translate}}/{{'_cost' | translate}}
+                                    </th>
+                                    <th>
+                                      {{'_sum_assured' | translate}}/{{'_unit' | translate}}/{{'_plan' | translate}}
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tr *ngIf="proposalRiderData == false">
+                                  <td colspan="7">{{'_data_not_found' | translate}}</td>
+                                </tr>
+                                <tbody *ngIf="proposalRiderData">
+                                  <tr *ngFor="let proposalRider of proposalRiderData">
+                                    <td>
+                                      {{proposalRider.riderCode}}
+                                    </td>
+                                    <td>
+                                      {{proposalRider.riderName}}
+                                    </td>
+                                    <td class="text-align-right">
+                                      {{proposalRider.basicPremium | currency:'Rp '}}
+                                    </td>
+                                    <td class="text-align-right">
+                                      <span *ngIf="proposalRider.sumAssured > 0">{{proposalRider.sumAssured | currency:'Rp '}}</span>
+                                      <span *ngIf="proposalRider.plan != null">{{proposalRider.plan}}</span>
+                                      <span *ngIf="proposalRider.unit != '0 Unit' && proposalRider.plan == null">{{proposalRider.unit}}</span>
+</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_beneficiary' | translate}}</ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="row">
+                        <div class="col-lg-12" *ngIf="proposalBeneficiaryData.length == 0">
+                          <div class="background-white padding-15 section-wrap section-tab proposal-item-list box-shadow">
+                            <span>{{'_data_not_found' | translate }}</span>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6" *ngFor="let proposalBenef of proposalBeneficiaryData">
+                          <div class="tab-card box-shadow">
+                            <div class="card-table tr-no-hover">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>{{proposalBenef.fullName}}</th>
+                                  </tr>
+                                </thead>
+
+                                <tr>
+                                  <td>
                                     <div class="row">
-                                      <div class="col-lg-4">
-                                        <div class="form-group form-group-disabled">
-                                            <label>Email</label>
-                                            <div class="form-control-disabled">diana.rihana@gmail.com</div>
-                                        </div>
-
+                                      <div class="col-lg-6">
+                                        <div class="color-dark-gray">{{'_birth_date' | translate}} </div>
                                       </div>
-                                      <div class="col-lg-4">
-                                           <div class="form-group form-group-disabled">
-                                                <label class="color-white" >Mobile Phone Number </label>
-                                                <div class="form-control-disabled">082877272</div>
-                                            </div>
-                                      </div>
-                                      <div class="col-lg-4">
-                                          <!-- <div class="form-group form-group-disabled">
-                                              <label>Identity Number </label>
-                                              <div class="form-control-disabled">0299822009198</div>
-                                          </div> -->
+                                      <div class="col-lg-6">
+                                        <div class="color-gray2"> {{proposalBenef.birthday}} </div>
                                       </div>
                                     </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
                                     <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group-disabled">
-                                                    <label>Correspondence Address</label>
-                                                    <div class="form-control-disabled"> Cluster Permata, <br> Blok A no 13<br>Jl. Anggrek No2 RT 1 RW 2, Setiabudi <br>Jakarta Selatan <br>51216</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group-disabled">
-                                                    <label>Home Address</label>
-                                                    <div class="form-control-disabled"> Cluster Permata, <br> Blok A no 13<br>Jl. Anggrek No2 RT 1 RW 2, Setiabudi <br>Jakarta Selatan <br>51216</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group-disabled">
-                                                    <label>Office Address</label>
-                                                    <div class="form-control-disabled"> Cluster Permata, <br> Blok A no 13<br>Jl. Anggrek No2 RT 1 RW 2, Setiabudi <br>Jakarta Selatan <br>51216</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <div class="col-lg-6">
+                                        <div class="color-dark-gray">{{'_gender' | translate}} </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="color-gray2">{{proposalBenef.gender | translate}}</div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="row">
+                                      <div class="col-lg-6">
+                                        <div class="color-dark-gray">{{'_relationship' | translate}} </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="color-gray2">{{proposalBenef.designationDesc}}</div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
                             </div>
-                            <div class="background-white padding-15 section-wrap section-tab box-shadow">
-                              <div class="row">
-                                  <div class="col-lg-4">
-                                        <div class="form-group-disabled">
-                                            <label>Basic Premium </label>
-                                            <div class="form-control-disabled">Rp 10,000,000.00</div>
-                                        </div>
-                                        <div class="form-group-disabled">
-                                            <label>Regular Top up</label>
-                                            <div class="form-control-disabled">Rp 500,000.00</div>
-                                        </div>
-                                    
-                                  </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group form-group-disabled">
-                                            <label>Proposal Date </label>
-                                            <div class="form-control-disabled">19 February 2018</div>
-                                        </div>
-                                        <div class="form-group form-group-disabled">
-                                            <label>Proposal Receive Date</label>                            
-                                            <div class="form-control-disabled">5 May  2018</div>
-                                        </div>
-                                    </div>
-                                  <div class="col-lg-4">
-                                        <div class="form-group form-group-disabled">
-                                            <label>Payment Method</label>
-                                            <div class="form-control-disabled"> Transfer</div>
-                                        </div>
-                                        <div class="form-group-disabled">
-                                            <label>Currency</label>
-                                            <div class="form-control-disabled"> IDR </div>
-                                        </div>
-                                  </div>
-                                </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_servicing_agent' | translate}} </ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-15 section-wrap section-tab box-shadow">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_agent_code' | translate}}</label>
+                              <div class="form-control-disabled"> {{proposalAgentData.agentCode}}</div>
                             </div>
-                          </ng-template>
-                      </ngb-tab>
-                      <ngb-tab>
-                          <ng-template ngbTabTitle>Life Assured  </ng-template>
-                          <ng-template ngbTabContent>
-                              <div class="background-white padding-15 section-wrap section-tab box-shadow">
-                                <div class="fund-product-table tr-nohover">
-                                        <table class="table table-striped thead-center">
-                                            <thead>
-                                            <tr>
-                                                <th>
-                                                Name
-                                                </th>
-                                                <th>
-                                                Gender
-                                                </th>
-                                                <th>
-                                                    Birth Date
-                                                </th>
-                                            </tr>
-                                            </thead>
-
-                                            <tr>
-                                                <td>
-                                                    Oktaria Puspita
-                                                </td>
-                                                <td>
-                                                    Female
-                                                </td>
-                                                <td>
-                                                    8 May 1992
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                        Rianty Rukmana
-                                                </td>
-                                                <td>
-                                                        Female
-                                                </td>
-                                                <td>
-                                                        08/05/1995
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                    <td>
-                                                        Triana Riany
-                                                    </td>
-                                                    <td>
-                                                            Female
-                                                    </td>
-                                                    <td>
-                                                            8 May 1992
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </table>
-                                    </div>
-                              </div>
-                          </ng-template>
-                      </ngb-tab>
-                      <ngb-tab>
-                          <ng-template ngbTabTitle>Fund  </ng-template>
-                          <ng-template ngbTabContent>
-                              <div class="background-white padding-15 section-wrap section-tab box-shadow">
-                                  <div class="row">
-                                      <div class="col-lg-12">
-                                        <div class="fund-table">
-                                          <table class="table table-striped thead-center">
-                                            <thead>
-                                              <tr>
-                                                <th>
-                                                    Fun Code
-                                                </th>
-                                                <th>
-                                                  Fund name 
-                                                </th>
-                                                <th>
-                                                  Fund Allocation
-                                                </th>
-                                              </tr>
-                                            </thead>
-
-                                            <tr>
-                                                <td>
-                                                        AMMR
-                                                </td>
-                                                <td>
-                                                        ekreasi Rupiah Money Market fund
-                                                </td>
-                                                <td>
-                                                  60%
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                               <td>
-                                                    ASOR
-                                                        </td>
-                                                  <td>
-                                                        ekreasi Rupiah Syariah Bond Fund
-                                                  </td>
-                                                  <td>
-                                                    40%
-                                                  </td>
-                                              </tr>
-                                          </table>
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </ng-template>
-                      </ngb-tab>
-                      <ngb-tab>
-                          <ng-template ngbTabTitle>Product </ng-template>
-                          <ng-template ngbTabContent>
-                              <div class="background-white padding-15 section-tab box-shadow">
-                                  <div class="header-product-info">
-                                    <h5>Product</h5>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-12">
-                                          <div class="fund-product-table">
-                                            <table class="table table-striped thead-center">
-                                              <thead>
-                                                <tr>
-                                                  <th>
-                                                    Product Code
-                                                  </th>
-                                                  <th>
-                                                    Product name 
-                                                  </th>
-                                                  <th>
-                                                    Premi/Biaya
-                                                  </th>
-                                                  <th>
-                                                    Sum Assured/Unit/Plan
-                                                  </th>
-                                                </tr>
-                                              </thead>
-  
-                                              <tr>
-                                                  <td>
-                                                        IFLE003
-                                                  </td>
-                                                  <td>
-                                                    Asuransi Flexi Link
-                                                  </td>
-                                                  <td class="text-align-right">
-                                                    Rp 300,000.00
-                                                  </td>
-                                                  <td class="text-align-right">
-                                                    Rp 150,000,000.00
-                                                  </td>
-                                              </tr>
-                                            </table>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="background-white padding-15 section-tab box-shadow">
-                                  <div class="header-product-info">
-                                    <h5>Rider</h5>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-12">
-                                          <div class="fund-rider-table">
-                                               
-                                                    <table class="table table-striped thead-center">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                            Rider Code
-                                                            </th>
-                                                            <th>
-                                                            Rider name 
-                                                            </th>
-                                                            <th>
-                                                                Life Assured Name
-                                                            </th>
-                                                            <th>
-                                                            Premi/Biaya
-                                                            </th>
-                                                            <th>
-                                                            Sum Assured/Unit/Plan
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-        
-                                                    <tr>
-                                                        <td>
-                                                            IADD01 
-                                                        </td>
-                                                        <td>
-                                                            Accidental Death and Disablement
-                                                        </td>
-                                                        <td>
-                                                            Oktaria Puspita
-                                                        </td>
-                                                        <td class="text-align-right">
-                                                            Rp 50,000.00
-                                                        </td>
-                                                        <td class="text-align-right">
-                                                            Rp 300,000.00
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            ICMED01
-                                                        </td>
-                                                        <td>
-                                                            My Flexi Health
-                                                        </td>
-                                                        <td>
-                                                            Oktaria Puspita
-                                                        </td>
-                                                        <td class="text-align-right">
-                                                            Rp 60,000.00
-                                                        </td>
-                                                        <td class="text-align-right">
-                                                                Copay 20% <br/>
-
-                                                                Asia <br/>
-                                                            Plan B - RP. 600.000
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                            <td>
-                                                                IHCU01
-                                                            </td>
-                                                            <td>
-                                                            Hospital Cash Unit
-                                                            </td>
-                                                            <td>
-                                                                Oktaria Puspita
-                                                            </td>
-                                                            <td class="text-align-right">
-                                                                Rp 50,000.00
-                                                            </td>
-                                                            <td class="text-align-right">
-                                                                    10 unit
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </ng-template>
-                      </ngb-tab>
-                      <ngb-tab>
-                        <ng-template ngbTabTitle>Beneficiary</ng-template>
-                        <ng-template ngbTabContent>
-                            <div class="row">
-                              <div class="col-lg-6">
-                                  <div class="tab-card box-shadow">
-                                    <div class="card-table tr-no-hover">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Diana Rihana</th>
-                                                </tr>
-                                            </thead>
-                                          
-                                            <tr>
-                                              <td>
-                                                <div class="row">
-                                                  <div class="col-lg-6">
-                                                      <div class="color-dark-gray">Birth Date </div>
-                                                  </div>
-                                                  <div class="col-lg-6">
-                                                      <div class="color-gray2"> 8 May 1992 </div>
-                                                  </div>
-                                                </div>
-                                              </td>
-                                            </tr>
-                                            <tr>
-                                                    <td>
-                                                        <div class="row">
-                                                        <div class="col-lg-6">
-                                                            <div class="color-dark-gray">Gender </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="color-gray2">Female</div>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="color-dark-gray">Relationship </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="color-gray2">Daughter</div>
-                                                    </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                          </table>
-                                    </div>
-                                  </div>
-                              </div>
-                              <div class="col-lg-6">
-                                  <div class="tab-card box-shadow">
-                                    <div class="card-table">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Oktaria Puspita</th>
-                                                </tr>
-                                            </thead>
-                                            <tr>
-                                              <td>
-                                                <div class="row">
-                                                  <div class="col-lg-6">
-                                                      <div class="color-dark-gray">Birth Date </div>
-                                                  </div>
-                                                  <div class="col-lg-6">
-                                                      <div class="color-gray2"> 8 May 1992 </div>
-                                                  </div>
-                                                </div>
-                                              </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                  <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="color-dark-gray">Gender </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="color-gray2">Female </div>
-                                                    </div>
-                                                  </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="color-dark-gray">Relationship </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="color-gray2">Daughter</div>
-                                                    </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                          </table>
-                                    </div>
-                                  </div>
-                              </div>
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_agent_name' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.realName}}</div>
                             </div>
-                        </ng-template>
-                      </ngb-tab>
-                      <ngb-tab>
-                          <ng-template ngbTabTitle>Proposal Tracking </ng-template>
-                          <ng-template ngbTabContent>
-                              <div class="background-white padding-15 section-wrap section-tab box-shadow">
-                                  <div class="row">
-                                      <div class="col-lg-12">
-                                          <div class="form-group form-group-disabled">
-                                              <label>Proposal Tracking</label>
-                                              <div class="form-control-disabled"> On Process</div>
-                                          </div>
-                                      </div>
-                                     
-                                  </div>
-                              </div>
-                          </ng-template>
-                      </ngb-tab>
 
-                      
-                      <ngb-tab>
-                          <ng-template ngbTabTitle>Servicing Agent  </ng-template>
-                          <ng-template ngbTabContent>
-                              <div class="background-white padding-15 section-wrap section-tab box-shadow">
-                                  <div class="row">
-                                    <div class="col-lg-4">
-                                      <div class="form-group form-group-disabled">
-                                        <label>Agent Code</label>
-                                        <div class="form-control-disabled"> 02838283929</div>
-                                      </div>
-                                      <div class="form-group form-group-disabled">
-                                          <label>Agent Name</label>
-                                          <div class="form-control-disabled">Yoana Nita</div>
-                                      </div>
-                                      
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group form-group-disabled">
-                                          <label>Email</label>
-                                          <div class="form-control-disabled"> yoananita@gmail.com</div>
-                                        </div>
-                                        <div class="form-group form-group-disabled">
-                                            <label>Mobile Number</label>
-                                            <div class="form-control-disabled">082929278882</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        
-                                        <div class="form-group form-group-disabled">
-                                                <label>Status Agent</label>
-                                                <div class="form-control-disabled">Active</div>
-                                        </div>
-                                        <div class="form-group form-group-disabled">
-                                                <label>Branch</label>
-                                                <div class="form-control-disabled">Surabaya</div>
-                                            </div>
-                                    </div>
-                                  </div>
-                              </div>
-                          </ng-template>
-                      </ngb-tab>
-                     
-                      
-                    </ngb-tabset>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_email' | translate}}</label>
+                              <div class="form-control-disabled"> {{proposalAgentData.email}}</div>
+                            </div>
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_mobile_number' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.mobile}}</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_status_agent' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.agentStatus}}</div>
+                            </div>
+                            <div class="form-group form-group-disabled">
+                              <label>{{'_branch' | translate}}</label>
+                              <div class="form-control-disabled">{{proposalAgentData.physicalLocation}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+
+
+                </ngb-tabset>
               </div>
             </div>
-                 
-             
+
+
           </div>
         </div>
       </div>

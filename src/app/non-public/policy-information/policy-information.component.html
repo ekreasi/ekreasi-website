@@ -1,204 +1,86 @@
 <header-non-public></header-non-public>
 <content>
-<div  class="inner-content-dashboard">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-6">
-            <div class="ekreasi-header-content-non-public">
-                <div class="ekreasi-breadcrumb">
-                    <a [routerLink]="['/dashboard']" routerLinkActive="active"><span class="icon-left"></span>Dashboard</a>
-                  </div>
-              <h1>Customer Corner</h1>
-            </div>
-          </div>
-          <div class="col-lg-6">
-              <div class="ekreasi-header-content welcome-page float-right">
-                  <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
-                  <ul>
-                    <li>Last Login at Friday, 9 Feb 2018. 01:58pm </li>
-                    <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
-                  </ul>
-              </div>
-          </div>
-        </div>
-  </div>
-  </div>
-  <div class="inner-content-gray">
-      <div class="side-menu-dashboard-vertical"> 
-          <menu-dashboard-vertical></menu-dashboard-vertical>
-      </div>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-content-dashboard-wrap">
-            <div class="side-menu-dashboard-horizontal"> 
-                <menu-dashboard-horizontal></menu-dashboard-horizontal>
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
             </div>
-              
-            <div class="ekreasi-content-general">
+
+            <div class="chubb-content-general">
               <div class="headline-left">
                 <div class="row">
-                  <div  class="col-sm-12">
-                    <h5 class="color-violet">Policy Information</h5>
+                  <div class="col-sm-12">
+                    <h5 class="color-violet">
+                      {{'_policy_information' | translate}}
+                    </h5>
                   </div>
                 </div>
               </div>
-              <div class="ekreasi-content-nonpublic">
+              <div class="chubb-content-nonpublic">
                 <div class="row">
                   <div class="col-lg-12">
-                      <div class="table-violet tr-hover-link">
-                          <table class="table table-striped violet border-gray-botom-1px thead-center">
-                            <thead>
-                                <tr>
-                                    <th>Policy Number</th>
-                                    <th>Product Name</th>
-                                    <th>Main Life <br>Assured</th>
-                                    <th>Total Premi</th>
-                                    <th>Sum Assured</th>
-                                    <th>Payment Frequency</th>
-                                    <th>Policy Status</th>
-                                    <th>Issued Date</th>
-                                    <th>Due Date</th>
-                                </tr>
-                            </thead>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                              <td><span>0988282888 </span></td>
-                              
-                              <td>Asuransi Family Saver</td>
-                              <td>Ribka Pertiwi</td>
-                              <td>Rp 10,000,000.00</td>
-                              <td>Rp 150,000,000.00</td>
-                              <td>Monthly</td>
-                              <td>Inforce</td>
-                              <td>3 Mar 2018</td>
-                              <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                
-                                <td>Asuransi Invest Link</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                
-                                <td>Asuransi Platinum Link</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                               
-                                <td>Asuransi Cash Back Premium</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                
-                                <td>Asuransi Premier Link</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                
-                                <td>Asuransi Invest Link</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                
-                                <td>Asuransi Family Saver</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                
-                                <td>Asuransi Invest Link</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                
-                                <td>Asuransi Invest Link</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                            <tr [routerLink]="['/my-data/policy-information/policy-detail']">
-                                <td><span>0988282888 </span></td>
-                                <td>Asuransi Invest Link</td>
-                                <td>Ribka Pertiwi</td>
-                                <td>Rp 10,000,000.00</td>
-                                <td>Rp 150,000,000.00</td>
-                                <td>Monthly</td>
-                                <td>Inforce</td>
-                                <td>3 Mar 2018</td>
-                                <td>3 Apr 2018</td>
-                            </tr>
-                          </table>
-                        </div>
+                    <div class="table-violet tr-hover-link">
+                      <table class="table table-striped violet border-gray-botom-1px thead-center">
+                        <thead>
+                          <tr>
+                            <th>{{'_policy_number' | translate}}</th>
+                            <th>{{'_product_name' | translate}}</th>
+                            <th>{{'_main_life_assured' | translate}}</th>
+                            <th>{{'_total_premium' | translate}}</th>
+                            <th>{{'_sum_assured' | translate}}</th>
+                            <th>{{'_payment_frequency' | translate}}</th>
+                            <th>{{'_policy_status' | translate}}</th>
+                            <th>{{'_issued_date' | translate}}</th>
+                            <th>{{'_next_due_date' | translate}}</th>
+                          </tr>
+                        </thead>
+                        <tr *ngIf="!loadingData">
+                          <td colspan="9">{{'_loading_data' | translate}}</td>
+                        </tr>
+                        <tr *ngIf="policyData == false && loadingData">
+                          <td colspan="9">{{'_data_not_found' | translate}}</td>
+                        </tr>
+                        <tbody *ngIf="policyData">
+                          <tr *ngFor="let policy of policyData" [routerLink]="['/my-data/policy-information/', policy.policyNo]">
+                            <td>
+                              <span>{{policy.policyNo}}</span>
+                            </td>
+                            <td>{{policy.productName}}</td>
+                            <td>{{policy.mainLifeAssured}}</td>
+                            <td>{{policy.totalPremium | currency:'Rp '}}</td>
+                            <td>{{policy.sumAssured | currency:'Rp '}}</td>
+                            <td>{{policy.paymentFrequency}}</td>
+                            <td>{{policy.lastProposalStatus}}</td>
+                            <td>{{policy.issueDate}}</td>
+                            <td>{{policy.nextDueDate}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                   <div class="col-lg-6">
-                      <div class="title-bottom-content">
-                          <p>Total  <span class="color-magenta">25</span> Policy Information</p>
-                      </div>
+                    <div class="title-bottom-content">
+                      <p>{{'_total_records' | translate}} <span class="color-magenta">{{total}}</span> {{'_policy_information' | translate}}</p>
+                    </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="pagination-magenta float-right">
-                      <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                      <ngb-pagination [collectionSize]="totalDataPagination" [(page)]="currentPage" aria-label="Default pagination" [maxSize]="3" [pageSize]="perPage"
+                        (pageChange)="loadPage($event)"></ngb-pagination>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
-                 
-             
+
+
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  version: string = environment.VERSION;
+
+  constructor(private meta: Meta) {
+    this.meta.addTag({ name: 'version', content: this.version });
+  }
 }
+
+

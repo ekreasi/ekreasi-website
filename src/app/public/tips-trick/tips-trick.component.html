@@ -1,219 +1,55 @@
 <header-page></header-page>
 <content>
-  <div  class="inner-content-tips">
+  <div class="inner-content-news" *ngIf="!loadingData">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="ekreasi-header-content">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
-            </div>
-            <h1>Tips & Trick</h1>
+          <div class="col-lg-12">
+            
           </div>
         </div>
-        <div class="col-lg-6">
-            <div class="chub-tips-pagination">
-                <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+    </div>
+  </div>
+  <div class="load-data" *ngIf="loadingData">
+    <div  class="inner-content-news">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="chubb-header-content">
+              <div class="chubb-breadcrumb">
+                <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>{{'_home' | translate}}</a>
+                <a [routerLink]="['/education-center']" routerLinkActive="active"><span class="icon-left"></span>{{'_education_center' | translate}}</a>
               </div>
+              <h1>Tips and Trick</h1>
+            </div>
+            <div class="clearfix"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="inner-content-gray">
-
-    
-
-    <div class="container">
-        <div class="ekreasi-headline-banner">
-          <div class="row">
-            <div class="col-lg-6 no-padding">
-                <div class="banner-dashboard">
-                    <div class="img-hero-banner">
-                        <img src="./assets/img/dummy/family-banner.jpg">
-                    </div>
-                </div>
+    <div class="inner-content-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4" *ngFor="let tipstrick of data.education_center">
+            <div class="chubb-item-news-thumb magenta">
+              <div class="chubb-news-img">
+                <img [lazyLoad]="tipstrick.image">
+              </div>
+              <div class="chubb-summary-news-item">
+                <h5>{{tipstrick.title}}</h5>
+                <p>{{tipstrick.summary}}</p>
+                <button class="btn-news magenta" [routerLink]="['/tips-trick/', tipstrick.id]" routerLinkActive="active" >{{'_read_more' | translate}} <span class="icon-right"></span></button>
+              </div>
             </div>
-            <div class="col-lg-6 no-padding">
-                <div class="ekreasi-headline-banner-text background-tosca">
-                    <h3 class="color-white" >Asuransi, Salah Satu Cara Mewujudkan Cinta kepada Keluarga</h3>
-                    <p class="color-white" >Terdiagnosa penyakit kritis adalah risiko kesehatan yang bisa datang kapan dan kepada siapa saja. Faktor usia dan gaya hidup masih jadi penyebab utama…</p>
-                    <a href="#" class="btn-bottom">Baca Lebih Lanjut<span class="icon-right"></span></a>
-                    <p class="float-right tips-category" >Education</p>
-                </div>
-            </div>
+          </div>  
+        </div>
+
+        <div class="col-lg-12 text-right no-padding">
+          <div class="chub-news-pagination">
+            <ngb-pagination [collectionSize]="total" [(page)]="currentPage" [maxSize]="3" [pageSize]="perPage" (pageChange)="loadPage($event)" aria-label="Default pagination"></ngb-pagination>
+            <div class="clearfix"></div>
           </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="background-white item-tips-horizontal border-right-yellow">
-                  <div class="row">
-                    <div class="col-lg-5 no-padding">
-                        <div class="ekreasi-tips-img-v2">
-                            <img src="./assets/img/dummy/news1.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="ekreasi-summary-tips-item-horizontal">
-                            <h5>ekreasi Membuat Penunjukan Kepemimpinan di Asia Pasifik</h5>
-                            <p>ekreasi hari ini mengumumkan dua penunjukan kepemimpinan untuk bisnis perusahaan di Asia Pasifik. Kedua penunjukan….</p>
-                            <div class="clearfix"></div>
-                            <div class="row">
-                              <div class="col-lg-6">
-                                <button class="btn-tips btn-yellow" [routerLink]="['/detail-tips-trick']" routerLinkActive="active" >Selengkapnya <span class="icon-right"></span></button>
-                              </div>
-                              <div class="col-lg-6">
-                                <p class="float-right" >Education</p>
-                              </div>
-                          </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="background-white item-tips-horizontal border-right-red">
-                    <div class="row">
-                      <div class="col-lg-5 no-padding">
-                          <div class="ekreasi-tips-img-v2">
-                              <img src="./assets/img/dummy/news2.jpg">
-                          </div>
-                      </div>
-                      <div class="col-lg-7">
-                          <div class="ekreasi-summary-tips-item-horizontal">
-                              <h5>ekreasi Membuat Penunjukan Kepemimpinan di Asia Pasifik</h5>
-                              <p>ekreasi hari ini mengumumkan dua penunjukan kepemimpinan untuk bisnis perusahaan di Asia Pasifik. Kedua penunjukan….</p>
-                              <div class="clearfix"></div>
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <button class="btn-tips btn-red" [routerLink]="['/detail-tips-trick']" routerLinkActive="active" >Selengkapnya <span class="icon-right"></span></button>
-                                </div>
-                                <div class="col-lg-6">
-                                  <p class="float-right" >Finance</p>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="background-white item-tips-horizontal border-right-tosca">
-                  <div class="row">
-                    <div class="col-lg-5 no-padding">
-                        <div class="ekreasi-tips-img-v2">
-                            <img src="./assets/img/dummy/news3.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="ekreasi-summary-tips-item-horizontal">
-                            <h5>ekreasi Membuat Penunjukan Kepemimpinan di Asia Pasifik</h5>
-                            <p>ekreasi hari ini mengumumkan dua penunjukan kepemimpinan untuk bisnis perusahaan di Asia Pasifik. Kedua penunjukan….</p>
-                            <div class="clearfix"></div>
-                            <div class="row">
-                              <div class="col-lg-6">
-                                <button class="btn-tips btn-tosca" [routerLink]="['/detail-tips-trick']" routerLinkActive="active" >Selengkapnya <span class="icon-right"></span></button>
-                              </div>
-                              <div class="col-lg-6">
-                                <p class="float-right" >Education</p>
-                              </div>
-                          </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="background-white item-tips-horizontal border-right-yellow">
-                    <div class="row">
-                      <div class="col-lg-5 no-padding">
-                          <div class="ekreasi-tips-img-v2">
-                              <img src="./assets/img/dummy/news1.jpg">
-                          </div>
-                      </div>
-                      <div class="col-lg-7">
-                          <div class="ekreasi-summary-tips-item-horizontal">
-                              <h5>ekreasi Membuat Penunjukan Kepemimpinan di Asia Pasifik</h5>
-                              <p>ekreasi hari ini mengumumkan dua penunjukan kepemimpinan untuk bisnis perusahaan di Asia Pasifik. Kedua penunjukan….</p>
-                              <div class="clearfix"></div>
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <button class="btn-tips btn-yellow" [routerLink]="['/detail-tips-trick']" routerLinkActive="active" >Selengkapnya <span class="icon-right"></span></button>
-                                </div>
-                                <div class="col-lg-6">
-                                  <p class="float-right" >Finance</p>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="background-white item-tips-horizontal border-right-yellow">
-                  <div class="row">
-                    <div class="col-lg-5 no-padding">
-                        <div class="ekreasi-tips-img-v2">
-                            <img src="./assets/img/dummy/news1.jpg">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="ekreasi-summary-tips-item-horizontal">
-                            <h5>ekreasi Membuat Penunjukan Kepemimpinan di Asia Pasifik</h5>
-                            <p>ekreasi hari ini mengumumkan dua penunjukan kepemimpinan untuk bisnis perusahaan di Asia Pasifik. Kedua penunjukan….</p>
-                            <div class="clearfix"></div>
-                            <div class="row">
-                              <div class="col-lg-6">
-                                <button class="btn-tips btn-yellow" [routerLink]="['/detail-tips-trick']" routerLinkActive="active" >Selengkapnya <span class="icon-right"></span></button>
-                              </div>
-                              <div class="col-lg-6">
-                                <p class="float-right" >Education</p>
-                              </div>
-                          </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="background-white item-tips-horizontal border-right-red">
-                    <div class="row">
-                      <div class="col-lg-5 no-padding">
-                          <div class="ekreasi-tips-img-v2">
-                              <img src="./assets/img/dummy/news3.jpg">
-                          </div>
-                      </div>
-                      <div class="col-lg-7">
-                          <div class="ekreasi-summary-tips-item-horizontal">
-                              <h5>ekreasi Membuat Penunjukan Kepemimpinan di Asia Pasifik</h5>
-                              <p>ekreasi hari ini mengumumkan dua penunjukan kepemimpinan untuk bisnis perusahaan di Asia Pasifik. Kedua penunjukan….</p>
-                              <div class="clearfix"></div>
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <button class="btn-tips btn-red" [routerLink]="['/detail-tips-trick']" routerLinkActive="active" >Selengkapnya <span class="icon-right"></span></button>
-                                </div>
-                                <div class="col-lg-6">
-                                  <p class="float-right" >Finance</p>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
+      </div>
     </div>
   </div>
 </content>

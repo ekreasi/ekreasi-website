@@ -537,3 +537,27 @@
             margin-bottom: 30px;
         }
     }
+    ul.ngxcarouselPoint li.active {
+        background:#fff !important;
+    }
+    
+    .ngxcarouselPointDefault .ngxcarouselPoint li.active {
+        background:#fff !important;
+    }
+    
+    .ngxcarouselPointDefault .ngxcarouselPoint li {
+        background:#fff !important;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin:auto;
+    }
+
+    .footer-call ul li {
+        padding:6px 0px;
+    }

@@ -1,567 +1,547 @@
 <header-non-public></header-non-public>
 <content>
-<div  class="inner-content-dashboard">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="ekreasi-header-content-non-public">
-                <div class="ekreasi-breadcrumb">
-                    <a [routerLink]="['/dashboard']" routerLinkActive="active"><span class="icon-left"></span>Dashboard</a>
-                </div>
-            <h1>Customer Corner</h1>
-            </div>
+    <div class="inner-content-gray min-height-nonpublic">
+        <div class="side-menu-dashboard-vertical">
+            <menu-dashboard-vertical></menu-dashboard-vertical>
         </div>
-        <div class="col-lg-6">
-            <div class="ekreasi-header-content welcome-page float-right">
-                <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
-                <ul>
-                    <li>Last Login at Friday, February 09, 2018. 01:58pm </li>
-                    <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-  </div>
-  </div>
-  <div class="inner-content-gray">
-      <div class="side-menu-dashboard-vertical"> 
-          <menu-dashboard-vertical></menu-dashboard-vertical>
-      </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="ekreasi-content-dashboard-wrap">
-            <div class="side-menu-dashboard-horizontal"> 
-                <menu-dashboard-horizontal></menu-dashboard-horizontal>
-            </div>
-              
-            <div class="ekreasi-content-general">
-              <div class="headline-center-violet border-bottom-gray">
-                <div class="row">
-                  <div  class="col-sm-12">
-                    <h5 class="color-violet">Transaction</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="ekreasi-content-nonpublic">
-                <div class="row">
-                  <div class="col-lg-12">
-                      <ngb-tabset class="ekreasi-primary-tab tab-col-2">
-                          <ngb-tab>
-                            <ng-template ngbTabTitle>Transaction History</ng-template>
-                            <ng-template ngbTabContent>
-                                <div class="background-white padding-15 section-tab">
-                                    <div class="row">
-                                        <div class="col-lg-3">
-                                            <div  class="form-group">
-                                                <label >Transaction Type</label>
-                                                <select  class="form-control no-border-radius">
-                                                        <option>Select Transaction Type</option>
-                                                        <option>Switching</option>
-                                                        <option>Redirection</option>
-                                                        <option>Withdrawal</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div  class="form-group">
-                                                <label >Start Date</label>
-                                                <div class="input-group">
-                                                    <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="modelStart" ngbDatepicker #s="ngbDatepicker">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-outline-secondary" (click)="s.toggle()" type="button">
-                                                        <img src="../assets/img/icon-date.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div  class="form-group">
-                                                <label >End Date</label>
-                                                <div class="input-group">
-                                                    <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="modelEnd" ngbDatepicker #e="ngbDatepicker">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-outline-secondary" (click)="e.toggle()" type="button">
-                                                        <img src="../assets/img/icon-date.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <button class="btn-magenta btn-search-fund">Search</button>
-                                        </div>
-                                    </div>
-                                    <div class="policy-table table-violet">
-                                        <table class="table table-striped">
-                                            <thead>
-                                            <tr>
-                                                <th>
-                                                    Transaction Type
-                                                </th>
-                                                <th>
-                                                    Status
-                                                </th>
-                                                <th>
-                                                    Application Date
-                                                </th>
-                                                <th>
-                                                    Transaction Date
-                                                </th>
-                                                </tr>
-                                            </thead>
-                                            <tr>
-                                                <td>
-                                                    Switch Fund
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Change Regular Premium 
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Withdrawal 
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Switch Fund
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Change Regular Premium 
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Withdrawal 
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="chubb-content-dashboard-wrap">
+                        <div class="side-menu-dashboard-horizontal">
+                            <menu-dashboard-horizontal></menu-dashboard-horizontal>
+                        </div>
 
-                                            <tr>
-                                                <td>
-                                                    Withdrawal 
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Switch Fund
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Change Regular Premium 
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Withdrawal 
-                                                </td>
-                                                <td>
-                                                    In Force
-                                                </td>
-                                                <td>
-                                                    25/03/2018
-                                                </td>
-                                                <td>
-                                                    26/03/2018
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="title-bottom-content">
-                                                <p>Total from <span class="color-magenta">25</span> Transaction History</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="pagination-magenta float-right">
-                                            <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
-                                            </div>
-                                        </div>
+                        <div class="chubb-content-general">
+                            <div class="headline-center-violet border-bottom-gray">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h5 class="color-violet">
+                                            Transaction
+                                        </h5>
                                     </div>
                                 </div>
-                            </ng-template>
-                          </ngb-tab>
-                          <ngb-tab>
-                              <ng-template ngbTabTitle>eStatement</ng-template>
-                              <ng-template ngbTabContent>
-                                    <div class="background-white padding-15 section-tab">
-                                        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                                            <ngb-panel>
-                                                <ng-template ngbPanelTitle>
-                                                    Transaction Statement
-                                                </ng-template>
-                                                <ng-template ngbPanelContent>
-                                                                <div class="row">
-                                                                    <div class="col-lg-3">
-                                                                        <div  class="form-group">
-                                                                            <label >Policy Number</label>
-                                                                            <input class="form-control no-border-radius" placeholder="Policy Number" type="text">
+                            </div>
+                            <div class="chubb-content-nonpublic">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <ngb-tabset class="chubb-primary-tab tab-col-2">
+                                            <ngb-tab>
+                                                <ng-template ngbTabTitle>Transaction History</ng-template>
+                                                <ng-template ngbTabContent>
+                                                    <div class="background-white padding-15 section-tab">
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <div class="form-group">
+                                                                    <label>Transaction Type</label>
+                                                                    <select class="form-control no-border-radius">
+                                                                        <option>Select Transaction Type</option>
+                                                                        <option>Switching</option>
+                                                                        <option>Redirection</option>
+                                                                        <option>Withdrawal</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="form-group">
+                                                                    <label>Start Date</label>
+                                                                    <div class="input-group">
+                                                                        <input autocomplete="off" class="form-control" placeholder="dd MMM YYYY" [(ngModel)]="modelStart" ngbDatepicker #s="ngbDatepicker" readonly>
+                                                                        <div class="input-group-append">
+                                                                            <button class="btn btn-outline-secondary" (click)="s.toggle()" type="button">
+                                                                                <img src="../assets/img/icon-date.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                                                                            </button>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-3">
-                                                                        <div  class="form-group">
-                                                                            <label >Transaction Type</label>
-                                                                            <select  class="form-control no-border-radius">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="form-group">
+                                                                    <label>End Date</label>
+                                                                    <div class="input-group">
+                                                                        <input autocomplete="off" class="form-control" placeholder="dd MMM YYYY" [(ngModel)]="modelEnd" ngbDatepicker #e="ngbDatepicker" readonly>
+                                                                        <div class="input-group-append">
+                                                                            <button class="btn btn-outline-secondary" (click)="e.toggle()" type="button">
+                                                                                <img src="../assets/img/icon-date.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <button class="btn-magenta btn-search-fund">Search</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="policy-table table-violet">
+                                                            <table class="table table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>
+                                                                            Transaction Type
+                                                                        </th>
+                                                                        <th>
+                                                                            Status
+                                                                        </th>
+                                                                        <th>
+                                                                            Application Date
+                                                                        </th>
+                                                                        <th>
+                                                                            Transaction Date
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tr>
+                                                                    <td>
+                                                                        Switch Fund
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Change Regular Premium
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Withdrawal
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Switch Fund
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Change Regular Premium
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Withdrawal
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        Withdrawal
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Switch Fund
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Change Regular Premium
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Withdrawal
+                                                                    </td>
+                                                                    <td>
+                                                                        In Force
+                                                                    </td>
+                                                                    <td>
+                                                                        25/03/2018
+                                                                    </td>
+                                                                    <td>
+                                                                        26/03/2018
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="title-bottom-content">
+                                                                    <p>{{'_total_records' | translate}} from
+                                                                        <span class="color-magenta">25</span> Transaction History</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="pagination-magenta float-right">
+                                                                    <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ng-template>
+                                            </ngb-tab>
+                                            <ngb-tab>
+                                                <ng-template ngbTabTitle>eStatement</ng-template>
+                                                <ng-template ngbTabContent>
+                                                    <div class="background-white padding-15 section-tab">
+                                                        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                                                            <ngb-panel>
+                                                                <ng-template ngbPanelTitle>
+                                                                    Transaction Statement
+                                                                </ng-template>
+                                                                <ng-template ngbPanelContent>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label>Policy Number</label>
+                                                                                <input autocomplete="off" class="form-control no-border-radius" placeholder="Policy Number" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label>Transaction Type</label>
+                                                                                <select class="form-control no-border-radius">
                                                                                     <option>Select Transaction Type</option>
                                                                                     <option>Switching</option>
                                                                                     <option>Redirection</option>
                                                                                     <option>Withdrawal</option>
-                                                                            </select>
+                                                                                </select>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3">
-                                                                        <div  class="form-group">
-                                                                            <label >Transaction Date</label>
-                                                                            <div class="input-group">
-                                                                                <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="modelStart" ngbDatepicker #s="ngbDatepicker">
-                                                                                <div class="input-group-append">
-                                                                                    <button class="btn btn-outline-secondary" (click)="s.toggle()" type="button">
-                                                                                    <img src="../assets/img/icon-date.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
-                                                                                    </button>
+                                                                        <div class="col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label>Transaction Date</label>
+                                                                                <div class="input-group">
+                                                                                    <input autocomplete="off" class="form-control" placeholder="dd MMM YYYY" [(ngModel)]="modelStart" ngbDatepicker #s="ngbDatepicker" readonly>
+                                                                                    <div class="input-group-append">
+                                                                                        <button class="btn btn-outline-secondary" (click)="s.toggle()" type="button">
+                                                                                            <img src="../assets/img/icon-date.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+                                                                                        </button>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+
+                                                                        <div class="col-lg-3">
+                                                                            <button class="btn-magenta btn-search-fund">Search</button>
+                                                                        </div>
                                                                     </div>
-                                                                    
-                                                                    <div class="col-lg-3">
-                                                                        <button class="btn-magenta btn-search-fund">Search</button>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="policy-table table-green">
-                                                                    <table class="table table-striped">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th>
-                                                                                Policy Number
-                                                                            </th>
-                                                                            <th>
-                                                                                Transaction Type
-                                                                            </th>
-                                                                            <th>
-                                                                                Status
-                                                                            </th>
-                                                                            <th>
-                                                                                Transaction Date
-                                                                            </th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tr>
-                                                                            <td>
-                                                                                039493493848
-                                                                            </td>
-                                                                            <td>
-                                                                               Withdrawal
-                                                                            </td>
-                                                                            <td>
-                                                                                In Force
-                                                                            </td>
-                                                                            <td>
-                                                                                25/03/2018
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                039493493848
-                                                                            </td>
-                                                                            <td>
-                                                                                Switch Fund
-                                                                            </td>
-                                                                            <td>
-                                                                                In Force
-                                                                            </td>
-                                                                            <td>
-                                                                                25/03/2018
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
+                                                                    <div class="policy-table table-green">
+                                                                        <table class="table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        Policy Number
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        Transaction Type
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        Status
+                                                                                    </th>
+                                                                                    <th>
+                                                                                        Transaction Date
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tr>
+                                                                                <td>
                                                                                     039493493848
                                                                                 </td>
                                                                                 <td>
-                                                                                   Withdrawal
+                                                                                    Withdrawal
                                                                                 </td>
                                                                                 <td>
                                                                                     In Force
                                                                                 </td>
                                                                                 <td>
                                                                                     25/03/2018
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    039493493848
+                                                                                </td>
+                                                                                <td>
+                                                                                    Switch Fund
+                                                                                </td>
+                                                                                <td>
+                                                                                    In Force
+                                                                                </td>
+                                                                                <td>
+                                                                                    25/03/2018
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    039493493848
+                                                                                </td>
+                                                                                <td>
+                                                                                    Withdrawal
+                                                                                </td>
+                                                                                <td>
+                                                                                    In Force
+                                                                                </td>
+                                                                                <td>
+                                                                                    25/03/2018
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </ng-template>
+                                                            </ngb-panel>
+                                                            <ngb-panel>
+                                                                <ng-template ngbPanelTitle>
+                                                                    Anual Transaction Statement
+                                                                </ng-template>
+                                                                <ng-template ngbPanelContent>
+                                                                    <div class="policy-table table-violet">
+                                                                        <table class="table table-striped">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2017
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2016
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2015
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2014
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2013
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2012
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2011
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2010
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2009
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </ng-template>
+                                                            </ngb-panel>
+                                                            <ngb-panel>
+                                                                <ng-template ngbPanelTitle>
+                                                                    Investment Value Information Letter
+                                                                </ng-template>
+                                                                <ng-template ngbPanelContent>
+                                                                    <div class="policy-table table-violet">
+                                                                        <table class="table table-striped">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2017
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2016
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2015
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2014
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2013
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2012
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2011
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2010
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <a href="#" class="annual">
+                                                                                        2009
+                                                                                        <span class="icon-downloads float-right"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </ng-template>
+                                                            </ngb-panel>
+                                                        </ngb-accordion>
+                                                    </div>
                                                 </ng-template>
-                                            </ngb-panel>
-                                            <ngb-panel>
-                                                <ng-template ngbPanelTitle>
-                                                    Anual Transaction Statement
-                                                </ng-template>
-                                                <ng-template ngbPanelContent>
-                                                        <div class="policy-table table-violet">
-                                                                <table class="table table-striped">
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2017
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2016
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                             </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2015
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2014
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                                </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2013
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                 </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2012
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2011
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                    </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2010
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                    </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2009
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                    </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                </table>
-                                                            </div>
-                                                </ng-template>
-                                            </ngb-panel>
-                                            <ngb-panel>
-                                                <ng-template ngbPanelTitle>
-                                                    Investment Value Information Letter
-                                                </ng-template>
-                                                <ng-template ngbPanelContent>
-                                                        <div class="policy-table table-violet">
-                                                                <table class="table table-striped">
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2017
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2016
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                             </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2015
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#" class="annual">
-                                                                                2014
-                                                                                <span class="icon-downloads float-right"></span>
-                                                                                </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2013
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                 </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2012
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2011
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                    </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2010
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                    </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="#" class="annual">
-                                                                                    2009
-                                                                                    <span class="icon-downloads float-right"></span>
-                                                                                    </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                </table>
-                                                            </div>
-                                                </ng-template>
-                                            </ngb-panel>
-                                        </ngb-accordion>
+                                            </ngb-tab>
+                                        </ngb-tabset>
                                     </div>
-                                </ng-template>
-                          </ngb-tab>
-                        </ngb-tabset>
-                  </div>
-                 
-                  
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
-              </div>
             </div>
-                 
-             
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </content>
 <app-footer></app-footer>

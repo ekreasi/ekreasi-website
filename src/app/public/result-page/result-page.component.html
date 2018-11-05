@@ -1,12 +1,13 @@
 <header-page></header-page>
 <content>
-  <div  class="inner-content-search">
+  <div class="inner-content-search">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-header-content">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['/']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+          <div class="chubb-header-content">
+            <div class="chubb-breadcrumb">
+              <a [routerLink]="['/']" routerLinkActive="active">
+                <span class="icon-left"></span>{{'_home' | translate}}</a>
             </div>
             <h1>Search Result</h1>
           </div>
@@ -16,66 +17,37 @@
   </div>
   <div class="inner-content-gray">
     <div class="container">
-        <div class="ekreasi-content-general">
-            <div class="headline-center-violet border-bottom-gray">
-              <div class="row">
-                <div  class="col-sm-12">
-                    <h5 class="color-violet">Search Result <span class="color-magenta">"Name of Search"</span></h5>
-                </div>
-              </div>
+      <div class="chubb-content-general">
+        <div class="headline-center-violet border-bottom-gray">
+          <div class="row">
+            <div class="col-sm-12">
+              <h5 class="color-violet">{{'_search_result' | translate}}
+                <span class="color-magenta">{{query}}</span>
+              </h5>
             </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="item-search">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus bibendum mi bibendum accumsan. Vivamus blandit interdum sem at placerat. Fusce vitae fermentum diam. Duis pretium consectetur magna. </p>
-            </div>
-            <div class="bottom-content">
-                <div class="col-lg-12 no-padding">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-6 no-padding">
-                        <div class="title-bottom-content">
-                          <p>Page <span class="color-magenta">1</span> from <span class="color-magenta">5</span> Search Result</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-6  no-padding">
-                          <div class="pagination-magenta float-right">
-                              <ngb-pagination [collectionSize]="50" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
         </div>
-      
+
+        <div class="container margin-bottom-30" *ngIf="loadingData && searchResult.length == 0">
+          <div class="notfound-bottom">{{'_data_not_found' | translate}}</div>
+        </div>
+
+        <div class="container margin-bottom-30" *ngIf="!loadingData">
+          <div class="notfound-bottom">{{'_loading_data' | translate}}</div>
+        </div>
+
+        <section id="result" *ngIf="loadingData && searchResult.length > 0">
+          <div class="item-search" *ngFor="let data of searchResult">
+            <h3>
+              <a [routerLink]="data.url" [queryParams]="{from: data.title}"><span [innerHTML]="data.title | highlight : query"></span></a>
+            </h3>
+            <div [innerHTML]="data.description | excerpt: 200 | highlight : query"></div>
+          </div>
+        </section>
+
+      </div>
+
     </div>
   </div>
 </content>
 <app-footer></app-footer>
-

@@ -1,45 +1,27 @@
 <header-non-public></header-non-public>
 <content>
-<div  class="inner-content-dashboard">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-6">
-            <div class="ekreasi-header-content-non-public">
-                <div class="ekreasi-breadcrumb">
-                    <a [routerLink]="['/dashboard']" routerLinkActive="active"><span class="icon-left"></span>Dashboard</a>
-                  </div>
-              <h1>Customer Corner</h1>
-            </div>
-          </div>
-          <div class="col-lg-6">
-              <div class="ekreasi-header-content welcome-page float-right">
-                  <h4>Welcome,<span class="color-violet"> Permata Putri </span></h4>
-                  <ul>
-                    <li>Last Login at Friday, 9 Feb 2018. 01:58pm </li>
-                    <li>You Have <a [routerLink]="['/inbox']"><span class="circle-mail">3</span></a>Unread notification</li>
-                  </ul>
-              </div>
-            </div>
-        </div>
-  </div>
-  </div>
-  <div class="inner-content-gray">
+  <div class="inner-content-gray min-height-nonpublic">
       <div class="side-menu-dashboard-vertical"> 
           <menu-dashboard-vertical></menu-dashboard-vertical>
       </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-content-dashboard-wrap">
+          <div class="chubb-content-dashboard-wrap">
             <div class="side-menu-dashboard-horizontal"> 
                 <menu-dashboard-horizontal></menu-dashboard-horizontal>
             </div>
               
-            <div class="ekreasi-content-general">
-              <div class="headline-left  border-bottom-blue">
+            <div class="chubb-content-general">
+              <div class="headline-left border-bottom-blue">
                 <div class="row">
-                  <div  class="col-lg-6">
-                    <h5 class="color-blue"> ekreasi Customer Portal</h5>
+                  <div class="col-sm-12">
+                    <h5 class="color-blue">
+                      <a (click)="backClicked()">
+                        <i class="fa fa-arrow-left"></i>
+                      </a>
+                      Chubb Customer Portal
+                    </h5>
                   </div>
 
                   <div  class="col-lg-6">
@@ -47,14 +29,14 @@
                     </div>
                 </div>
               </div>
-              <div class="ekreasi-content-nonpublic">
+              <div class="chubb-content-nonpublic">
                   <div class="row">
                     <div class="col-lg-12">
                         <div class="content-message-detail">
                           <h5>Update new website </h5>
                           <p><img src="../../../assets/img/dummy/ads.jpg"></p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus leo, commodo quis turpis at, tempus efficitur justo. Curabitur non consequat eros. Quisque eu venenatis nisi, at mollis urna. Curabitur vel felis tincidunt, dignissim magna id, posuere ex. Fusce suscipit condimentum sem, eget mollis massa scelerisque sed. Maecenas porta risus vitae vehicula feugiat. Ut a cursus urna, vitae luctus ante. Sed finibus mattis magna, sit amet congue ante. Donec ornare nisl libero, vitae tempus diam lacinia quis.</p>
-                          <p>Regards <br>PT ekreasi Life Indonesia</p>
+                          <p>Regards <br>PT Chubb Life Indonesia</p>
                         </div>
                     </div>
                   </div>

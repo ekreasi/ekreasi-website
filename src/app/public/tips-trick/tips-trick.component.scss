@@ -1,69 +1,70 @@
 @import '~assets/sass/vars';
-    .inner-content-tips{
+    .inner-content-news{
         padding:80px 0px 60px 0px; 
     }
-    .ekreasi-summary-tips {
-        width:70%;
+    .chubb-summary-news {
+        width:100%;
         padding:0px 30px;
         border-left:4px solid $orange;
         margin: 30px 0px 40px 0px;
     }
-    .ekreasi-item-tips-thumb {
+    .chubb-item-news-thumb {
         width:100%;
         background:#fff;
         margin-bottom:30px;
     }
 
-    .ekreasi-item-tips-thumb.magenta {
+    .chubb-item-news-thumb.magenta {
         border-bottom:4px solid $magenta;
     }
-    .ekreasi-item-tips-thumb.green {
+    .chubb-item-news-thumb.green {
         border-bottom:4px solid $green;
     }
-    .ekreasi-item-tips-thumb.violet {
+    .chubb-item-news-thumb.violet {
         border-bottom:4px solid $violet;
     }
-    .ekreasi-tips-img {
+    .chubb-news-img {
         width:100%;
         height:220px;
         overflow:hidden;
     }
-    .ekreasi-tips-img img {
+    .chubb-news-img img {
         width:100%;
     }
-    .ekreasi-summary-tips-item {
+    .chubb-summary-news-item {
         padding:30px 20px;
     }
-    .ekreasi-summary-tips-item h5 {
+    .chubb-summary-news-item h5 {
         font-family:'publico-roman',serif !important;
+        height: 72px;
+        overflow: hidden;
     }
-    .ekreasi-summary-tips-item p {
+    .chubb-summary-news-item p {
         line-height: 27px;
         margin: 23px auto;
+        height: 135px;
+        overflow: hidden;
     }
-    .btn-tips.magenta {
+    .btn-news.magenta {
         border:3px solid $magenta;
         background:transparent;
         color:$magenta;
         padding: 5px 40px;
     }
 
-    .btn-tips.violet {
+    .btn-news.violet {
         border:3px solid $violet;
         background:transparent;
         color:$violet;
         padding: 5px 40px;
     }
 
-    .btn-tips.green {
+    .btn-news.green {
         border:3px solid $green;
         background:transparent;
         color:$green;
         padding: 5px 40px;
     }
-    .chub-tips-pagination {
-        float: right;
-        position: absolute;
-        bottom: 0;
-        right: 15px;
+    .chub-news-pagination {
+        display: inline-block;
     }

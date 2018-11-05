@@ -1,82 +1,57 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Config } from '../../config'; 
+import { AuditTrail } from './../../audit-trail';
+import { Title } from '@angular/platform-browser';
+import { CacheService } from '../../cache.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-faq',
 	templateUrl: './faq.component.html',
-	styleUrls: ['./faq.component.scss']
+	styleUrls: ['./faq.component.scss'],
+	providers: [ Config, AuditTrail ]
 })
 export class FaqComponent implements OnInit {
+	params : any;
+	data : any = {};
+  public loadingData: boolean = false;
+  public preview: any = '';
+  public token: any = '';
 
-	faqData : any = {};
+  constructor(private cnf: Config, private auditTrail: AuditTrail, private titleService: Title, private http: HttpClient, private cacheService: CacheService, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.preview = params['preview'];
+      this.token = params['token'];
+    });
+  }
 
-	constructor() { }
+  ngOnInit() {
+    this.cacheService.get(this.cnf.lang + '/faq', this.loadData()).subscribe((res:any) => {
+      this.loadingData = true;
+      if (res.status == 100) {
+        this.data = JSON.parse(this.cnf.decryptData(res.datas));
+        this.titleService.setTitle( this.cnf.prefixTitle + this.data.title + this.cnf.postfixTitle );
+      }
+    });
+  }
 
-	ngOnInit() {
-		this.loadData();
-	}
+  loadData(){
+    let params = new HttpParams();
+    params = params.append('appid', this.cnf.appid);
+    params.append('appkey', this.cnf.appkey);
+    params = params.append('lang', this.cnf.lang);
 
-	loadData(){
-		this.faqData = {
-			"title": "Frequently Asked Questions (FAQ)",
-			"summary": "Beragam penghargaan berhasil diraih oleh PT ekreasi Life Insurance Indonesia (ekreasi Life) sejak awal unit operasionalnya diluncurkan di Indonesia.",
-			"faqs": [
-				{
-				  	"title": "Pertanyaan Umum",
-				  	"data": [
-					    {
-							"id": "1",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-					    {
-							"id": "2",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-					    {
-							"id": "3",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-					    {
-							"id": "4",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-					    {
-							"id": "5",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-					    {
-							"id": "6",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-				  	]
-				},{
-				  	"title": "Polis",
-				  	"data": [
-					    {
-							"id": "1",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-					    {
-							"id": "2",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-					    {
-							"id": "3",
-							"title": "Apa yang harus saya lakukan jika polis hilang?",
-							"description" : "Bila Polis Anda hilang atau rusak, kami dapat mencetakkan kembali sebuah Polis duplikat untuk Anda dengan dikenakan biaya cetak ulang. Lengkapi dokumen berikut sebagai persyaratan cetak ulang Polis: Surat permohonan cetak ulang Polis yang diajukan oleh Pemegang Polis sendiri. Surat pernyataan kehilangan dari Kepolisian. Fotokopi identitas yang masih berlaku. Bukti pembayaran biaya cetak ulang Polis.",
-					    },
-				  	]
-				}
-			]
-		};
+    let url = this.cnf.URLWS + '/faq';
+    if (this.preview) {
+      params = params.append('token', this.token);
+      url = url + '/preview/' + this.preview;
+    } else {
+      url = url + '/frontend/all';
+    }
 
-	}
+    return this.http.get(url, { params })
+      .map((response: Response) => response);
+  }
 
 }

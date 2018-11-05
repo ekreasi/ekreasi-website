@@ -4,12 +4,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="ekreasi-header-content-education">
-            <div class="ekreasi-breadcrumb">
-              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>Home</a>
+          <div class="chubb-header-content-education">
+            <div class="chubb-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>{{'_home' | translate}}</a>
             </div>
-            <h1>Education Center</h1>
-            
+            <h1>{{'_education_center' | translate}}</h1>
           </div>
         </div>
       </div>
@@ -19,17 +18,17 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <a [routerLink]="['/faq']"  class="ekreasi-item-education-thumb green">
+          <a [routerLink]="['/faq']"  class="chubb-item-education-thumb green">
             <h5>FAQ</h5>
             <img src="./assets/img/icon-faq.svg">
-            <p>Selengkapnya</p>
+            <p>{{'_read_more' | translate}}</p>
           </a>
         </div>
         <div class="col-lg-6">
-            <a [routerLink]="['/tips-trick']"  class="ekreasi-item-education-thumb violet">
+            <a [routerLink]="['/tips-trick']"  class="chubb-item-education-thumb violet">
                 <h5>Tips & Trick</h5>
               <img src="./assets/img/icon-tips.svg">
-              <p>Selengkapnya</p>
+              <p>{{'_read_more' | translate}}</p>
             </a>
         </div>
       </div>

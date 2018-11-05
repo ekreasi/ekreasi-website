@@ -12,6 +12,7 @@
 @import "proposal";
 @import "policy";
 @import "override";
+@import "bootstrap";
 
 a {
     cursor: pointer;
@@ -404,29 +405,12 @@ input:-webkit-autofill { background-color: transparent !important; }
     color: #ff0198!important;
 }
 
-.container-content-white {
-    background:#fff;
-    padding: 30px;
+
+.ngxcarouselPointDefault .ngxcarouselPoint li.active {
+    background:#fff !important;
 }
-.chubb-image-about {
-    margin:auto;
-    text-align:center; 
-    img {
-        width:400px !important;
-        margin:auto;
-    }
-} 
-.chubb-header-content h1 {
-    text-align:center;
-    color:$dark-gray;
-    font-family: 'TrebuchetMS-Bold',sans-serif;
+.chubb-logo-header a img {
+    width: 144px;
 }
-.title-about {
-    padding:20px 0px 40px 0px;
-    text-align:center;
-    h1 {
-        text-align:center;
-        color:$dark-gray;
-        font-family: 'TrebuchetMS-Bold',sans-serif; 
-    }
-}
+
+
