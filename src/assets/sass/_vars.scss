@@ -426,7 +426,9 @@
     }
     .inner-content-gray {
         padding:80px 0px;
-        background:#EEEEEE;
+        // background-image:url(/assets/img/bg-gradient.png);
+        // background-repeat:repeat-x;
+        // background-position: bottom;
     }
     .chubb-header-content h1 {
         margin:auto;
@@ -496,6 +498,29 @@
     
     .border-bottom-orange  {
         border-bottom:4px solid $ekreasi-orange !important;
+        h5 {
+            color:$ekreasi-orange ;
+        }
+    }
+
+
+
+    .border-top-violet  {
+        border-top:4px solid $ekreasi-violet !important;
+        h5 {
+            color:$ekreasi-violet ;
+        }
+    }
+    
+    .border-top-green  {
+        border-top:4px solid $ekreasi-green !important;
+        h5 {
+            color:$ekreasi-green ;
+        }
+    }
+    
+    .border-top-orange  {
+        border-top:4px solid $ekreasi-orange !important;
         h5 {
             color:$ekreasi-orange ;
         }

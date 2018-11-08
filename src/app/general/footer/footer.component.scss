@@ -6,8 +6,8 @@
 .footer-about h5, .footer-shortcut h5 {
     font-family: 'TrebuchetMS-Bold',sans-serif;
     color: $dark-gray;
-    padding: 0px 0px 0px 0px;
-    // border-bottom: 1px solid rgba(0,0, 0, 0.1);
+    padding: 0px 0px 15px 0px;
+    border-bottom: 1px solid rgba(0,0, 0, 0.1);
 }
 .footer-about ul li{
     list-style:none;
@@ -68,6 +68,7 @@ p.date-nav {
 .background-darkgray {
     width:100%;
     // background:$soft-gray1;
+
 }
 .footer-wrap {
     color: $dark-gray;
@@ -77,21 +78,22 @@ p.date-nav {
 .footer-wrap h5 {
     font-family: 'TrebuchetMS-Bold',sans-serif;
     color:$dark-gray;
-    padding:0px 0px 10px 0px;
-    // border-bottom:1px solid rgba(0,0,0,0.1)
+    padding:0px 0px 15px 0px;
+    border-bottom:1px solid rgba(0,0,0,0.1)
 }
 .footer-wrap p {
     color:$dark-gray;
     line-height:28px;
     font-size:15px;
-    margin:0px;
+    margin:10px;
 }
 .chubb-footer-bottom {
     margin-top: 40px;
 }
 .footer-call ul {
-    // border-top:1px solid rgba(0, 0, 0, 0.1);
-    margin-top:34px;
+    border-top:1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    padding-top: 16px;
 }
 .footer-call ul li {
     list-style:none;

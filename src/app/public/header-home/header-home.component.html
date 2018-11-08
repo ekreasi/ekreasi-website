@@ -16,10 +16,15 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 no-padding">
-              <div class="language-wrap" *ngIf="true">
+                <div class="chubb-logo-header">
+                  <a [routerLink]="['']" routerLinkActive="active">
+                    <img src="assets/img/ekreasi-logo.svg">
+                  </a>
+                </div>
+              <!-- <div class="language-wrap" *ngIf="true">
                 <button class="btn btn-transparent btn-language" (click)="changeLanguage('en')" [ngClass]="{'border-lang': lang == 'en'}">{{'_english' | translate}}</button>
                 <button class="btn btn-transparent btn-language btn-border-bottom" (click)="changeLanguage('id')" [ngClass]="{'border-lang': lang == 'id'}">{{'_indonesia' | translate}}</button>
-              </div>
+              </div> -->
             </div>
             <div class="col-lg-6 no-padding">
               <div class="nav-right-top">
@@ -72,18 +77,15 @@
     </nav>
   </section>
   <div class="clearfix"></div>
-  <section class="search-wrapper">
+  <!-- <section class="search-wrapper">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="chubb-logo-header">
-            <a [routerLink]="['']" routerLinkActive="active">
-              <img src="assets/img/ekreasi-logo.svg">
-            </a>
-          </div>
+
         </div>
       </div>
     </div>
-  </section>
-  <div class="clearfix"></div>
+  </section> -->
+
 </header>
+<div class="clearfix"></div>
