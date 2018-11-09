@@ -21,10 +21,10 @@
                 <button class="btn btn-transparent btn-language btn-border-bottom" (click)="changeLanguage('id')" [ngClass]="{'border-lang': lang == 'id'}">{{'_indonesia' | translate}}</button>
               </div> -->
               <div class="chubb-logo-header">
-                  <a [routerLink]="['']" routerLinkActive="active">
-                    <img src="assets/img/ekreasi-logo.svg">
-                  </a>
-                </div>
+                <a [routerLink]="['']" routerLinkActive="active">
+                  <img src="assets/img/ekreasi-logo.svg">
+                </a>
+              </div>
             </div>
             <div class="col-lg-6 no-padding">
               <div class="nav-right-top">
@@ -49,20 +49,33 @@
                       </ul>
                     </div>
                   </li> -->
-                  <li>
-                      <a [routerLink]="['/about-ekreasi']" routerLinkActive="active">About Ekreasi</a>
+                  <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      Service <span class="caret"></span>
+                    </a>
+                    <!-- <ul class="dropdown-menu">
+                      <li><a href="#">App Development</a></li>
+                      <li><a href="#">Web Development</a></li>
+                      <li><a href="#">Support</a></li>
+                    </ul> -->
                   </li>
                   <li>
                    <!-- <a [routerLink]="['/agents']" routerLinkActive="active">{{'_agents' | translate}}</a> -->
-                   <a [routerLink]="['/portfolio']" routerLinkActive="active">Portfolio</a>
+                   <a [routerLink]="['/portfolio']" routerLinkActive="active">Work</a>
                   </li>
                   <li>
                     <!-- <a href="{{linkMenu.news}}" target="_blank">{{'_news' | translate}}</a> -->
-                    <a [routerLink]="['/career']" routerLinkActive="active">Career</a>
+                    <a [routerLink]="['/about-ekreasi']" routerLinkActive="active">About</a>
                   </li>
                   <li>
                      <!-- <a [routerLink]="['/contact']" routerLinkActive="active">{{'_contact_us' | translate}}</a> -->
-                     <a [routerLink]="['/contact']" routerLinkActive="active">Contact Us</a>
+                     <a [routerLink]="['/contact']" routerLinkActive="active">Blog</a>
+                  </li>
+                  <li>
+                     <a [routerLink]="['/career']" routerLinkActive="active">Career</a>
+                  </li>
+                  <li>
+                     <a [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
                   </li>
                   <div class="clearfix"></div>
                 </ul>

@@ -27,29 +27,26 @@
 .nav-right-top ul li {
     list-style:none;
     float:left;
-    padding:14px 10px 11px 10px;
+    padding:30px 10px;
     color:#fff;
     font-size:15px;
     letter-spacing: 0.8px;
 }
 .chubb-logo-header {
-    padding:34px 0px;
-    text-align:center;
+    padding:15px 0px;
 }
 
 .nav-right-top ul li a {
-    padding-bottom:14px;
+    padding: 0px 10px 14px;
+    color:#fff;
 }
 .nav-right-top ul li a.active {
     background-image:url(../../../assets/img/icon-arrow.svg);
     background-repeat:no-repeat;
     background-position:bottom;
-    background-size: 21px;
+    background-size: 53px;
     border: none !important;
-    padding-bottom: 17px;
-}
-.nav-right-top ul li a {
-    color:#fff;
+    padding: 34px 10px;
 }
 //Search item 
 .chubb-search {
