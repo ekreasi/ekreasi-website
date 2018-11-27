@@ -1,0 +1,96 @@
+@import '~assets/sass/vars';
+
+.menu-dashboard-horizontal {
+    background:#fff;
+    padding:0px;
+}
+.menu-dashboard-horizontal ul li {
+    float: left;
+    list-style: none;
+    padding: 17px 14px;
+    height: 55px;
+    border-right: 1px solid #ccc;
+}
+.menu-dashboard-horizontal ul li button {
+    background:transparent;
+    border:none;
+    color:$dark-gray;
+    height: 24px;
+}
+.menu-dashboard-horizontal ul li a {
+    border:none;
+    color:$dark-gray; 
+    display: block;
+}
+.menu-dashboard-horizontal ul li a:hover {
+    border:none;
+    color:$magenta; 
+}
+.menu-dashboard-horizontal ul li button .icon-user:before{
+    font-size:24px;
+}
+.menu-dashboard-horizontal ul li button .icon-claimform:before{
+    font-size: 33px;
+    position: relative;
+    top: -5px;
+}
+.menu-dashboard-horizontal ul li button .icon-fund:before{
+    font-size: 33px;
+    position: relative;
+    top: -5px;
+}
+
+.menu-dashboard-horizontal ul li a .icon-transaction:before {
+    font-size: 28px;
+    top: -2px;
+    position: relative;
+}
+.menu-dashboard-horizontal ul li a .icon-mail:before {
+    font-size: 38px;
+    top: -7px;
+    position: relative;
+}
+.menu-dashboard-horizontal ul li a .icon-claimform:before {
+    font-size: 38px;
+    top: -7px;
+    position: relative;
+}
+.menu-dashboard-horizontal ul li a .icon-signout {
+    float:left;
+}
+.menu-dashboard-horizontal ul li a .icon-signout:before {
+    font-size:25px;
+    top: 0px;
+    position: relative;
+    margin-right:5px;
+}
+.menu-dashboard-horizontal ul li .dropdown-menu {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-top: 3px solid #fff;
+    border-radius: 0px !important;
+    margin-top: 11px;
+    margin-left: -50%;
+    min-width: 200px;
+}
+.menu-dashboard-horizontal ul li .dropdown-menu ul li {
+    border-right:none;
+    width:100%;
+}
+.menu-dashboard-horizontal ul li .dropdown-menu ul li a {
+    color:#fff;
+    text-decoration:none;
+    border-right:none;
+    width:100%;
+}
+
+.chubb-menu-dashboard.menu-burger-icon {
+    margin-top: 0px;
+    .bar1, .bar2, .bar3 {
+        background-color: #333;
+    }
+}
+
+.navbar {
+    padding: 0.8rem 1rem;
+}

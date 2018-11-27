@@ -1,0 +1,42 @@
+.side-menu-dashboard-vertical{
+    position:fixed;
+    left:0;
+    width:220px;
+    height:auto;
+    background:#fff;
+    z-index:1;
+}
+.header-tosca {
+    background:$tosca;
+} 
+.header-magenta {
+    background:$magenta;
+} 
+.header-green{
+    background:$green;
+} 
+.header-violet{
+    background:$violet;
+} 
+
+.header-red{
+    background:$red;
+} 
+
+.header-orange{
+    background:$orange;
+} 
+.header-blue{
+    background:$blue;
+} 
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 54;
+}
+.top-nav .navbar {
+    position: fixed;
+    z-index: 7;
+
+}

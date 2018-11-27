@@ -15,19 +15,19 @@
       <div class="collapse navbar-collapse nav-mobile float-right" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 no-padding">
+            <div class="col-lg-2 no-padding">
               <!-- <div class="language-wrap" *ngIf="true">
                 <button class="btn btn-transparent btn-language" (click)="changeLanguage('en')" [ngClass]="{'border-lang': lang == 'en'}">{{'_english' | translate}}</button>
                 <button class="btn btn-transparent btn-language btn-border-bottom" (click)="changeLanguage('id')" [ngClass]="{'border-lang': lang == 'id'}">{{'_indonesia' | translate}}</button>
               </div> -->
               <div class="chubb-logo-header">
                 <a [routerLink]="['']" routerLinkActive="active">
-                  <img src="assets/img/ekreasi-logo.svg">
+                  <img src="assets/img/ekreasi-logo-color.svg">
                 </a>
               </div>
             </div>
-            <div class="col-lg-6 no-padding">
-              <div class="nav-right-top">
+            <div class="col-lg-8 no-padding">
+              <div class="nav-left-top">
                 <ul>
                   <!-- <li ngbDropdown>
                     <button class="btn-menu-dropdown" id="dropdownBasic1" ngbDropdownToggle>{{'_about_us' | translate}}</button>
@@ -49,15 +49,9 @@
                       </ul>
                     </div>
                   </li> -->
-                  <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      Service <span class="caret"></span>
-                    </a>
-                    <!-- <ul class="dropdown-menu">
-                      <li><a href="#">App Development</a></li>
-                      <li><a href="#">Web Development</a></li>
-                      <li><a href="#">Support</a></li>
-                    </ul> -->
+                  <li>
+                   <!-- <a [routerLink]="['/agents']" routerLinkActive="active">{{'_agents' | translate}}</a> -->
+                   <a [routerLink]="['/portfolio']" routerLinkActive="active">Service</a>
                   </li>
                   <li>
                    <!-- <a [routerLink]="['/agents']" routerLinkActive="active">{{'_agents' | translate}}</a> -->
@@ -82,6 +76,19 @@
               </div>
 
             </div>
+            <div class="col-lg-2 no-padding">
+              <div class="translate">
+                <ul>
+                  <li>
+                     <a class="active">ID</a>
+                  </li>
+                  <li>
+                     <a>EN</a>
+                  </li>
+                  <div class="clearfix"></div>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -90,7 +97,7 @@
     </nav>
   </section>
   <div class="clearfix"></div>
-  <section class="search-wrapper">
+  <!-- <section class="search-wrapper">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -102,6 +109,6 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </header>
 <div class="clearfix"></div>

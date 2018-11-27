@@ -1,0 +1,51 @@
+@import '~assets/sass/vars';
+
+.inner-content-dashboard {
+    padding:30px 0px 40px 0px;
+}
+.welcome-page ul li {
+    margin-left:20px;
+}
+.welcome-page ul li  {
+    font-size:13px;
+}
+
+.chubb-section-proposal {
+    background:#fff;
+    padding:30px;
+    margin-bottom:30px
+}
+.headline-proposal  {
+    padding:0px 0px 10px 0px;
+    border-bottom:4px solid $violet;
+}
+
+.chubb-content-nonpublic {
+    margin:20px auto 0px auto;
+}
+.form-disabled:disabled {
+    background:#fff;
+    border-bottom:1px solid #ccc;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-radius:0px;
+    padding:8px 0px;
+}
+.form-group-disabled label {
+    margin: auto;
+    color: #000;
+    font-family: 'publico-roman',serif;
+}
+
+.address p {
+    margin-bottom: 0px;
+}
+
+.chubb-primary-tab > ul {
+    width: 100%;
+}
+
+.tab-card {
+    margin-bottom: 30px;
+}

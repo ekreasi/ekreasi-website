@@ -18,9 +18,9 @@ export class OfficeNetworkComponent implements OnInit {
   dataOfficeNetwork: any = [];
 
   page = 1;
-  zoom: number = 15;
-  lat: number =  -6.224783;
-  lng: number = 106.810068;
+  zoom: number = 15; 
+  lat: number =  -6.224582;
+  lng: number = 106.840498;
   markers: marker[];
   public preview: any = '';
   public token: any = '';

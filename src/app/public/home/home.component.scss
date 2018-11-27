@@ -2,10 +2,196 @@
 
 
 //Navigation 
-
-
-
 .slide-container {
     padding-top:50px;
     position: relative;
+}
+
+.head-first{
+	padding-top: 100px;
+    padding-bottom: 120px;
+    height: 100%;
+    background-color: #f3f2f0;
+    background-image: linear-gradient(#fff,#f3f2f0);
+}
+.head-first .head-first-image{
+	position: absolute;
+    right: 50%;
+}
+.head-first .head-first-image img{
+	width:100%;
+	height:auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.head-first .head-first-title{	
+    margin-top: 50px;
+    float: right;
+    margin-left: 50%;
+    width: 50%;
+    padding-left: 80px;
+}
+.head-first .head-first-title h1{
+	font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: bold;
+    line-height: 1.05;
+    color: #0071BC;
+}
+.head-first .head-first-content{
+	order: 3;
+	float: right;
+    margin-left: 50%;
+    width: 50%;
+    padding-left: 80px;
+}
+.head-first .head-first-content p{
+	color: #555;
+	font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 35px;
+}
+.head-first .head-first-content a.btn{
+	color: #fff;
+	background-color: #0071BC;
+}
+
+.head-about{
+	text-align: center;
+    margin-bottom: 1.6rem;
+}
+.head-about h1{
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+    line-height: 1.05;
+    letter-spacing: -.035em;
+}
+.head-about p{
+	color: #555;
+	font-size: 16px;
+    line-height: 1.6;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.bg-utama{	
+    background-color: #f3f2f0;
+    background-image: linear-gradient(#fff,#f3f2f0);
+}
+
+@media only screen and (min-width : 1200px) {
+}
+
+@media (min-width:991px) and  (max-width:1200px) { 
+}
+
+@media (min-width:768px) and  (max-width:991px) { 
+    .head-first {
+        padding-bottom: 90px;
+        .head-first-image{
+            position: absolute;
+            right: 50%;
+            padding-top: 60px;
+        }
+        .head-first-title{  
+            margin-top: 50px;
+            float: right;
+            margin-left: 40%;
+            width: 50%;
+            padding-left: 40px;
+        }
+        .head-first-title h1{
+            font-size: 48px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: bold;
+            line-height: 1.05;
+            color: #0071BC;
+        }
+        .head-first-content{
+            order: 3;
+            float: right;
+            margin-left: 50%;
+            width: 50%;
+            padding-left: 40px;
+        }
+    }
+    .head-about p{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .head-first{
+        padding-top: 80px;
+        padding-bottom: 20px;
+        height: 100%;
+        background-color: #f3f2f0;
+        background-image: linear-gradient(#fff,#f3f2f0);
+
+        .head-first-image{
+            position: relative;
+            z-index: 1;
+            right: 0;
+
+            img{
+                width:100%;
+                height:auto;
+                box-shadow: none;
+                margin-bottom:15px;
+            }
+        }
+        .head-first-title{  
+            margin-top: 0;
+            float: right;
+            margin-left: 0;
+            width: 100%;
+            padding-left: 0;
+            order: 1;
+            
+            h1{
+                font-size: 40px;
+                margin-top: 0;
+                margin-bottom: 25px;
+                font-weight: bold;
+                line-height: 1.05;
+                color: #0071BC;
+            }
+        }
+        .head-first-content{
+            order: 3;
+            float: none;
+            margin-left: 0;
+            width: 100%;
+            padding-left: 0;
+
+            p{
+                color: #555;
+                font-size: 16px;
+                line-height: 1.6;
+                margin: 0 0 35px 30px;
+            }
+
+            a.btn{
+                color: #fff;
+                background-color: #0071BC;
+                display: block;
+                padding: 12px 30px;
+                font-size: 20px;
+            }
+        }
+    }
+    .head-about p{
+        color: #555;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .slide-container {
+        padding-top:0;
+        position: relative;
+    }
 }

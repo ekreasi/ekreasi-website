@@ -1,0 +1,90 @@
+<header-non-public></header-non-public>
+<content>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
+            </div>
+
+            <div class="chubb-content-general">
+              <div class="headline-left">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h5 class="color-violet">
+                      {{'_policy_information' | translate}}
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="chubb-content-nonpublic">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="table-violet tr-hover-link">
+                      <table class="table table-striped violet border-gray-botom-1px thead-center">
+                        <thead>
+                          <tr>
+                            <th>{{'_policy_number' | translate}}</th>
+                            <th>{{'_product_name' | translate}}</th>
+                            <th>{{'_main_life_assured' | translate}}</th>
+                            <th>{{'_total_premium' | translate}}</th>
+                            <th>{{'_sum_assured' | translate}}</th>
+                            <th>{{'_payment_frequency' | translate}}</th>
+                            <th>{{'_policy_status' | translate}}</th>
+                            <th>{{'_issued_date' | translate}}</th>
+                            <th>{{'_next_due_date' | translate}}</th>
+                          </tr>
+                        </thead>
+                        <tr *ngIf="!loadingData">
+                          <td colspan="9">{{'_loading_data' | translate}}</td>
+                        </tr>
+                        <tr *ngIf="policyData == false && loadingData">
+                          <td colspan="9">{{'_data_not_found' | translate}}</td>
+                        </tr>
+                        <tbody *ngIf="policyData">
+                          <tr *ngFor="let policy of policyData" [routerLink]="['/my-data/policy-information/', policy.policyNo]">
+                            <td>
+                              <span>{{policy.policyNo}}</span>
+                            </td>
+                            <td>{{policy.productName}}</td>
+                            <td>{{policy.mainLifeAssured}}</td>
+                            <td>{{policy.totalPremium | currency:'Rp '}}</td>
+                            <td>{{policy.sumAssured | currency:'Rp '}}</td>
+                            <td>{{policy.paymentFrequency}}</td>
+                            <td>{{policy.lastProposalStatus}}</td>
+                            <td>{{policy.issueDate}}</td>
+                            <td>{{policy.nextDueDate}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="title-bottom-content">
+                      <p>{{'_total_records' | translate}} <span class="color-magenta">{{total}}</span> {{'_policy_information' | translate}}</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="pagination-magenta float-right">
+                      <ngb-pagination [collectionSize]="totalDataPagination" [(page)]="currentPage" aria-label="Default pagination" [maxSize]="3" [pageSize]="perPage"
+                        (pageChange)="loadPage($event)"></ngb-pagination>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

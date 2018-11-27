@@ -1,0 +1,114 @@
+.tab-col-3 ul li{
+    width:33.3333%;
+}
+// .tab-col-6 ul li{
+//     width:16.6666%;
+// }
+
+.chubb-download-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.chubb-download-tab .nav-tabs {
+    // border-bottom:2px solid #ccc;
+}
+.chubb-download-tab .nav-tabs li {
+    border:1px solid #eee;
+}
+.chubb-download-tab .nav-tabs li {
+    a {
+        
+        border-left:none;
+        border-right:none;
+        border-bottom:none;
+        
+        border-radius:0px;
+        text-align:left;
+        font-size:22px;
+        text-align:center;
+    }
+    a#ngb-tab-1 {
+        border-top: 3px solid $green ;
+        color:$green;
+    }
+    a#ngb-tab-0 {
+        border-top: 3px solid $tosca;
+        color:$tosca;
+    }
+    a.active#ngb-tab-1, a.active#ngb-tab-0 {
+        border-top: 3px solid $magenta !important;
+        color:$magenta !important;
+    }
+}
+.chubb-download-tab .nav-tabs li a .icon-claimform:before {
+    position: absolute;
+    left: -5px;
+    font-size: 50px;
+    top: -8px;
+}
+.chubb-download-tab .nav-tabs li a .icon-customerform:before {
+    position: absolute;
+    left: -5px;
+    font-size: 50px;
+    top: -8px;
+}
+.chubb-download-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    border-top:3px solid $magenta !important;
+    color:$magenta
+}
+.chubb-download-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    border-top:3px solid $magenta;
+    color:$magenta
+}
+.chubb-download-tab ul li {
+    width:50%;
+}
+
+// Primary Tab
+
+.chubb-primary-tab .nav-tabs li a:hover {
+    color: #8e8e8e;
+    border:none;
+}
+.chubb-primary-tab .nav-tabs li a {
+    color:#8e8e8e;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    // border-bottom:3px solid #ccc;
+    text-align:center;
+}
+.chubb-primary-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+    color:$magenta;
+    
+}
+.chubb-primary-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+    color:$magenta
+}
+
+.chubb-primary-tab .tab-content {
+    background:#f5f5f5;
+    padding:15px;
+}
+.section-tab {
+
+    margin-bottom:15px;
+}
+.tab-card {
+    background:#fff;
+  
+}

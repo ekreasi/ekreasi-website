@@ -1,0 +1,88 @@
+@import '~assets/sass/vars';
+
+.pricing-table-column{
+  border-radius: .3rem;
+  box-shadow: 0 4px 8px 0 #f3f2f0, 0 6px 20px 0 #f3f2f0;
+}
+.pricing-table-header{
+  background-color: #c7c7c7;
+  border-radius: 8px 8px 0px 0px;
+}
+.pricing-table-header img{
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0px 0px;
+}
+.pricing-table-text{
+  background-color: #ffffff;
+  border-color: #ffffff;
+  padding: 15px;
+  text-align: left;   
+  border-radius: 0px 0px 8px 8px;
+  margin-bottom: 25px;
+}
+.pricing-table-text span{
+    color:#c7c7c7;
+    font-weight: 500;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.pricing-table-text span.kategori{
+    float: left;
+}
+.pricing-table-text span.tanggal{
+    float: right;
+}
+.pricing-table-text h3{
+    clear: both;
+    font-size: 18px;
+    font-weight: 600; 
+    padding: 5px 0px;
+    line-height: 22px;
+}
+.pricing-table-text p{
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.pricing-table-text .button{
+    background-color: #61269E;
+    border: 1px solid #61269E;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.head-about{
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+.head-about .service{
+    padding-top:50px;
+}
+.head-about h1{
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+    line-height: 1.05;
+    letter-spacing: -.035em;
+}
+.head-about p{
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 50px;
+}

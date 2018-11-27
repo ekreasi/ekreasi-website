@@ -1,0 +1,100 @@
+<div class="side-menu-dashboard">
+
+  <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion-menu">
+    <ngb-panel class="panel-wrap" id="static-1">
+      <ng-template ngbPanelTitle>
+        <span class="icon-panel">
+          <div class="float-left icon-wrapper">
+            <div class="icon-user"></div>
+          </div> {{'_my_data' | translate}}</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="side-menu-non-public">
+          <ul>
+            <li>
+              <a [routerLink]="['/my-data/personal-data']" routerLinkActive="active">{{'_personal_information' | translate}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['/my-data/proposal-information']" routerLinkActive="active">{{'_proposal_information' | translate}}</a>
+            </li>
+            <li class="no-border-bottom">
+              <a [routerLink]="['/my-data/policy-information']" routerLinkActive="active">{{'_policy_information' | translate}}</a>
+            </li>
+            <!-- <li class="no-border-bottom"><a [routerLink]="['/my-data/letter-estatement']" routerLinkActive="active">Letter & e Statement</a></li> -->
+          </ul>
+        </div>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+
+  <div class="side-menu-single-link">
+    <a [routerLink]="['/claim/history']" routerLinkActive="active">
+      <div class="float-left icon-wrapper">
+        <div class="icon-claimform"></div>
+      </div>
+      <span>{{'_claim' | translate}}</span>
+    </a>
+  </div>
+
+  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion-menu">
+    <ngb-panel class="panel-wrap">
+      <ng-template ngbPanelTitle>
+        <span class="icon-panel">
+          <div class="float-left icon-wrapper">
+            <div class="icon-fund"></div>
+          </div>{{'_fund' | translate}}</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="side-menu-non-public">
+          <ul>
+            <li>
+              <a [routerLink]="['/fund/unit-price']" routerLinkActive="active">{{'_unit_price' | translate}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['/fund/performance']" routerLinkActive="active">{{'_performance' | translate}}</a>
+            </li>
+            <li class="no-border-bottom">
+              <a [routerLink]="['/fund/fund-fact-sheet']" routerLinkActive="active">{{'_fund_fact_sheet' | translate}}</a>
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+  <div class="side-menu-single-link">
+    <a [routerLink]="['/inbox']" routerLinkActive="active">
+      <div class="float-left icon-wrapper">
+        <div class="icon-mail"></div>
+      </div>
+      <span>{{'_inbox' | translate}}</span>
+    </a>
+  </div>
+  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion-menu">
+    <ngb-panel class="panel-wrap">
+      <ng-template ngbPanelTitle>
+        <span class="icon-panel">
+          <div class="float-left icon-wrapper">
+            <div class="ico-setting"></div>
+          </div>{{'_account_setting' | translate}}</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="side-menu-non-public">
+          <ul>
+            <li>
+              <a [routerLink]="['/change-password']" routerLinkActive="active">{{'_change_password' | translate}}</a>
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+
+  <div class="side-menu-single-link">
+    <a (click)="doLogout()">
+      <div class="float-left icon-wrapper">
+        <div class="icon-signout"></div>
+      </div>
+      <span>{{'_log_out' | translate}}</span>
+    </a>
+  </div>
+</div>

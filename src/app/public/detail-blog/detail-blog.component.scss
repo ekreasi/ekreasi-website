@@ -1,0 +1,79 @@
+@import '~assets/sass/vars';
+
+.blog-content-detail{
+  background-color: $ekreasi-white;
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 #f3f2f0, 0 6px 20px 0 #f3f2f0;
+  padding: 40px;
+}
+
+.blog-content-detail img{
+	width: 60%;
+    margin: 0 30px 10px 0;
+    float: left;
+    -webkit-shape-outside: square();
+    shape-outside: square();
+}
+.blog-content-detail h3{
+    --x-height-multiplier: 0.342;
+    --baseline-multiplier: 0.22;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.1;
+    letter-spacing: .015em;
+    margin-bottom: 15px;
+}
+.blog-content-detail p{
+    margin-top: 15px;
+    line-height: 1.8rem;
+    letter-spacing: .01rem;
+}
+.blog-content-detail a {
+  color: $ekreasi-blue;
+  text-decoration: none;
+  border-bottom: 1px dashed $ekreasi-blue;
+  display: inline-block;
+  position: relative;
+  padding: 0 .2em;
+  transition: all 250ms;
+  z-index: 1000;
+}
+.blog-content-detail a:before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 0%;
+  background: rgba(38, 130, 202, 0.16);
+  bottom: 0;
+  left: 0;
+  color: $ekreasi-white;
+  position: absolute;
+  transition: height 250ms;
+}
+.blog-content-detail a:hover {
+  border-color: transparent;
+}
+.blog-content-detail a:hover:before {
+  height: 100%;
+}
+.blog-content-detail span{
+	font-size: 14px;
+	font-style: italic;
+}
+.blog-content-detail span b{
+	color: $ekreasi-dark-blue;
+}
+
+@media only screen and (min-width : 1200px) {
+}
+
+@media (min-width:991px) and  (max-width:1200px) { 
+}
+
+@media only screen and (max-width : 991px) {
+  .blog-content-detail img{
+      width: 100%;
+      margin: 0px 0px 30px 0px;
+  }
+}

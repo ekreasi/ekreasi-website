@@ -62,7 +62,7 @@ import { HeaderHomeComponent } from './public/header-home/header-home.component'
 import { HeaderPageComponent } from './public/header-page/header-page.component';
 import { LoginComponent } from './public/login/login.component';
 import { ForgetPasswordComponent } from './public/forget-password/forget-password.component';
-import { AwardsComponent } from './public/awards/awards.component';
+import { BlogComponent } from './public/blog/blog.component';
 import { FormDownloadsComponent } from './public/form-downloads/form-downloads.component';
 import { FaqComponent } from './public/faq/faq.component';
 import { OfficeNetworkComponent } from './public/office-network/office-network.component';
@@ -118,6 +118,7 @@ import { environment } from '../environments/environment';
 import { SafeHtmlPipe } from './safeHtml.pipe';
 import { EqualValidator } from './equal-validator.directive';
 import { AuthGuard } from './AuthGuard';
+import { DetailBlogComponent } from './public/detail-blog/detail-blog.component';
 
 
 const appRoutes: Routes = [
@@ -162,6 +163,10 @@ const appRoutes: Routes = [
     component: DetailPortfolioComponent
   },
   {
+    path: 'blog/blog-detail',
+    component: DetailBlogComponent
+  },
+  {
     path: 'career',
     component: CareerComponent
   },
@@ -182,8 +187,8 @@ const appRoutes: Routes = [
     component: ForgetPasswordComponent
   },
   {
-    path: 'about/awards',
-    component: AwardsComponent
+    path: 'blog',
+    component: BlogComponent
   },
   {
     path: 'about/awards/:id',
@@ -368,7 +373,7 @@ const appRoutes: Routes = [
     HeaderPageComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    AwardsComponent,
+    BlogComponent,
     FormDownloadsComponent,
     FaqComponent,
     OfficeNetworkComponent,
@@ -424,7 +429,8 @@ const appRoutes: Routes = [
     ExcerptFilter,
     LocalizedDatePipe,
     SafeHtmlPipe,
-    EqualValidator
+    EqualValidator,
+    DetailBlogComponent
   ],
   imports: [
     BrowserModule,

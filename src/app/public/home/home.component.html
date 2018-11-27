@@ -1,9 +1,33 @@
 <header-home></header-home>
 <div class="clearfix"></div>
-<section class="margin-tb-40 slide-container">
+
+
+<section class="head-first">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 carousel-wrap">
+      <div class="col-lg-12">
+        <div class="head-first-image">
+          <img src="./assets/img/ipad.jpg" class="img-responsive">
+        </div>
+        <div class="head-first-title">
+          <h1>We Make Your<br>Digital Stronger</h1>
+        </div>
+        <div class="head-first-content">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada.</p>
+          <a class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="margin-tb-40 slide-container">
+  <!-- PAKE YG INI -->
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-lg-12 carousel-wrap"> -->
+
         <!-- <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)" *ngIf="loadingBanner && dataCarousel.length > 0">
           <ngx-item NgxCarouselItem *ngFor="let carousel of dataCarousel">
             <div class="chubb-hero" [ngClass]="{'clickable': carousel.url != null}" (click)="doLoadBanner(carousel.url)">
@@ -26,14 +50,16 @@
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
         </ngx-carousel> -->
-        <ngx-carousel [inputs]="carouselOne"(carouselLoad)="myfunc($event)">
+        
+        <!-- PAKE YG INI -->
+        <!-- <ngx-carousel [inputs]="carouselOne"(carouselLoad)="myfunc($event)">
             <ngx-item NgxCarouselItem>
                 <div class="chubb-hero">
                   <div class="container">
                   <div class="row">
                     <div class="col-lg-6">
                         <div class="img-hero">
-                            <img src="./assets/img/hero-image-home.png">
+                            <img src="./assets/img/ipad.jpg" class="img-responsive" style="width:100%; height:auto; border-radius:25px; box-shadow: 25px 25px 15px grey;">
                         </div>
                     </div><div class="col-lg-6">
                         <div class="chubb-hero-content">
@@ -44,7 +70,8 @@
                   </div>
                 </div>
                 </div>
-            </ngx-item>
+            </ngx-item> -->
+
             <!-- <ngx-item NgxCarouselItem>
                 <div class="chubb-hero">
                     <div class="row">
@@ -80,47 +107,48 @@
                       </div>
                 </div>
             </ngx-item> -->
-            <button NgxCarouselPrev class='leftRs'>&lt;</button>
+            
+            <!-- PAKE YG INI -->
+            <!-- <button NgxCarouselPrev class='leftRs'>&lt;</button>
             <button NgxCarouselNext class='rightRs'>&gt;</button>
         </ngx-carousel>
       </div>
-
     </div>
-  </div>
+  </div> -->
+
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 ">
+      <div class="col-md-12 head-about">
+        <h1>More About Us</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada.</p>
+      </div>
+      <div class="col-md-4 ">
         <div class="chubb-box border-bottom-violet">
-          <a [routerLink]="['/about-ekreasi']" routerLinkActive="active" >
-            <!-- <h5>{{'_chubb_product' | translate}}</h5> -->
-           
+          <a [routerLink]="['/about-ekreasi']" routerLinkActive="active" >          
             <div class="thumbnail">
-              <img src="./assets/img/thumbnail-about.png">
+              <img src="./assets/img/thumbnail-about.png" style="height:145px; width:auto">
             </div>
             <h5>About Us</h5>
             <div class="clearfix"></div>
           </a>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-md-4">
         <div class="chubb-box border-bottom-green">
-          <a [routerLink]="['/portfolio']" routerLinkActive="active">
-            <!-- <h5>{{'_hospital_provider' | translate}}</h5> -->
-            
+          <a [routerLink]="['/portfolio']" routerLinkActive="active">            
             <div class="thumbnail">
-                <img src="./assets/img/thumbnail-portfolio.png">
+                <img src="./assets/img/thumbnail-portfolio.png" style="height:145px; width:auto">
               </div>
               <h5>Portfolio</h5>
             <div class="clearfix"></div>
           </a>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-md-4">
         <div class="chubb-box border-bottom-orange">
           <a [routerLink]="['/career']" routerLinkActive="active">
-            <!-- <h5>{{'_education_center' | translate}}</h5> -->
             <div class="thumbnail">
-                <img src="./assets/img/thumbnail-career.png">
+                <img src="./assets/img/thumbnail-career.png" style="height:145px; width:auto">
               </div>
               <h5>Career</h5>
             <div class="clearfix"></div>

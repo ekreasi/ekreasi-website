@@ -1,35 +1,91 @@
 @import '~assets/sass/vars';
 
+//Header Content 
+.chubb-summary-about {
+    width:100%;
+    padding:0px 30px;
+    border-left:3px solid $green;
+    margin: 30px 0px 40px 0px;
+}
+.chubb-summary-about p {
+    line-height:40px;
+}
+.chubb-image-about img {
+    width:100%;
+}
+.chubb-secondary-paragraph {
+    width:100%;
+    float:right;
+    padding:40px 0px;
+}
+.chubb-secondary-paragraph p {
+    line-height:40px;
+}
+.chubb-secondary-paragraph ul li {
+    padding:15px 0px;
+    margin-left:40px;
+}
+.chubb-secondary-paragraph ul {
+    margin-bottom:20px;
+}
+.chubb-header-content h1 {
+    padding: 20px 0px 20px 0px;
+}
 
-    //Header Content 
-      
-        .chubb-summary-about {
-            width:100%;
-            padding:0px 30px;
-            border-left:3px solid $green;
-            margin: 30px 0px 40px 0px;
-        }
-        .chubb-summary-about p {
-            line-height:40px;
-        }
-        .chubb-image-about img {
-            width:100%;
-        }
-        .chubb-secondary-paragraph {
-            width:100%;
-            float:right;
-            padding:40px 0px;
-        }
-        .chubb-secondary-paragraph p {
-            line-height:40px;
-        }
-        .chubb-secondary-paragraph ul li {
-            padding:15px 0px;
-            margin-left:40px;
-        }
-        .chubb-secondary-paragraph ul {
-            margin-bottom:20px;
-        }
-        .chubb-header-content h1 {
-            padding: 20px 0px 20px 0px;
-        }
+.container-content-white{
+  box-shadow: 0 4px 8px 0 #f3f2f0, 0 6px 20px 0 #f3f2f0;   
+  margin-bottom: 25px; 
+}
+
+
+
+.blog-content-detail h3{
+    --x-height-multiplier: 0.342;
+    --baseline-multiplier: 0.22;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.1;
+    letter-spacing: .015em;
+    margin-bottom: 15px;
+}
+.blog-content-detail p{
+    margin-top: 15px;
+    line-height: 1.8rem;
+    letter-spacing: .01rem;
+}
+.blog-content-detail a {
+  color: $ekreasi-blue;
+  text-decoration: none;
+  border-bottom: 1px dashed $ekreasi-blue;
+  display: inline-block;
+  position: relative;
+  padding: 0 .2em;
+  transition: all 250ms;
+  z-index: 1000;
+}
+.blog-content-detail a:before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 0%;
+  background: rgba(38, 130, 202, 0.16);
+  bottom: 0;
+  left: 0;
+  color: $ekreasi-white;
+  position: absolute;
+  transition: height 250ms;
+}
+.blog-content-detail a:hover {
+  border-color: transparent;
+}
+.blog-content-detail a:hover:before {
+  height: 100%;
+}
+.blog-content-detail span{
+    font-size: 14px;
+    font-style: italic;
+}
+.blog-content-detail span b{
+    color: $ekreasi-dark-blue;
+}

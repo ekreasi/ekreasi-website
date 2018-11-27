@@ -1,0 +1,205 @@
+<header-non-public></header-non-public>
+<content>
+  <div class="inner-content-gray min-height-nonpublic">
+    <div class="side-menu-dashboard-vertical">
+      <menu-dashboard-vertical></menu-dashboard-vertical>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-content-dashboard-wrap">
+            <div class="side-menu-dashboard-horizontal">
+              <menu-dashboard-horizontal></menu-dashboard-horizontal>
+            </div>
+
+            <div class="chubb-content-general">
+              <div class="headline-left">
+                <div class="col-sm-12 border-bottom-gray">
+                  <h5 class="color-tosca">
+                    {{'_tracking' | translate}}
+                  </h5>
+                </div>
+              </div>
+              <div class="chubb-content-nonpublic">
+                <ngb-tabset class="chubb-primary-tab tab-col-6 tab-col-2">
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_cashless_tracking' | translate}}</ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-20 box-shadow">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label>{{'_policy_number' | translate}}</label>
+                              <select class="form-control no-border-radius" [(ngModel)]="modelPolicyNoCashless">
+                                <option selected="selected" value="">{{'_select_policy_number' | translate}}</option>
+                                <option *ngFor="let policy of policyData">{{policy.policyNo}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-group">
+                              <label>{{'_admission_date' | translate}}</label>
+                              <div class="input-group">
+                                <input autocomplete="off" class="form-control" placeholder="dd MMM YYYY" [(ngModel)]="modelStartCashless" ngbDatepicker #s="ngbDatepicker" readonly>
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" (click)="s.toggle()" type="button">
+                                    <i class="far fa-calendar-alt"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <button class="btn-magenta btn-search-fund" (click)="doSearchCashless()">{{'_search' | translate}}</button>
+                          </div>
+                        </div>
+                        <div class="table-tosca">
+                          <table class="table table-striped violet border-gray-botom-1px thead-center">
+                            <thead>
+                              <tr>
+                                <th>{{'_claim_number' | translate}}</th>
+                                <th>{{'_policy_number' | translate}}</th>
+                                <th>{{'_life_assured' | translate}}</th>
+                                <th>{{'_admission_date' | translate}}</th>
+                                <th>{{'_status' | translate}}</th>
+                              </tr>
+                            </thead>
+                            <tr *ngIf="!loadingDataCashless">
+                              <td colspan="7">{{'_loading_data' | translate}}</td>
+                            </tr>
+                            <tr *ngIf="claimCashlessData == false && loadingDataCashless">
+                              <td colspan="7">{{'_data_not_found' | translate}}</td>
+                            </tr>
+                            <tr *ngFor="let claim of claimCashlessData">
+                              <td>
+                                <a class="link" (click)="loadCashlessDetail(claim)">{{claim.claim_id}}</a>
+                              </td>
+                              <td>{{claim.policy_no}}</td>
+                              <td>{{claim.policy_holder}}</td>
+                              <td>{{claim.admission_date | date:'dd MMM yyyy'}}</td>
+                              <td>{{claim.claim_status}}</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="title-bottom-content">
+                              <p>{{'_total' | translate}}
+                                <span class="color-magenta">{{cashlessTotal}}</span> {{'_cashless_tracking' | translate}}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="pagination-magenta float-right">
+                              <ngb-pagination [collectionSize]="cashlessTotalDataPagination" [(page)]="cashlessCurrentPage" aria-label="Default pagination" [maxSize]="3"
+                                [pageSize]="cashlessPerPage" (pageChange)="loadPageCashless($event)"></ngb-pagination>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>{{'_reimbursement_tracking' | translate}}</ng-template>
+                    <ng-template ngbTabContent>
+                      <div class="background-white padding-20 box-shadow">
+                        <div class="row">
+                          <div class="col-lg-3">
+                            <div class="form-group">
+                              <label>{{'_policy_number' | translate}}</label>
+                              <select class="form-control no-border-radius" [(ngModel)]="modelPolicyNoReimbursement">
+                                <option selected="selected" value="">{{'_select_policy_number' | translate}}</option>
+                                <option *ngFor="let policy of policyData">{{policy.policyNo}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="form-group">
+                              <label>{{'_submission_date' | translate}}</label>
+                              <div class="input-group">
+                                <input autocomplete="off" class="form-control" placeholder="dd MMM YYYY" [(ngModel)]="modelStartReimbursement" ngbDatepicker #s="ngbDatepicker" readonly>
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" (click)="s.toggle()" type="button">
+                                    <i class="far fa-calendar-alt"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="form-group">
+                              <label>{{'_to' | translate}}</label>
+                              <div class="input-group">
+                                <input autocomplete="off" class="form-control" placeholder="dd MMM YYYY" [(ngModel)]="modelEndReimbursement" ngbDatepicker #end="ngbDatepicker" readonly>
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" (click)="end.toggle()" type="button">
+                                    <i class="far fa-calendar-alt"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <button class="btn-magenta btn-search-fund" (click)="doSearchReimbursement()">{{'_search' | translate}}</button>
+                          </div>
+                        </div>
+                        <div class="table-tosca">
+                          <table class="table table-striped violet border-gray-botom-1px thead-center">
+                            <thead>
+                              <tr>
+                                <th>{{'_claim_number' | translate}}</th>
+                                <th>{{'_policy_number' | translate}}</th>
+                                <th>{{'_life_assured' | translate}}</th>
+                                <th>{{'_submission_date' | translate}}</th>
+                                <th>{{'_status' | translate}}</th>
+                              </tr>
+                            </thead>
+                            <tr *ngIf="!loadingDataReimbursement">
+                              <td colspan="7">{{'_loading_data' | translate}}</td>
+                            </tr>
+                            <tr *ngIf="claimReimbursementData == false && loadingDataReimbursement">
+                              <td colspan="7">{{'_data_not_found' | translate}}</td>
+                            </tr>
+                            <tr *ngFor="let claim of claimReimbursementData">
+                              <td>
+                                <a [routerLink]="['/reimbursement-tracking-detail/', claim.claimId]">{{claim.claimNumber}} </a>
+                              </td>
+                              <td>{{claim.policyNo}}</td>
+                              <td>{{claim.lifeAssured}}</td>
+                              <td>{{claim.submissionDate}}</td>
+                              <td>{{claim.statusName}}</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="title-bottom-content">
+                              <p>{{'_total' | translate}}
+                                <span class="color-magenta">{{reimbursementTotal}}</span> {{'_reimbursement_tracking' | translate}}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="pagination-magenta float-right">
+                              <ngb-pagination [collectionSize]="reimbursementTotalDataPagination" [(page)]="reimbursementCurrentPage" aria-label="Default pagination"
+                                [maxSize]="3" [pageSize]="reimbursementPerPage" (pageChange)="loadPageReimbursement($event)"></ngb-pagination>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-tab>
+
+                </ngb-tabset>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>

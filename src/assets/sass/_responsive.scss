@@ -1,4 +1,7 @@
 @media (max-width: 991px) {
+  .container{
+    max-width: 85%;
+  }
   .chub-news-pagination[_ngcontent-c1] {
     float:left !important;
     position: relative !important;
@@ -90,6 +93,7 @@
   .nav-mobile {
     background: rgba(0, 0, 0, 0.8);
     z-index: 5;
+    height: 100vh;
   }
   .nav-right-top {
     float:none !important;
@@ -197,7 +201,7 @@
     padding:2px 0px !important;
   }
   .footer-wrap {
-    padding:30px 0px 0px 0px !important;
+    padding:5px 0px 0px 0px !important;
   }
   .footer-wrap p {
     color:#bbb !important;
@@ -339,6 +343,9 @@
   .chubb-login-home {
     height:auto !important;
     margin:25px auto 0px auto; 
+  }
+  .footer-call {
+    padding: 30px 0px !important;
   }
   
 }

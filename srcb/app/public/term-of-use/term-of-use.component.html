@@ -1,0 +1,33 @@
+<header-page></header-page>
+<content>
+  <div  class="inner-content-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            
+
+            <div class="load-data" *ngIf="loadingData">
+              <div class="chubb-header-content">
+                <div class="chubb-breadcrumb">
+                  <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>{{'_home' | translate}}</a>
+                </div>
+                <h1>{{data.title}}</h1>
+                <div class="chubb-summary-about" *ngIf="data.summary != '---'">
+                  <p>{{data.summary}}</p>
+                </div>
+              </div>
+              <div class="chubb-image-about">
+                <img [lazyLoad]="data.image">
+              </div>
+              <div class="chubb-secondary-paragraph" [innerHTML]="data.description | safeHtml">
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</content>
+<app-footer></app-footer>
+
+
+

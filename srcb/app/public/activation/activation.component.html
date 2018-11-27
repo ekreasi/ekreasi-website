@@ -1,0 +1,173 @@
+<header-page></header-page>
+<content>
+  <div class="inner-activation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-header-content">
+            <div class="chubb-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active">
+                <span class="icon-left"></span>{{'_home' | translate}}</a>
+            </div>
+            <h1 *ngIf="userActivation.type !='forgotpassword'">{{'_activation' | translate}}</h1>
+            <h1 *ngIf="userActivation.type =='forgotpassword'">{{'_forget_password' | translate}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="inner-activation-wrap">
+    <div class="bg-fullscren-black"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-centered">
+          <div class="chubb-content-activation-wrap aw-container" *ngIf="!isOTP">
+            <div class="container">
+              <div class="row ">
+                <div class="col-lg-12">
+                  <div class="notification-activation">
+                    <h4>Confirmation</h4>
+                    <p>
+                      <strong>Harap mencatat User ID Anda untuk keperluan login berikutnya.</strong>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-centered">
+
+                  <form autocomplete="off" role="presentation" novalidate (ngSubmit)="onInternalSubmit(internalForm)" #internalForm="ngForm"
+                    name="reg">
+                    <div class="form-group">
+                      <label>{{'_user_id' | translate}}</label>
+                      <input autocomplete="new-password" [(ngModel)]="userActivation.userId" #userId="ngModel" name="userId" required class="form-control no-border-radius"
+                        placeholder="{{'_user_id' | translate}}" type="text" disabled>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">{{'_email_address' | translate}}</label>
+                      <input autocomplete="new-password" [(ngModel)]="userActivation.email" #email="ngModel" name="email" class="form-control no-border-radius"
+                        id="exampleInputEmail1" placeholder="{{'_email_address' | translate}}" type="email" [email]="true"
+                        required>
+
+                      <div class="form-control-feedback chubb-alert" *ngIf="email.errors && (email.dirty || email.touched)">
+                        <p *ngIf="email.errors.required">{{'_email_is_required' | translate}}</p>
+                        <p *ngIf="!email.errors.required">{{'_email_is_invalid' | translate}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>{{'_password' | translate}}</label>
+                      <input autocomplete="new-password" required [(ngModel)]="userActivation.password" #password="ngModel" name="password" class="form-control no-border-radius"
+                        placeholder="{{'_your_password' | translate}}" type="password" minlength="8" [pattern]="passwordPattern">
+
+                      <ng2-password-strength-bar [passwordToCheck]="userActivation.password" [barLabel]="barLabel" [barColors]="myColors">
+                      </ng2-password-strength-bar>
+
+                      <div class="form-control-feedback chubb-alert">
+                        <p>- Minimal terdiri dari: 8 karakter</p>
+                        <p>- Harus mengandung: huruf besar, huruf kecil, dan angka</p>
+                        <p *ngIf="false">- Mengandung: karakter khusus (misal: .,!#$%^&*)</p>
+                        <p>- Jangan gunakan: tanggal lahir, email, atau nama</p>
+                        <p>- Jangan gunakan: password yang sudah digunakan sebelumnya</p>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label>{{'_retype_password' | translate}}</label>
+                      <input autocomplete="new-password" required [(ngModel)]="userActivation.retypePassword" #retypePassword="ngModel" name="retypePassword"
+                        class="form-control no-border-radius" placeholder="{{'_retype_password' | translate}}" type="password"
+                        validateEqual="password">
+
+                      <div class="form-control-feedback chubb-alert" *ngIf="retypePassword.errors && (retypePassword.dirty || retypePassword.touched)">
+                        <p *ngIf="retypePassword.errors.required">{{'_retype_password_is_required' | translate}}</p>
+                        <p *ngIf="!retypePassword.valid || !(retypePassword.pristine && !f.submitted)">{{'_retype_password_doesnt_match' | translate}}</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="idTerms">
+                        <input required [(ngModel)]="userActivation.tickTerms" #tickTerms="ngModel" name="tickTerms" type="checkbox" value="1" name="tickTerms"
+                          id="idTerms"> By clicking Sign Up, you agree to our
+                        <a [href]="termOfUseLink" target="_blank">Terms of Service.</a>
+                      </label>
+                    </div>
+
+                    <div *ngIf="false" class="form-group text-center">
+                      <re-captcha #captchaRef="reCaptcha" class="recaptcha" width="100%" name="captcha" [siteKey]="googleRecaptchaKey" (resolved)="resolved($event)"></re-captcha>
+                      <input required autocomplete="off" [(ngModel)]="userActivation.captcha" #captcha="ngModel" type="hidden" name="captcha" placeholder="{{'_captcha' | translate}}">
+                    </div>
+
+                    <button class="btn btn-green" type="submit" [disabled]="!internalForm.form.valid || loadingButton">{{'_next' | translate}}</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chubb-content-activation-wrap" *ngIf="isOTP">
+            <div class="container">
+              <div class="row ">
+                <div class="col-lg-10 col-centered text-center">
+                  <form class="ng-untouched ng-pristine ng-valid">
+                    <div class="five-min text-red">
+                      <countdown-timer (zeroTrigger)="activationTimeout()" [end]="activationCountdown"></countdown-timer>
+                    </div>
+
+                    <h2>{{'_enter_verification_code' | translate}}</h2>
+                    <p>{{'_sent_sms_verification_code' | translate}}
+                      <br/> {{otpResponse.handphone}}</p>
+
+                    <div class="form-group">
+                      <label>{{'_verification_code' | translate}}</label>
+                      <input autocomplete="off" [(ngModel)]="userActivation.otpCode" #otpCode="ngModel" name="otpCode" class="form-control no-border-radius text-center"
+                        placeholder="XXXXXX" type="text" required maxlength="7">
+                      <div class="form-control-feedback chubb-alert" *ngIf="otpCode.errors && (otpCode.dirty || otpCode.touched)">
+                        <p *ngIf="otpCode.errors.required">{{'_otp_code_is_required' | translate}}</p>
+                      </div>
+                    </div>
+
+                    <p *ngIf="isResendActivationTimeout">{{'_not_receiving_code' | translate}}
+                      <countdown-timer (zeroTrigger)="enableResendButton()" [end]="resendActivationCountdown"></countdown-timer>
+                    </p>
+
+                    <p *ngIf="otpResponse.totalRequestOtp > 0">{{'_otp_remaining' | translate}} {{otpResponse.totalRequestOtp}} {{'_of' | translate}} {{otpResponse.maxRequestOtp}}</p>
+
+                    <div class="row row-mobile">
+                      <button class="btn btn-green col-md-6" type="submit" [disabled]="otpCode.invalid || loadingButton" (click)="submitActivation()">
+                        {{'_submit' | translate}}
+                      </button>
+
+                      <button class="btn btn-red col-md-6" type="submit" [disabled]="resendActivationButton || otpResponse.totalRequestOtp >= otpResponse.maxRequestOtp"
+                        (click)="resendRequestOtp()">
+                        {{'_resend_code' | translate}}
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</content>
+
+<swal *ngIf="userActivation.type !='forgotpassword'" #successActivationSwal title="Success" text="Akun Anda berhasil aktif" type="success">
+</swal>
+
+<swal *ngIf="userActivation.type =='forgotpassword'" #successActivationSwal title="Success" text="Password Anda berhasil diubah" type="success">
+</swal>
+
+<swal #errorActivationSwal title="{{'_oops' | translate}}" text="{{errorMessage}}" type="error">
+</swal>
+
+<swal #errorActivationNotFoundSwal title="{{'_oops' | translate}}" text="{{errorMessage}}" type="error" (confirm)="doGoHome($event)"
+  (cancel)="doGoHome($event)">
+</swal>
+
+<swal #activationTimeoutSwal text="Activation time has expired">
+</swal>
+<app-footer></app-footer>

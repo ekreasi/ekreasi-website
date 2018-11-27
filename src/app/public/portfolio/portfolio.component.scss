@@ -16,6 +16,9 @@
     .chubb-item-news-thumb a {
         cursor:pointer !important;
     }
+    .chubb-item-news-thumb .chubb-news-img:hover {
+        box-shadow: 0 4px 8px 0 #f3f2f0, 0 6px 20px 0 #f3f2f0;
+    }
     .chubb-item-news-thumb.magenta {
         border-bottom:4px solid $magenta;
     }

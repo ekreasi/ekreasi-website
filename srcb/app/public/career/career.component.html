@@ -1,0 +1,271 @@
+<header-page-violet></header-page-violet>
+<content>
+  <!-- <div class="inner-content-agents">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-header-content">
+            <div class="chubb-breadcrumb">
+              <a [routerLink]="['']" routerLinkActive="active"><span class="icon-left"></span>{{'_home' | translate}}</a>
+            </div>
+            <h1>{{'_agents_area' | translate}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="inner-content-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chubb-agent-wrap">
+            <div class="chubb-agent-search">
+              <div class="row">
+                <form class="col-lg-5 col-centered" (ngSubmit)="onSearch()">
+                  <div class="input-group chubb-agent-search">
+                    <input required minlength="3" autocomplete="off" type="search" name="search" class="form-control chubb-agent-search-bg" placeholder="{{'_search_agent' | translate}}"
+                      [(ngModel)]="search">
+                    <div class="input-group-prepend">
+                      <button type="submit" class="btn-chubb-agent-search" (click)="onSearch()" [disabled]="search.length < 3 && search.length > 0">
+                        <i class="fa fa-search search-agent-icon"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <ngb-tabset class="chubb-magenta-tab overflow-x" #t="ngbTabset" *ngIf="agentLocationData.length > 0">
+              <ngb-tab *ngFor="let location of agentLocationData" id="{{location}}">
+                <ng-template ngbTabTitle>
+                  <div (click)="loadAgentLocationContent(location)">{{ location }}</div>
+                </ng-template>
+                <ng-template ngbTabContent class="tab-agent">
+                  <div class="loading-padding" *ngIf="!loadingData">{{'_loading_data' | translate}}</div>
+                  <div *ngIf="loadingData && agentLocationContentData[location].length == 0">Data tidak ditemukan</div>
+                  <div *ngIf="agentLocationContentData[location]">
+                    <ngb-accordion *ngIf="loadingData" #acc="ngbAccordion" activeIds="ngb-panel-0">
+                      <ngb-panel [title]="agentData.realName" *ngFor="let agentData of agentLocationContentData[location]; let i = index" id="ngb-panel-{{i}}">
+                        <ng-template ngbPanelContent>
+                          <div class="chubb-detail-agent">
+                            <h6><strong>{{'_detail_agent' | translate}}</strong></h6>
+                            <table>
+                              <tr>
+                                <td width="150">{{'_name' | translate}}</td>
+                                <td>:</td>
+                                <td>{{ agentData.realName }}</td>
+                              </tr>
+                              <tr>
+                                <td>{{'_status' | translate}}</td>
+                                <td>:</td>
+                                <td>{{ agentData.agentStatusName }}</td>
+                              </tr>
+                              <tr>
+                                <td>{{'_register_as_agent' | translate}} </td>
+                                <td>:</td>
+                                <td>{{ agentData.registerDate }}</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </ng-template>
+                      </ngb-panel>
+                    </ngb-accordion>
+                  </div>
+                  <div *ngIf="loadingData && agentLocationContentData[location].length > 0" class="bottom-content">
+                    <div class="col-lg-12 no-padding">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-6 no-padding">
+                            <div class="title-bottom-content">
+                              <p>{{'_total_records' | translate}} <span class="color-magenta">{{total}}</span> {{'_agents'
+                                | translate}}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="pagination-magenta float-right">
+                              <ngb-pagination [collectionSize]="total" [(page)]="currentPage" aria-label="Default pagination" [maxSize]="3" [pageSize]="perPage"
+                                (pageChange)="loadPage($event, location)"></ngb-pagination>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+            <div class="notfound" *ngIf="agentLocationData.length == 0">
+              {{'_data_not_found' | translate}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="inner-content-gray">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="chubb-item-news-thumb">
+                  <div class="chubb-career-title">
+                      <h1>
+                        UI/X Designer
+                      </h1>
+                  </div>
+                 
+                  <div class="chubb-summary-portfolio">
+                      <table>
+                        <tr>
+                          <td colspan="3" style="padding:10px 0px;font-size: 18px !important;"><b>Job Information</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>Work Experince : 0 - 2 Years </p>
+                                    </li>
+                                    <li>
+                                        <p>Location : DKI Jakarta </p>
+                                    </li>
+                                  </ul>
+                            </td>
+                        </tr>
+                      </table>
+
+                      <table>
+                          <tr>
+                            <td style="padding:10px 0px;font-size:18px !important;"><b>Job Description</b></td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <ul>
+                                  <li>
+                                      <p>Create concept designs & alterations in website, web mobile, responsive, UX/UI, apps & digital design for our clients </p>
+                                  </li>
+                                  <li>
+                                      <p>Capability to provide concepts & design soluitions and ideas for our clients that reflects their business image </p>
+                                  </li>
+                                  <li>
+                                      <p> Working in harmony with our web development, marketing & social media divisions for project requirements </p>
+                                  </li>
+                                  <li>
+                                      <p>Working in tight schedule and deadline</p>
+                                  </li>
+                                </ul>
+                              </td>
+                          </tr>
+                        
+                        </table>
+                        <table>
+                            <tr>
+                              <td style="padding:10px 0px;font-size:18px !important;"><b>Job Requirements:</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  <ul>
+                                    <li>
+                                        <p>Candidate must possess at least a Diploma, Bachelor's Degree, Computer Science/Information Technology, Engineering (Computer/Telecommunication), Engineering (Others) or equivalent. </p>
+                                    </li>
+                                    <li>
+                                        <p>Required skill(s): experience with ui/ux design, strong working knowledge of photoshop & illustrator, strong working knowledge of html & css & javascript/jquery, strong design portofolio in website & digital design, Highly detail oriented & organised. </p>
+                                    </li>
+                                    <li>
+                                        <p> No work experience required. </p>
+                                    </li>
+                                    <li>
+                                        <p>Full-Time and Contract position(s) available.</p>
+                                    </li>
+                                  </ul>
+                                </td>
+                            </tr>
+                          
+                          </table>
+                        
+                  </div>
+                  <a class="btn btn-career-violet" href="#" >Apply<span class="icon-right"></span></a>
+                </div>
+            </div> 
+            <div class="col-lg-4">
+                <div class="chubb-item-news-thumb">
+                  <div class="chubb-career-title">
+                      <h1>
+                        IOS Developer
+                      </h1>
+                  </div>
+                 
+                  <div class="chubb-summary-portfolio">
+                      <table>
+                        <tr>
+                          <td colspan="3" style="padding:10px 0px;font-size: 18px !important;"><b>Job Information</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>Work Experince : 0 - 2 Years </p>
+                                    </li>
+                                    <li>
+                                        <p>Location : DKI Jakarta </p>
+                                    </li>
+                                  </ul>
+                            </td>
+                        </tr>
+                      </table>
+
+                      <table>
+                          <tr>
+                            <td style="padding:10px 0px;font-size:18px !important;"><b>Job Description</b></td>
+                          </tr>
+                          <tr>
+                              <td>
+                                <ul>
+                                  <li>
+                                      <p>Create concept designs & alterations in website, web mobile, responsive, UX/UI, apps & digital design for our clients </p>
+                                  </li>
+                                  <li>
+                                      <p>Capability to provide concepts & design soluitions and ideas for our clients that reflects their business image </p>
+                                  </li>
+                                  <li>
+                                      <p> Working in harmony with our web development, marketing & social media divisions for project requirements </p>
+                                  </li>
+                                  <li>
+                                      <p>Working in tight schedule and deadline</p>
+                                  </li>
+                                </ul>
+                              </td>
+                          </tr>
+                        
+                        </table>
+                        <table>
+                            <tr>
+                              <td style="padding:10px 0px;font-size:18px !important;"><b>Job Requirements:</b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  <ul>
+                                    <li>
+                                        <p>Candidate must possess at least a Diploma, Bachelor's Degree, Computer Science/Information Technology, Engineering (Computer/Telecommunication), Engineering (Others) or equivalent. </p>
+                                    </li>
+                                    <li>
+                                        <p>Required skill(s): experience with ui/ux design, strong working knowledge of photoshop & illustrator, strong working knowledge of html & css & javascript/jquery, strong design portofolio in website & digital design, Highly detail oriented & organised. </p>
+                                    </li>
+                                    <li>
+                                        <p> No work experience required. </p>
+                                    </li>
+                                    <li>
+                                        <p>Full-Time and Contract position(s) available.</p>
+                                    </li>
+                                  </ul>
+                                </td>
+                            </tr>
+                          
+                          </table>
+                        
+                  </div>
+                  <a class="btn btn-career-violet" href="#" >Apply<span class="icon-right"></span></a>
+                </div>
+            </div> 
+        </div>
+      </div>
+    </div>
+</content>
+<app-footer></app-footer>

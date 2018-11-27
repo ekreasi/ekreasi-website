@@ -840,7 +840,7 @@ div.chubb-logo-header a img {
         .top-nav {
             position: fixed !important;
             height: 60px !important;
-            background: #ff0198 !important;
+            background: #0071BC !important;
             z-index: 999;
             
             button.btn-menu-dropdown {
@@ -894,16 +894,15 @@ div.chubb-logo-header a img {
     }
 
     .chubb-logo-header img {
-        width: 144px;
+        //width: 144px;
+        display: none;
     }
 
     .nav-home table tr td {
         white-space: normal !important;
     }
 
-    .footer-shortcut {
-        margin-top: 10px;
-    }
+    
     .chubb-magenta-tab .nav-tabs li a:hover {
         color: #FF0198!important;
         border-color: #FF0198!important;
