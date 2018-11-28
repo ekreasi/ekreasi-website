@@ -3,22 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 120 28" style="enable-background:new 0 0 120 28;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#61269E;}
-	.st1{fill:#CE002A;}
-	.st2{fill:#FAC800;}
-	.st3{fill:#0081C9;}
-	.st4{fill:#8ECA4D;}
-	.st5{fill:#F3741E;}
+	.st0{fill:#4F388D;}
 </style>
 <g id="Page-1">
 	<g id="Pixel" transform="translate(-15.000000, -37.000000)">
-		<path id="Combined-Shape" class="st0" d="M11.7,37.3H0V21.4h149v15.9h-13.3c-35.2,0-35,27.7-60.9,27.7S46.5,37.3,11.7,37.3z"/>
+		<path id="Combined-Shape" class="st0" d="M11.7,39.6H0V25h149v14.6h-13.3c-35.2,0-35,25.4-60.9,25.4S46.5,39.6,11.7,39.6z"/>
 	</g>
 </g>
-<rect x="-207.8" y="-112.9" class="st1" width="60.8" height="62.1"/>
-<rect x="-123.5" y="-112.9" class="st2" width="60.8" height="62.1"/>
-<rect x="-38.6" y="-112.9" class="st3" width="60.8" height="62.1"/>
-<rect x="46.7" y="-112.9" class="st0" width="60.8" height="62.1"/>
-<rect x="131.4" y="-112.9" class="st4" width="60.8" height="62.1"/>
-<rect x="222.4" y="-112.9" class="st5" width="60.8" height="62.1"/>
 </svg>

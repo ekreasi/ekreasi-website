@@ -26,7 +26,7 @@
     <div class="row">
       <div class="col-lg-12 carousel-wrap">
 
-        <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)" *ngIf="loadingBanner && dataCarousel.length > 0">
+        <!-- <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)" *ngIf="loadingBanner && dataCarousel.length > 0">
           <ngx-item NgxCarouselItem *ngFor="let carousel of dataCarousel">
             <div class="chubb-hero" [ngClass]="{'clickable': carousel.url != null}" (click)="doLoadBanner(carousel.url)">
                   <span class="img-hero">
@@ -47,7 +47,7 @@
           <button NgxCarouselNext class='rightRs'>
             <i class="fa fa-angle-right" aria-hidden="true"></i>
           </button>
-        </ngx-carousel>
+        </ngx-carousel> -->
         
         <!-- PAKE YG INI -->
         <ngx-carousel [inputs]="carouselOne"(carouselLoad)="myfunc($event)">
