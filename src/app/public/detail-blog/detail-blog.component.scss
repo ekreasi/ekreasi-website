@@ -30,9 +30,9 @@
     letter-spacing: .01rem;
 }
 .blog-content-detail a {
-  color: $ekreasi-blue;
+  color: $ekreasi-yellow;
   text-decoration: none;
-  border-bottom: 1px dashed $ekreasi-blue;
+  border-bottom: 1px dashed $ekreasi-yellow;
   display: inline-block;
   position: relative;
   padding: 0 .2em;
@@ -44,7 +44,7 @@
   z-index: -1;
   width: 100%;
   height: 0%;
-  background: rgba(38, 130, 202, 0.16);
+  background: rgba(250, 200, 0, 0.16);
   bottom: 0;
   left: 0;
   color: $ekreasi-white;
@@ -62,7 +62,7 @@
 	font-style: italic;
 }
 .blog-content-detail span b{
-	color: $ekreasi-dark-blue;
+	color: $ekreasi-yellow;
 }
 
 @media only screen and (min-width : 1200px) {

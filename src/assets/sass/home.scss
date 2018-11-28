@@ -51,7 +51,7 @@
 //Hero Slide show
 .chubb-hero {
     width:100%;
-    height:550px;
+    height:auto;
 }
 .chubb-hero {
     overflow: hidden;
@@ -80,7 +80,7 @@
     position: relative;
     z-index: 1;
     padding: 20px;
-    margin: 0px 0px 0px 74px;
+    margin: 0px;
     width: auto;
 }
 .chubb-hero-content p {

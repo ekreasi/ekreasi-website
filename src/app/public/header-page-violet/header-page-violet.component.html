@@ -2,8 +2,8 @@
 <header class="chubb-header">
   <section class="top-nav ">
 
-    <nav class="navbar navbar-expand-lg navbar-light no-padding  navbar-violet">
-      <button class="chubb-navbar navbar-toggler float-right " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <nav class="navbar navbar-expand-lg navbar-light no-padding  navbar-blue">
+      <button class="chubb-navbar navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed; addCloseClass()">
         <!-- <span class="navbar-toggler-icon chubb-custom-menu"></span> -->
         <div id="burger" class="menu-burger-icon">
@@ -15,49 +15,44 @@
       <div class="collapse navbar-collapse nav-mobile float-right" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 no-padding">
+            <div class="col-lg-2 no-padding">
+                <div class="chubb-logo-header">
+                  <a [routerLink]="['']" routerLinkActive="active">
+                    <img src="assets/img/ekreasi-logo-color.svg">
+                  </a>
+                </div>
               <!-- <div class="language-wrap" *ngIf="true">
                 <button class="btn btn-transparent btn-language" (click)="changeLanguage('en')" [ngClass]="{'border-lang': lang == 'en'}">{{'_english' | translate}}</button>
                 <button class="btn btn-transparent btn-language btn-border-bottom" (click)="changeLanguage('id')" [ngClass]="{'border-lang': lang == 'id'}">{{'_indonesia' | translate}}</button>
               </div> -->
-              <div class="chubb-logo-header">
-                <a [routerLink]="['']" routerLinkActive="active">
-                  <img src="assets/img/ekreasi-logo.svg">
-                </a>
-              </div>
             </div>
-            <div class="col-lg-6 no-padding">
-              <div class="nav-right-top">
+            <div class="col-lg-8 no-padding">
+              <div class="nav-left-top">
                 <ul>
-                  <!-- <li ngbDropdown>
-                    <button class="btn-menu-dropdown" id="dropdownBasic1" ngbDropdownToggle>{{'_about_us' | translate}}</button>
+                  <!-- DROPDOWNNYA -->
+                  <!-- <li ngbDropdown class="btn-drop">
+                    <button class="btn-menu-dropdown" id="dropdownBasic1" ngbDropdownToggle>Service</button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                      <ul>
-                       
+                      <ul>                       
                         <li class="dropdown-item">
-                          <a href="{{linkMenu.about_chubb}}" target="_blank">{{'_about_chubb' | translate}}</a>
+                          <a href="{{linkMenu.about_chubb}}" target="_blank">App Development</a>
                         </li>
                         <li class="dropdown-item">
-                           <a href="{{linkMenu.about_chubb_us}}" target="_blank">{{'_about_chubb_us' | translate}}</a>
+                           <a href="{{linkMenu.about_chubb_us}}" target="_blank">Web Development</a>
                         </li>
                         <li class="dropdown-item">
-                          <a href="{{linkMenu.awards}}" target="_blank">{{'_awards' | translate}}</a>
-                        </li>
-                        <li class="dropdown-item">
-                          <a href="{{linkMenu.financial_report}}" target="_blank">{{'_financial_report' | translate}}</a>
+                          <a href="{{linkMenu.awards}}" target="_blank">Support</a>
                         </li>
                       </ul>
                     </div>
-                  </li> -->
-                  <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      Service <span class="caret"></span>
-                    </a>
-                    <!-- <ul class="dropdown-menu">
-                      <li><a href="#">App Development</a></li>
-                      <li><a href="#">Web Development</a></li>
-                      <li><a href="#">Support</a></li>
-                    </ul> -->
+                  </li>-->
+                  <li class="menu-home">
+                   <!-- <a [routerLink]="['/agents']" routerLinkActive="active">{{'_agents' | translate}}</a> -->
+                   <a [routerLink]="['/']">Home</a>
+                  </li>
+                  <li>
+                   <!-- <a [routerLink]="['/agents']" routerLinkActive="active">{{'_agents' | translate}}</a> -->
+                   <a [routerLink]="['/product']" routerLinkActive="active">Service</a>
                   </li>
                   <li>
                    <!-- <a [routerLink]="['/agents']" routerLinkActive="active">{{'_agents' | translate}}</a> -->
@@ -69,7 +64,7 @@
                   </li>
                   <li>
                      <!-- <a [routerLink]="['/contact']" routerLinkActive="active">{{'_contact_us' | translate}}</a> -->
-                     <a [routerLink]="['/contact']" routerLinkActive="active">Blog</a>
+                     <a [routerLink]="['/blog']" routerLinkActive="active">Blog</a>
                   </li>
                   <li>
                      <a [routerLink]="['/career']" routerLinkActive="active">Career</a>
@@ -81,6 +76,19 @@
                 </ul>
               </div>
 
+            </div>
+            <div class="col-lg-2 no-padding">
+              <div class="translate">
+                <ul class="translate-desktop">
+                  <li>
+                     <a class="active">ID</a>
+                  </li>
+                  <li>
+                     <a>EN</a>
+                  </li>
+                  <div class="clearfix"></div>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -94,14 +102,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="chubb-logo-header">
-            <a [routerLink]="['']" routerLinkActive="active">
-              <img src="assets/img/ekreasi-logo.svg">
-            </a>
-          </div>
+
         </div>
       </div>
     </div>
   </section> -->
+
 </header>
 <div class="clearfix"></div>
