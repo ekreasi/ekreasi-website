@@ -2,7 +2,8 @@
 
 .pricing-table-column{
   border-radius: .3rem;
-  box-shadow: 0 4px 8px 0 #f3f2f0, 0 6px 20px 0 #f3f2f0;
+  border: 1px solid #f3f2f0 !important;
+  margin-top:25px;
 }
 .pricing-table-header{
   background-color: #c7c7c7;
@@ -12,7 +13,8 @@
   vertical-align: middle;
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;object-fit: cover;
+  height: 140px;
 }
 .pricing-table-text{
   background-color: #ffffff;
@@ -21,6 +23,7 @@
   text-align: left;   
   border-radius: 0px 0px 8px 8px;
   margin-bottom: 25px;
+  height:300px;
 }
 .pricing-table-text span{
     color:#c7c7c7;
