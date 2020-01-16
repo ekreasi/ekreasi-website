@@ -1,0 +1,432 @@
+/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+@import "vars";
+@import "home";
+@import "responsive";
+@import "table";
+@import "pagination";
+@import "menu";
+@import "nonpublic";
+@import "tab";
+@import "forms";
+@import "proposal";
+@import "policy";
+@import "override";
+
+a {
+    cursor: pointer;
+}
+.icon-prev.carousel-control-prev-icon {
+    display:none !important;
+}
+.icon-next.carousel-control-next-icon {
+    display:none !important;
+}
+.carousel-indicators li {
+    width:10px !important;
+    height:10px !important;
+    border-radius:50px;
+}
+ul.ngxcarouselPoint {
+   
+}
+ul.ngxcarouselPoint li {
+    background:rgba(74, 74, 74, 1) !important;
+    padding:5px !important;
+    margin:auto 5px !important;
+}
+ul.ngxcarouselPoint li.active {
+    height:10px !important;
+    width:10px;
+    margin:auto 5px !important;
+    background-color: rgba(74,74,74,0.1)!important;
+    transform:scale(1) !important;
+}
+.ngxcarouselPointDefault {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index:2 ;
+}
+
+.chubb-hospital-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.chubb-hospital-tab .nav-tabs li a {
+    color:#ccc
+}
+
+.chubb-hospital-tab .nav-tabs li a.active {
+    color:$magenta;
+    font-family:'publico-roman',serif;
+    border-bottom:2px solid $magenta;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
+.chubb-list-nab ol.carousel-indicators {display:none !important}
+.chub-news-pagination .pagination .page-item.active .page-link {
+    background:$magenta;
+    color:#fff;
+    border-color:$magenta
+}
+.chub-news-pagination .pagination .page-item .page-link {
+    background: #e2e2e2;
+    color: #4A4A4A;
+    margin: 0px 8px;
+}
+.chub-tips-pagination .pagination .page-item.active .page-link {
+    background:$magenta;
+    color:#fff;
+    border-color:$magenta
+}
+.chub-tips-pagination .pagination .page-item .page-link {
+    background: #e2e2e2;
+    color: #4A4A4A;
+    margin: 0px 8px;
+}
+.card {
+    border-radius:0px !important;
+}
+.card-header a {
+    display:block;
+}
+.card-header {
+    border-bottom:none;
+}
+.collapse.show {
+    border-top:1px solid rgba(0,0,0,.125);
+}
+.card-header a {
+    color:$dark-gray;
+    font-family:"publico-roman",serif;
+}
+
+.card-header.active a {
+    background-image:url(../img/icon_arrowup_gray.png);
+    background-repeat:no-repeat;
+    background-position:right;
+    background-size: 12px;
+} 
+.card-header a {
+    background-image:url(../img/icon_arrowdown_gray.png);
+    background-repeat:no-repeat;
+    background-position:right;
+    background-size: 12px;
+}
+.chubb-magenta-tab .nav-tabs li a {
+    color: #ccc;
+    font-family: 'publico-roman',serif;
+    padding: 0px!important;
+} 
+.chubb-magenta-tab .nav-tabs li a > div {
+    padding: .5rem 1rem;
+}
+.chubb-magenta-tab .nav-tabs li a.active {
+    color: $magenta;
+    font-family: 'publico-roman',serif;
+    border-bottom: 2px solid $magenta;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.chubb-magenta-tab .nav-tabs li a:hover {
+    color: $violet;
+    font-family: 'publico-roman',serif;
+    border-bottom: 2px solid $violet;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.chubb-awards-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.chubb-awards-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.chubb-awards-tab .nav-tabs li a {
+    color:#ccc
+
+}
+.chubb-awards-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.chubb-awards-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+
+
+
+.border-bottom-magenta .icon-education:before {
+    color:$magenta
+} 
+
+.chubb-product-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.chubb-product-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.chubb-product-tab .nav-tabs li a {
+    color:#ccc
+
+}
+.chubb-product-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.chubb-product-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+
+
+.chubb-faq-tab .nav-tabs li a:hover {
+    color: #ccc;
+    border:none;
+}
+.chubb-faq-tab .nav-tabs {
+    border-bottom:2px solid #ccc;
+}
+.chubb-faq-tab .nav-tabs li a {
+    color:#ccc
+}
+.chubb-faq-tab .nav-tabs li a.active {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+.chubb-faq-tab .nav-tabs li a:hover {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid $magenta;
+}
+
+.accordion-faq .card-header {
+    background-image:url(../img/icon-question.svg);
+    background-repeat:no-repeat;
+    background-position:20px;
+}
+.accordion-faq .card-header a {
+    padding-left:40px;
+}
+.icon-answer-svg {
+    width:28px;
+    height:28px;
+    float:left;
+    background-repeat:no-repeat;
+    background-image:url(../img/icon-answer-svg.svg);
+    background-size:100%;
+    margin-right: 10px;
+}
+
+
+
+.side-menu-dashboard .accordion-menu .card .card-body {
+    padding:0px !important;
+}
+
+.side-menu-dashboard .accordion-menu .card .card-header {
+    padding:10px 14px 10px 5px !important;
+    background:#fff;
+}
+.side-menu-dashboard .accordion-menu .card .card-header .icon-user:before {
+    float: left;
+    font-size: 32px;
+    margin-top: -3px;
+}
+.side-menu-dashboard .accordion-menu .card .card-header .icon-claimform:before {
+    float: left;
+    font-size: 29px;
+    margin-top: -3px;
+}
+.side-menu-dashboard .accordion-menu .card .card-header .icon-fund:before{
+    float: left;
+    font-size: 29px;
+    margin-top: -3px;
+}
+.chubb-content-general {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.search-wrap {
+    margin:20px auto 5px auto;
+}
+.side-menu-single-link .card {
+    border-radius:0px 
+}
+.side-menu-non-public ul li.no-border-bottom{
+    border-bottom:none;
+}
+.language-wrap {
+    float:left;
+}
+
+.chubb-slide-non-public .ngxcarouselPointDefault {
+    // left:25%;
+}
+
+.inner-content-dashboard {
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
+    position: relative;
+}
+.chubb-header {
+    z-index: 10;
+    position: relative;
+}
+.headline-nav h5 i:before {
+    font-size:26px;
+    margin-right:10px;
+
+}
+.color-white-style label {
+    color:#fff !important;
+}
+
+.color-white-style .form-control-disabled {
+    color:rgba(255,255,255,0.6) !important;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.no-border-bottom {
+    border-bottom:none !important
+}
+.no-margin-bottom {
+    margin-bottom:0px !important
+}
+.chubb-content-nonpublic .tr-no-hover table tr:hover {
+    background:transparent !important;
+    color:#212529 !important;
+    cursor:default;
+}
+.tr-no-hover table tr:hover {
+    background:transparent !important;
+    color:#212529 !important;
+    cursor:default;
+}
+
+.side-menu-dashboard-vertical {
+    position: sticky;
+    left: 0;
+    width: 220px;
+    height: auto;
+    background: #fff;
+    z-index: 1;
+    top: 80px;
+    float: left;
+}
+
+.chubb-primary-tab > ul {
+    width: 100%;
+}
+
+select .ng-invalid, input.ng-invalid { border: 1px solid red !important; }
+select .ng-valid, input.ng-valid { border: 1px solid #46bb46 !important; }
+select .ng-untouched, input.ng-untouched {border: 1px solid #ccc !important; }
+input:-webkit-autofill { background-color: transparent !important; }
+.chubb-alert {
+    font-size: 12px;
+    -webkit-animation: 2s alertAnim forwards;
+    animation: 2s alertAnim forwards;
+    color: red;
+    z-index: 0 !important;
+    border-radius:0px;
+}
+
+.chubb-alert p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.nav-home {
+    background:#efefef;
+    min-height:218px;
+}
+
+.overflow-x {
+    overflow-x: scroll;
+}
+
+.recaptcha {
+    display: inline-block;
+}
+
+#swal2-content {
+    line-height: 24px;
+}
+
+.form-control[readonly] {
+    background: #FFF!important;
+}
+
+.chubb-hospital-tab .nav-tabs li a {
+    padding: 0px
+}
+
+.chubb-hospital-tab .nav-tabs li a .tab-title {
+    padding: .5rem 1rem;
+}
+
+.fa-loading {
+    float: right;
+    line-height: 24px;
+}
+
+.reset-filter {
+    position: absolute;
+    right: 15px;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.form-control.no-style-invalidate {
+    border: 1px solid #ced4da!important;
+}
+
+.reset-filter a {
+    color: #ff0198!important;
+}
+
+.container-content-white {
+    background:#fff;
+    padding: 30px;
+}
+.chubb-image-about {
+    margin:auto;
+    text-align:center; 
+    img {
+        width:70% !important;
+        margin:auto;
+    }
+} 
+.chubb-header-content h1 {
+    text-align:center;
+    color:$dark-gray;
+    font-family: 'TrebuchetMS-Bold',sans-serif;
+}
+.title-about {
+    padding:20px 0px 40px 0px;
+    text-align:center;
+    h1 {
+        text-align:center;
+        color:$dark-gray;
+        font-family: 'TrebuchetMS-Bold',sans-serif; 
+    }
+}

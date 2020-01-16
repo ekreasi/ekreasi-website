@@ -1,0 +1,680 @@
+.inner-content-dashboard {
+    padding:30px 0px 40px 0px;
+}
+.welcome-page ul li {
+    margin-left:20px;
+}
+.welcome-page ul li  {
+    font-size:13px;
+}
+.min-height-nonpublic {
+    min-height: 450px;
+}
+
+table tr td span.icon-triangleup:before {
+    font-size:22px;
+    color:green;
+    top:4px;
+    position:relative;
+}
+table tr td span.icon-triangledown:before {
+    font-size:22px;
+    color:red;
+    top:0px;
+    position:relative;
+}
+.charts-wrap {
+    margin:20px auto auto auto;
+}
+.performance-wrap {
+    margin-top:20px; 
+} 
+
+.charts-performance-wrap {
+    padding:30px 0px 0px 0px;
+}
+
+
+.sub-field {
+    margin-top:10px;
+    padding:10px;
+    background:#f1f1f1;
+    border-top: 2px solid #888888;
+}
+.circle-mail {
+    background:$violet;
+    height:80px;
+    width:80px;
+    padding:5px 8px;
+    border-radius:50px;
+    color:#fff;
+    margin:0px 5px;
+}
+a span.circle-mail {
+    color:#fff;
+}
+.chubb-header-content-non-public {
+    padding:0px;
+    margin:auto;
+    float:right;
+    width:100%;
+}
+.chubb-header-content-non-public ul {
+    width:100%;
+}
+.section-wrap {
+    margin-bottom:20px;
+    padding:15px 0px 15px 0px;
+}
+
+
+.box-soft-highlight {
+    background: #ecfff0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.box-shadow {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.side-menu-dashboard {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.chubb-content-nonpublic .men h5 {
+    color:$magenta;
+    text-align:center;
+    padding:10px 0px;
+    border-bottom:2px solid $magenta;
+    margin-bottom:30px;
+}
+.title-bottom-content p {
+    font-size:14px;
+    margin:7px auto auto auto;
+}
+
+.legend-none .highcharts-legend-item {
+    display:none !important;
+}
+.page-item:first-child .page-link{
+    border-radius:0px !important;
+    border: 1px solid #dee2e6
+}
+.page-item:first-child .page-link.disabled {
+    background:#fff !important;
+    border: 1px solid #dee2e6
+}   
+.page-item:last-child .page-link {
+    border-radius:0px !important;
+    background:#fff;
+    border: 1px solid #dee2e6
+}
+.card-item {
+    border:1px solid #ccc;
+    margin-bottom:20px;
+    position:relative;
+}
+.card-item  a {
+    display:block;
+    padding:30px;
+    color:$dark-gray;
+    font-size:18px;
+}
+.card-item a span.icon-downloads:before {
+    font-size: 51px !important;
+    margin-top: -10px;
+    position: absolute;
+    right: 30px;
+}
+span.sub-title-accordion ul li {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-left: 0px;
+    list-style: none;
+}
+
+.headline-center-tab h5 {
+    text-align: center;
+    padding: 10px 0px;
+    border-bottom: 2px solid #FF0198;
+    margin-bottom: 22px;
+}
+.border-radius{
+    border-radius:20px;
+}
+
+.box-policy-group {
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.policy-item-group {
+    text-align:center;
+    margin-bottom:10px;
+   
+}
+.policy-item-group label {
+    margin-bottom:0px;
+    color:#000;
+    font-family:'publico-roman',serif;
+
+}
+.policy-item-group .sub-label a , .policy-item-group .sub-label{
+    color:#4A4A4A;
+}
+.icon-policy {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    margin:0px;
+    text-align: center;
+    padding: 12px 0px;
+}
+.icon-policy i::before {
+    color:#fff;
+    font-size:34px;
+    margin-top:0px;
+}
+.policy-item-wrap table {
+    width:100%;
+}
+
+.chubb-slide-non-public .ngxcarouselPointDefault {
+    transform: translate(-50%, -10%);
+}
+
+.policy-item-wrap table tr td {
+    font-size:14px;
+    padding:5px 0px;
+    padding-right: 10px;
+}
+
+.policy-item-wrap table tr td a {
+    color:$violet;
+}
+.policy-item-wrap table tr td a:hover {
+    color:$magenta;
+}
+.policy-item-wrap {
+  
+}
+
+.policy-item-wrap table tr td.label {
+    font-size:14px;
+    font-family:'publico-roman',serif;
+    padding: 15px 10px;
+}
+
+.monthly-wrap .highcharts-legend-item path {
+    display:none
+}
+
+.monthly-wrap .highcharts-legend-item text tspan{
+    margin-top:30px
+}
+
+.sub-title-accordion ul {
+    margin-bottom:20px !important;
+
+}
+
+.highcharts-legend {
+    transform: translateY(380px) translateX(40%);
+}
+.policy-group-wrap {
+    background:#fff;
+    padding:30px 30px 0px 30px;
+    border: 1px solid #ddd;
+    margin-bottom:20px;
+}
+
+.title-personal h5 {
+    font-family: 'publico-roman',serif;
+
+}
+.note {
+    margin-bottom:20px;
+}
+.padding-20 {
+    padding:20px;
+}
+
+.overflow-x ul.nav-tabs {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: -webkit-inline-box;
+    width: 100%;
+}
+
+.section-wrap-claim {
+    margin-bottom: 20px;
+    padding: 30px 0px 0px 0px;
+}
+
+.input-group-append .btn, .input-group-prepend .btn {
+    z-index: 1 !important;
+}
+
+.headline-left-green h5{
+    text-align:center;
+    margin-bottom:20px;
+}
+.headline-left h5 {
+    text-align: left;
+    font-size: 24px;
+}
+.ico-setting {
+    width:20px;
+    height:20px;
+    background-image:url(../../assets/img/ico-setting.svg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-right: 5px;
+    margin-left: 2px;
+
+}
+.side-menu-dashboard .accordion-menu .card .card-header .icon-mail:before {
+    float: left;
+    font-size: 29px;
+    margin-top: -3px;
+}
+.item-message {
+    border:1px solid #efefef;
+    margin-top:-1px;
+
+}
+.content-message {
+    width:100%;
+}
+.content-message h5 {
+    margin:auto auto 5px auto;
+    font-family:'publico-roman',serif;
+    color:#000;
+    font-weight: bold;
+    font-size:18px;
+}
+
+.content-message p {
+    margin:auto;
+    color:$dark-gray;
+    font-size:14px;
+}
+
+.item-message a {
+    display:block;
+    padding:20px;
+}
+
+
+.item-message a .content-date{
+    color:$dark-gray;
+    padding-top: 10px;
+    font-size:15px;
+}
+
+.avatar-message {
+    border-radius:50%;
+    background:#eee;
+    overflow: hidden;
+    height:50px;
+    width:50px;
+}
+
+.avatar-message p {
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    padding: 6px 0px;
+}
+
+.background-tosca {
+    background:$tosca
+}
+.background-violet {
+    background:$violet
+}
+
+.background-blue {
+    background:$blue
+}
+
+.read {
+    position: absolute;
+    right: 0;
+    top: 9px;
+    font-style: italic
+}
+.read i {
+    font-size:13px;
+}
+
+.italic-style {
+    font-style: italic
+}
+
+.normal-style {
+    font-style: normal
+}
+.background-read {
+    background:#eee
+}
+
+.margin-20 {
+    margin:20px 0px;
+}
+
+.border-bottom-tosca {
+    border-bottom: 2px solid $tosca !important;
+}
+
+
+.border-bottom-blue {
+    border-bottom: 2px solid $blue!important;
+}
+
+.content-message-detail {
+    margin:20px auto;
+}
+
+.content-message-detail h5 {
+    font-family:'publico-roman',sans-serif
+}
+.menu-dashboard-horizontal ul li button .icon-mail:before{
+    font-size: 33px;
+    position: relative;
+    top: -5px;
+}
+
+.menu-dashboard-horizontal ul li a .icon-signout {
+    margin-left:10px;
+}
+
+.welcome-page {
+    float:right;
+}
+
+.chubb-primary-tab > ul {
+    overflow-x:scroll;
+    overflow-y:hidden;
+    display: -webkit-inline-box;
+}
+
+.change-password {
+    border-bottom:2px solid $violet
+}
+.min-height-500 {
+    height:500px;;
+}
+.tab-col-2 ul {
+    width:100%; 
+    margin-bottom: -7px;
+}
+.tab-col-2 .nav-tabs li {
+    width:50% !important;
+}
+.wrap-change-password {
+    margin-top:30px;
+}
+
+.chubb-headline-banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    margin-bottom: 30px;
+    background:#fff;
+}
+.chubb-headline-banner-text {
+    padding: 30px 30px 34px 30px;
+    height:100%;
+    position:relative;
+}
+
+.btn-bottom  {
+    background:$yellow;
+    position: absolute;
+    bottom: 144px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.tips-category {
+    position:absolute;
+    position: absolute;
+    bottom: 136px;
+    right: 40px;
+    color:#fff;
+}
+
+.item-tips-horizontal {
+    overflow:hidden;
+    margin-bottom:30px;
+}
+
+.chubb-summary-tips-item-horizontal {
+    padding: 15px 15px 15px 0px;
+}
+.chubb-summary-tips-item-horizontal h5 {
+    font-family:'publico-roman',sans-serif;
+    font-size:17px;
+    margin:0px auto 15px auto;
+}
+
+.chubb-summary-tips-item-horizontal p {
+    font-size: 15px;
+    margin: 10px auto 10px auto;
+    line-height: 23px;
+}
+.chubb-tips-img-v2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.chubb-tips-img-v2 img {
+    height:100%;
+}
+
+.chubb-secondary-paragraph ul, .chubb-secondary-paragraph ol {
+    padding: 0 0 0 20px;
+}
+
+.btn-tips {
+    padding:5px 0px;
+    border:none !important;
+}
+
+.inner-content-dashboard {
+    padding:30px 0px 40px 0px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
+    position: relative;
+}
+.welcome-page ul li {
+    margin-left:20px;
+}
+.welcome-page ul li  {
+    font-size:13px;
+}
+
+.chubb-section-proposal {
+    background:#fff;
+    padding:30px;
+    margin-bottom:30px;
+    border: 1px solid #ddd;
+}
+.headline-proposal  {
+    padding:0px 0px 10px 0px;
+    border-bottom:4px solid $cyan;
+}
+.table-proposal table {width:100%}
+.table-proposal  {
+    margin:30px auto 0px 0px;
+}
+.table-proposal table thead tr th {
+    background:$cyan !important;
+    color:#fff;
+    text-align:center;
+    width:100%;
+    padding:8px;
+}
+.table-proposal table tr td {
+    border:1px solid #ccc;
+    padding:8px;
+}
+.icon-panel .icon-user:before {
+    font-size:28px;
+}
+.chubb-section-policy {
+    background:#fff;
+    padding:30px;
+    margin-bottom:30px;
+    border: 1px solid #ddd;
+}
+
+.chubb-section-nav {
+    padding:10px 30px 30px 30px;
+    margin-bottom:0px;
+    border: 1px solid #ddd;
+}
+.headline-nav  {
+    padding:10px 0px 10px 0px;
+    border-bottom:2px solid $cyan;
+}
+.headline-policy a:hover {
+    color:$magenta;
+}
+
+.headline-policy  {
+    padding:10px 0px 10px 0px;
+    margin-bottom: 20px;
+}
+.table-policy table {width:100%;}
+.table-policy  {
+
+}
+.table-policy table thead tr th {
+    color:#fff;
+    text-align:center;
+    width:100%;
+    padding:8px;
+}
+.table-policy table tr td {
+    // border-top:1px solid rgba(255,255,255,0.3);
+    // border-bottom:1px solid rgba(255,255,255,0.3);
+    // border-left:none;
+    // border-right:none;
+    border:none;
+    padding:8px;
+    color:$dark-gray;
+}
+.table-policy table tr td strong {
+    color:#000;
+}
+.table-policy table {
+    width:70% !important;
+    margin:auto
+}
+
+.table-policy  {
+    padding:20px 0px 20px 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.side-menu-dashboard-horizontal {
+    background:#fff;
+}
+.chubb-section-policy-wrap {
+    margin-bottom:30px;
+}
+
+.btn-chubb-agent-search {
+    position:absolute;
+    right:0;
+    top:5px;
+    z-index:8;
+    .icon-search:before {
+        font-size: 23px;
+        color: gray;
+    }
+
+}
+
+a.sort i {
+    color:#fff;
+    margin-left:3px;
+}
+a.sort i:before {
+    font-size: 16px !important;
+    top: 0px;
+}
+
+.chubb-list-nab .carousel a {
+    position: absolute;
+    bottom: -55px;
+    z-index: 9;
+    top: auto;
+    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+}
+.chubb-list-nab .carousel a.carousel-control-prev {
+    left:0;
+}
+.chubb-list-nab .carousel a.carousel-control-next{
+    left: 36px;
+}
+.chubb-list-nab .carousel {
+    display: inline !important;
+}
+
+.fa-equal:before {
+    content: "=";
+}
+
+.btn-tutorial {
+    margin: auto 10px;
+    padding: 5px 16px;
+    background:$green;
+    border-radius: 3px;
+    color:$violet;
+    cursor:pointer;
+    position: relative;
+}
+
+.notif-tutorial {
+    background:$violet;
+    padding:10px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    border-radius:5px;
+    color:#fff;
+    margin:auto;
+    position:absolute !important;
+    left:0;
+    right:0;
+    top:-60px;
+    font-size:14px;
+    text-align: center;
+    
+    @media screen and (max-width: 768px) {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+.btn-close-tutorial {
+    float:right;
+    background-image:url('../img/icon-close.png');
+    background-size:20px;
+    color:$magenta;
+    width:20px;
+    height:20px;
+    border-radius:50px;
+    cursor:pointer;
+    position: absolute;
+    top: 7px;
+    right:7px;
+}
